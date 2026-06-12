@@ -1,0 +1,504 @@
+# Copyright (C) 2026 Webactueel
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ACF Image Auto Filler 1.3.50\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/acf-image-auto-filler\n"
+"POT-Creation-Date: 2026-06-12 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: ChatGPT WordPress QA repair workflow\n"
+"X-Domain: acf-image-auto-filler\n"
+
+msgid "%d selected image(s) were not used because there were not enough eligible fields."
+msgstr ""
+
+msgid "4. Koppeling controleren"
+msgstr ""
+
+msgid "ACF Image Auto Filler"
+msgstr ""
+
+msgid "ACF is not active or required ACF field functions are unavailable for one or more ACF field rollbacks."
+msgstr ""
+
+msgid "ACF is not active or required ACF functions are unavailable."
+msgstr ""
+
+msgid "Actiebalk"
+msgstr ""
+
+msgid "Actiegeschiedenis"
+msgstr ""
+
+msgid "Admin interface wordt geladen. Als dit blijft staan, laad het JavaScript-bestand niet."
+msgstr ""
+
+msgid "Advanced Custom Fields is niet actief of niet volledig geladen. ACF-velden vullen is uitgeschakeld, maar featured-image-only kan nog worden gebruikt."
+msgstr ""
+
+msgid "Advanced Custom Fields is not active or required ACF functions are unavailable."
+msgstr ""
+
+msgid "Advanced Custom Fields is unavailable. ACF field filling is disabled, but featured-image-only runs can still be used."
+msgstr ""
+
+msgid "Afbeelding groter bekijken"
+msgstr ""
+
+msgid "Afbeelding kiezen voor"
+msgstr ""
+
+msgid "afbeelding(en)"
+msgstr ""
+
+msgid "Afbeeldingen"
+msgstr ""
+
+msgid "Afbeeldingen kiezen"
+msgstr ""
+
+msgid "Afbeeldingen kiezen uit Media Library"
+msgstr ""
+
+msgid "Afbeeldingen wijzigen"
+msgstr ""
+
+msgid "Afbeeldings-ID"
+msgstr ""
+
+msgid "Afbeeldingsvoorbeeld"
+msgstr ""
+
+msgid "Alle concepten selecteren"
+msgstr ""
+
+msgid "Alle gepubliceerde selecteren"
+msgstr ""
+
+msgid "Alle lege velden selecteren"
+msgstr ""
+
+msgid "Alle zichtbare selecteren"
+msgstr ""
+
+msgid "Alleen aanzetten als je gevulde afbeeldingsvelden bewust wilt vervangen."
+msgstr ""
+
+msgid "Alleen geselecteerde velden"
+msgstr ""
+
+msgid "Alleen lege velden"
+msgstr ""
+
+msgid "Alleen overschrijvingen"
+msgstr ""
+
+msgid "Alleen zonder gekoppelde afbeelding"
+msgstr ""
+
+msgid "Alles deselecteren"
+msgstr ""
+
+msgid "Alles selecteren"
+msgstr ""
+
+msgid "Alles tonen"
+msgstr ""
+
+msgid "Alles ziet er goed uit. Er zijn geen fouten of overgeslagen velden."
+msgstr ""
+
+msgid "Annuleren"
+msgstr ""
+
+msgid "Attachment ID %d is not an image."
+msgstr ""
+
+msgid "Attachment IDs must be an array."
+msgstr ""
+
+msgid "Automatisch / geen handmatige keuze"
+msgstr ""
+
+msgid "Batchmodus actief"
+msgstr ""
+
+msgid "Batchmodus waarschuwing"
+msgstr ""
+
+msgid "Beschikbare posts"
+msgstr ""
+
+msgid "Bestaande afbeeldingen vervangen"
+msgstr ""
+
+msgid "Bestandsnaam-matching toepassen"
+msgstr ""
+
+msgid "Bezig..."
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Content kiezen"
+msgstr ""
+
+msgid "Content selectie-acties"
+msgstr ""
+
+msgid "Content wijzigen"
+msgstr ""
+
+msgid "Controle"
+msgstr ""
+
+msgid "Controle nodig"
+msgstr ""
+
+msgid "Controleer dit goed: na uitvoeren worden afbeeldingen gekoppeld aan ACF-velden. De laatste actie kan daarna worden teruggedraaid."
+msgstr ""
+
+msgid "Controleer per veld welke afbeelding wordt gekoppeld voordat je uitvoert."
+msgstr ""
+
+msgid "Could not restore one or more ACF image fields."
+msgstr ""
+
+msgid "Could not restore the featured image for one or more posts."
+msgstr ""
+
+msgid "Could not update field \"%1$s\" with attachment ID %2$d."
+msgstr ""
+
+msgid "Could not update the featured image."
+msgstr ""
+
+msgid "CSV-controlebestand downloaden"
+msgstr ""
+
+msgid "De preview is verouderd. Vernieuw de preview voordat je uitvoert."
+msgstr ""
+
+msgid "De WordPress Media Library kon niet worden geladen."
+msgstr ""
+
+msgid "Dit is de laatste inhoudelijke controle voordat de plugin iets opslaat."
+msgstr ""
+
+msgid "Er ging iets mis. Probeer opnieuw of controleer de invoer."
+msgstr ""
+
+msgid "Er zijn meer automatische ACF-afbeeldingen dan automatisch te vullen ACF-velden. Extra afbeeldingen worden overgeslagen tenzij je handmatig mapt."
+msgstr ""
+
+msgid "Er zijn minder automatische ACF-afbeeldingen dan automatisch te vullen velden. Niet alle velden krijgen automatisch een afbeelding."
+msgstr ""
+
+msgid "Extra images"
+msgstr ""
+
+msgid "Featured image"
+msgstr ""
+
+msgid "Featured image already contains this image."
+msgstr ""
+
+msgid "Featured image already has a value."
+msgstr ""
+
+msgid "Field already contains this image."
+msgstr ""
+
+msgid "Field already has a value."
+msgstr ""
+
+msgid "Gebruik geselecteerde afbeeldingen"
+msgstr ""
+
+msgid "Geen bewerkbare content gevonden. Kies een ander post type of pas je zoekterm aan."
+msgstr ""
+
+msgid "Geen geschikte ACF-afbeeldingsvelden gevonden."
+msgstr ""
+
+msgid "Geen velden binnen dit filter. Kies een ander filter om meer regels te zien."
+msgstr ""
+
+msgid "geselecteerde post(s)"
+msgstr ""
+
+msgid "geselecteerde veld(en)"
+msgstr ""
+
+msgid "Gevuld"
+msgstr ""
+
+msgid "Gevulde ACF-velden worden niet meegeteld zolang vervangen uit staat. Automatische afbeeldingen worden alleen aan lege geselecteerde velden gekoppeld."
+msgstr ""
+
+msgid "Handmatige keuze"
+msgstr ""
+
+msgid "Heeft al afbeelding"
+msgstr ""
+
+msgid "Huidig"
+msgstr ""
+
+msgid "Huidige afbeelding bekijken"
+msgstr ""
+
+msgid "ID %d is not an attachment."
+msgstr ""
+
+msgid "Invalid post type."
+msgstr ""
+
+msgid "item(s) teruggedraaid."
+msgstr ""
+
+msgid "Ja, uitvoeren"
+msgstr ""
+
+msgid "JavaScript is required to use ACF Image Auto Filler."
+msgstr ""
+
+msgid "Je past meerdere posts tegelijk aan. Controleer extra goed of deze posts dezelfde ACF-velden gebruiken."
+msgstr ""
+
+msgid "Kies eerst het post type en selecteer daarna één of meerdere items. Je kunt alle zichtbare items in één keer selecteren."
+msgstr ""
+
+msgid "Korte samenvatting"
+msgstr ""
+
+msgid "Laatste actie terugdraaien"
+msgstr ""
+
+msgid "Laatste actie terugdraaien is beschikbaar na uitvoeren."
+msgstr ""
+
+msgid "Leeg"
+msgstr ""
+
+msgid "Maak eerst een preview om de koppeling te controleren."
+msgstr ""
+
+msgid "Mapping filteren"
+msgstr ""
+
+msgid "Niet geselecteerd"
+msgstr ""
+
+msgid "Nieuwe afbeelding"
+msgstr ""
+
+msgid "Nieuwe afbeelding groter bekijken"
+msgstr ""
+
+msgid "No eligible ACF image fields were found for this post."
+msgstr ""
+
+msgid "No eligible fields"
+msgstr ""
+
+msgid "No image selected for this field."
+msgstr ""
+
+msgid "No rollback data was found for your last run."
+msgstr ""
+
+msgid "No valid image attachments were selected."
+msgstr ""
+
+msgid "Nog geen actiegeschiedenis beschikbaar."
+msgstr ""
+
+msgid "Nog geen afbeelding gekoppeld"
+msgstr ""
+
+msgid "Nog geen afbeeldingen geselecteerd."
+msgstr ""
+
+msgid "Nog geen velden om te koppelen. Kies eerst content en velden."
+msgstr ""
+
+msgid "Normaal veld"
+msgstr ""
+
+msgid "Omhoog"
+msgstr ""
+
+msgid "Omlaag"
+msgstr ""
+
+msgid "Ongewijzigd"
+msgstr ""
+
+msgid "Ongewijzigd of handmatig gekozen"
+msgstr ""
+
+msgid "Overgeslagen"
+msgstr ""
+
+msgid "overgeslagen item(s)"
+msgstr ""
+
+msgid "overschrijving(en)"
+msgstr ""
+
+msgid "Post #%d"
+msgstr ""
+
+msgid "Post type"
+msgstr ""
+
+msgid "post(s)"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Preview maken"
+msgstr ""
+
+msgid "Preview vernieuwen"
+msgstr ""
+
+msgid "Preview verouderd"
+msgstr ""
+
+msgid "Resultaat"
+msgstr ""
+
+msgid "Rollback"
+msgstr ""
+
+msgid "Rollback-data opgeslagen voor deze actie."
+msgstr ""
+
+msgid "Rollbackstatus wordt gecontroleerd voordat je uitvoert."
+msgstr ""
+
+msgid "Select at least one ACF image field or enable the featured image option."
+msgstr ""
+
+msgid "Select at least one editable post."
+msgstr ""
+
+msgid "Selected fields unavailable"
+msgstr ""
+
+msgid "Selecteer afbeeldingen"
+msgstr ""
+
+msgid "Selecteer eerst content. Daarna worden de velden van de eerste geselecteerde post getoond."
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Technische details"
+msgstr ""
+
+msgid "Teruggezet naar vorige attachment ID:"
+msgstr ""
+
+msgid "The selected ACF image fields are not available for this post."
+msgstr ""
+
+msgid "The selected featured image is not a valid image attachment."
+msgstr ""
+
+msgid "Uitgelichte afbeelding optioneel vullen"
+msgstr ""
+
+msgid "Uitvoeren"
+msgstr ""
+
+msgid "Veld"
+msgstr ""
+
+msgid "veld(en)"
+msgstr ""
+
+msgid "veld(en) worden gevuld"
+msgstr ""
+
+msgid "Velden"
+msgstr ""
+
+msgid "Velden binnen ACF-groepen meenemen"
+msgstr ""
+
+msgid "Velden kiezen"
+msgstr ""
+
+msgid "Velden wijzigen"
+msgstr ""
+
+msgid "Veldgroep"
+msgstr ""
+
+msgid "Verwijderen"
+msgstr ""
+
+msgid "wijziging(en)"
+msgstr ""
+
+msgid "wijziging(en) klaar"
+msgstr ""
+
+msgid "Wijzigingen uitvoeren"
+msgstr ""
+
+msgid "Wijzigingen uitvoeren?"
+msgstr ""
+
+msgid "Wordt gevuld"
+msgstr ""
+
+msgid "Wordt overgeslagen"
+msgstr ""
+
+msgid "Wordt overgeslagen: heeft al afbeelding"
+msgstr ""
+
+msgid "Wordt overschreven"
+msgstr ""
+
+msgid "Workflow stappen"
+msgstr ""
+
+msgid "You can process a maximum of %d posts per run."
+msgstr ""
+
+msgid "You can select a maximum of %d images per run."
+msgstr ""
+
+msgid "You do not have permission to access this page."
+msgstr ""
+
+msgid "You do not have permission to view the audit log."
+msgstr ""
+
+msgid "You do not have permission to view this post type."
+msgstr ""
+
+msgid "You no longer have permission to roll back one or more posts."
+msgstr ""
+
+msgid "Zichtbare deselecteren"
+msgstr ""
+
+msgid "zichtbare items geselecteerd"
+msgstr ""
+
+msgid "Zoek op titel..."
+msgstr ""
+
+msgid "Zoeken"
+msgstr ""
