@@ -2,17 +2,17 @@
 Contributors: webactueel
 Tags: acf, images, media library, custom fields
 Requires at least: 6.5
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.3.50
+Stable tag: 1.5.48
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Safely map selected Media Library images to normal ACF Image Fields from a React-powered WordPress admin screen.
+Safely map selected Media Library images to supported ACF Image Fields or featured images from a React-powered WordPress admin screen.
 
 == Description ==
 
-ACF Image Auto Filler helps editors and agencies fill normal top-level ACF Image Fields from selected Media Library images. It includes preview mapping, optional overwrite confirmation, rollback for the last run, manual field mapping, CSV dry-run export, optional featured image support, optional ACF Group field support, batch mode, and a small admin audit log.
+ACF Image Auto Filler helps editors and agencies fill supported ACF Image Fields from selected Media Library images. It supports normal top-level ACF Image fields and, when enabled, image fields directly inside ACF Group fields. Repeater, flexible content, gallery and clone fields are intentionally not auto-filled. The plugin includes preview mapping, optional overwrite confirmation, rollback per saved run from the audit log, manual field mapping, CSV dry-run export, optional featured image support, batch mode and a small admin audit log.
 
 
 == Installation ==
@@ -24,16 +24,278 @@ ACF Image Auto Filler helps editors and agencies fill normal top-level ACF Image
 
 == Safety Notes ==
 
-Test on staging before using batch mode or overwrite mode on client content. The plugin stores only plugin-owned rollback and audit metadata and removes that metadata on uninstall. Rollback restores only the last saved run for the current user. The audit log is only visible to administrators by default.
+Test on staging before using batch mode or overwrite mode on client content. The plugin stores only plugin-owned rollback and audit metadata and removes that metadata on uninstall. On multisite, uninstall cleanup stays scoped to the current site unless the uninstall runs from the network admin or `aiaf_uninstall_network_wide_cleanup` is explicitly filtered to true. Rollback can restore saved runs for the current user while their rollback data still exists. The audit log is only visible to administrators by default.
+
+== Privacy and Data ==
+
+The plugin does not send data to external services. It reads WordPress posts, terms, ACF field definitions and Media Library attachment metadata inside the admin screen. When a fill run is executed, the plugin stores rollback data for the current user and a small audit-log entry containing the run ID, user ID, timestamp and item count. Uninstall removes plugin-owned rollback and audit options.
+
+== Field Support ==
+
+Supported targets:
+
+* Normal top-level ACF Image fields.
+* Image fields directly inside ACF Group fields when the group option is enabled.
+* Featured images when the featured-image option is enabled.
+
+Not automatically filled:
+
+* ACF Repeater fields.
+* ACF Flexible Content fields.
+* ACF Gallery fields.
+* ACF Clone fields.
+
+These limits are intentional to avoid unsafe assumptions about nested field rows, layouts and cloned field storage.
+
+== Capability Filters ==
+
+The tool uses `manage_options` by default for write actions, rollback and audit-log access. `aiaf_view_capability` can be used for read-only tool access. Lower `aiaf_mutate_capability` only for trusted roles that may bulk-edit selected posts, terms and featured images; per-item `edit_post` and `edit_term` checks still run, but the mutation capability remains the main bulk-action gate. Capability filter values are trimmed and empty or non-string values fall back to `manage_options`.
+
+== Known Limits ==
+
+The content selector loads items in batches of up to 100 results. Use search or the load-more action on large sites. Batch runs are capped by the `aiaf_max_posts_per_run` filter and selected images are capped by the `aiaf_max_attachments_per_run` filter. Taxonomies do not support featured images in this tool.
+
+== Frequently Asked Questions ==
+
+= Does this overwrite existing values? =
+
+Only when the overwrite toggle is explicitly enabled. Otherwise existing ACF image values and featured images are skipped.
+
+= Can I use this without ACF active? =
+
+Featured-image-only runs can still work when ACF is unavailable. ACF field filling requires the expected ACF runtime functions.
+
+= Which WooCommerce items are shown? =
+
+Products and product categories are shown only when WooCommerce is active and the relevant post type or taxonomy exists. Product categories are shown only when eligible ACF Image fields are attached.
+
+= Can I undo a run? =
+
+Saved runs for the current user can be rolled back from the audit log while their rollback data still exists and the current user still has permission to edit the affected posts or terms.
+
+== Staging Checklist ==
+
+Before using batch mode or overwrite mode on client content, test activation, one-post filling, batch filling, overwrite off, overwrite on, manual mapping, featured-image-only mode, group-field mode, rollback after a normal run, rollback after a batch run, low-privilege access, ACF temporarily unavailable, uninstall cleanup and responsive admin behaviour.
 
 == Package Notes ==
 
-This ZIP is a production runtime package. It includes the plugin PHP files, built admin assets, translation template and readme. Source files such as src/, package.json and development documentation are intentionally not included. Keep a matching developer/source package separately when this plugin is maintained, reviewed or redistributed.
+Use the production package for normal WordPress installation. It contains only runtime files: plugin PHP files, built admin assets, bundled language files, uninstall cleanup and readme.txt.
+
+Use the source package for development. The source package also contains CSS/JS/i18n source files, build scripts, Composer/PHPCS configuration, wp-env configuration, GitHub Actions and internal verification documents.
 
 == Changelog ==
 
+= 1.5.48 =
+* Completed REST argument schemas for stronger validation metadata and Plugin Check readiness.
+* Rechecked package hygiene, version alignment, REST permissions and asset references after the UI fixes.
 
-= 1.3.50 =
+= 1.5.47 =
+* Aligned content filter labels above the content type and search fields.
+* Preserved the current bordered select, chevron and search-field styling.
+
+= 1.5.46 =
+* Cleaned production readme package references while preserving the current admin UI and CSS behavior.
+* Aligned release metadata for the cleaned production package.
+
+= 1.5.45 =
+* Restored the content type field as a bordered native select with a chevron, matching the current search field styling.
+* Kept the existing admin UI CSS intact outside this targeted content-type control fix.
+
+= 1.5.44 =
+* Cleaned stale production-package notes without changing the current admin UI styling.
+* Removed outdated CSS version comments while preserving the active CSS rules used by the current interface.
+* Removed changelog references to source-only and removed minified asset paths from the production readme.
+
+= 1.5.43 =
+* Cleaned the production package so root markdown documentation is not bundled in the installable WordPress.org ZIP.
+* Kept the 1.5.42 UI-loader and admin asset fixes intact.
+
+= 1.5.42 =
+* Fix admin UI loading behavior so the full-screen loader only appears during the first interface load.
+* Fix broken minified admin assets causing missing class spacing, layout issues and mixed result text.
+
+
+= 1.5.41 =
+* Fixed WordPress Plugin Check findings for i18n translator comments, WordPress.org update headers, textdomain loading, tested-up-to metadata and production markdown packaging.
+
+= 1.5.38 =
+* Fixed modal action buttons so primary and secondary actions render visibly and consistently.
+* Fixed result screen action buttons for rollback, preview and starting a new selection.
+* Kept overwrite-by-default behavior for featured images and ACF image fields.
+* Rebuilt minified JS/CSS assets and bundled updated Dutch and English translations.
+
+= 1.5.23 =
+* Added blocking progress overlay for fill and rollback mutations.
+* Added rollback per run ID with audit log actions and rollback status.
+* Added English translation files and aligned release metadata.
+
+
+= 1.5.22 =
+* Tightened WordPress-native admin spacing across the wizard, cards and form controls.
+* Reduced stepper height and active-step dominance while keeping the SaaS wizard style.
+* Standardized cards, buttons, status messages and image placeholders for one cohesive UI system.
+
+= 1.5.21 =
+* Corrected production-package documentation so it no longer references source-only files as if they are included in the installable ZIP.
+* Removed the stale developer-build note from the production readme.
+* Aligned plugin header, runtime asset version, translation metadata and stable tag for the repaired production package.
+
+= 1.5.20 =
+* Replaced static JavaScript fallback markup injection with DOM-based rendering.
+* Removed an unused admin capability wrapper to reduce dead-code noise.
+* Built a separate production package that excludes source, CI, local tooling, and internal audit files.
+
+= 1.5.19 =
+* Refactored REST mutation orchestration into `AIAF_Mutation_Service`.
+* Added `AIAF_Content_ID`, `AIAF_Manual_Mapping` and `AIAF_ACF_Runtime` services to reduce controller responsibility.
+* Added project governance documentation and EditorConfig files for maintainability and release governance.
+* Removed the screenshot section because no matching WordPress.org screenshot assets are bundled.
+* Expanded the static audit gate for service files, governance docs and screenshot/readme consistency.
+
+= 1.5.18 =
+* Improved the reproducibility of the admin JavaScript runtime build.
+* Updated the admin JavaScript build pipeline and runtime asset loading.
+* Added generated Dutch `nl_NL` PO/MO catalog files and `scripts/build-i18n.mjs`.
+* Expanded static audit checks to cover JS source/build assets and language catalog assets.
+
+= 1.5.17 =
+* Centralized capability filter handling in `AIAF_Capabilities` so admin and REST permissions use one policy.
+* Added static audit checks for version metadata, CSS layers, minified CSS, required source files and stale package references.
+* Added Composer, PHPCS, PHPCompatibilityWP, wp-env and GitHub Actions configuration to make quality checks repeatable.
+
+= 1.5.16 =
+* Rebuilt the admin stylesheet structure for more maintainable runtime styling.
+* Added CSS cascade layers (`base`, `components`, `utilities`, `responsive`) to the generated runtime stylesheet.
+* Updated admin stylesheet generation and runtime asset loading.
+
+= 1.5.15 =
+* Rebuilt the compiled admin stylesheet into one consolidated scoped CSS file, removing the accumulated version-patch blocks override layer.
+* Split preview permission from write/rollback permission so users with view access and item edit rights can generate previews without mutation-only REST failures.
+* Exposed mutation capability to the admin app so write and rollback actions are disabled before a REST request when the current user cannot mutate.
+
+= 1.5.14 =
+* Hardened admin action and confirmation modal button styling to use WordPress primary/secondary button colors reliably, including modal portal rendering.
+
+= 1.5.13 =
+* Corrected the no-change confirmation modal so zero executable changes show a clear no-action state with a single primary close button.
+
+= 1.5.12 =
+* Improved the admin confirmation modal with clearer four-card action metrics and a sticky action row so the primary action remains visible.
+* Improved the fixed review action bar spacing and visibility in the WordPress admin viewport.
+* Added the skipped-count card to the result summary for a more complete execution overview.
+* Kept the changes limited to UI polish and release metadata; no write logic, REST logic or rollback logic was changed.
+
+= 1.5.11 =
+* Bumped runtime package metadata from 1.5.10 to 1.5.11 so the repaired build is distinguishable from the previous package.
+* Hardened release metadata by aligning the stable tag, plugin header, runtime asset version and translation template version.
+* Set the readme tested-up-to value to the conservative verified support baseline until newer WordPress runtime testing is completed.
+* Retained the multisite uninstall hardening and capability-filter normalization from the repaired 1.5.10 package.
+
+= 1.5.10 =
+* Added a screen-reader-only page heading (H1) so the document outline starts correctly and WordPress admin notices anchor in the expected place, without adding a visible title bar.
+* Moved keyboard/screen-reader focus to the active step when navigating the workflow, so step changes are announced and reachable without a mouse.
+* Made the pill radius design token consistent with its name.
+* Fixed the review-step empty state so featured-image-only content no longer shows the misleading "choose content and fields" message; it now explains that only the featured image will be filled.
+* Kept the Media Library action available after the first selection (labelled "Selectie aanpassen") and pre-seeded the media frame with the current selection so images can be added or removed without starting over.
+* Removed the duplicated status title on the result screen.
+* Gave the content-selector quick actions clearer link affordance instead of flat grey text.
+
+= 1.5.9 =
+* Changed the selected-image list from a stretching grid to compact wrapping cards so single items no longer create oversized empty rows.
+* Tightened the image-card layout and action spacing to better match the plugin's calm WordPress-admin style.
+
+= 1.5.8 =
+* Refined the selected-image cards with a cleaner two-column layout, calmer badge styling and clearer action buttons.
+* Reworked the destructive action so the remove button feels more modern and less visually harsh.
+
+= 1.5.7 =
+* Restored the workflow stepper to full width while keeping the calmer modern UI polish.
+* Removed the desktop max-width clamp from the step navigation so all five steps keep an even full-width layout.
+
+= 1.5.6 =
+* Corrected the primary run button label so the action is imperative while the confirmation modal remains the decision question.
+* Cleaned runtime/package metadata for the final UI polish package.
+
+= 1.5.5 =
+* Reworked the admin UI styling for the image selection, field selection, review, confirmation and result screens.
+* Improved empty states, warning states, selected image cards, preview/result rows and final action layout for a calmer client-facing workflow.
+* Restyled the execution confirmation modal so the summary, overwrite warning and actions match the plugin interface.
+
+= 1.5.2 =
+* Hardened featured-image validation so taxonomy terms and post types without thumbnail support cannot be processed as featured-image targets.
+* Filtered empty attachment IDs before mutation limits and write processing.
+* Escaped inline admin settings JSON with hex options before printing to the admin page.
+* Disabled the featured-image toggle in the React admin UI for unsupported content types.
+* Added previous/next step navigation and clickable completed workflow steps.
+* Limited the fullscreen loading modal to the initial plugin load only.
+* Simplified the final result screen, image cards and rollback presentation.
+
+= 1.4.1 =
+* Moved the fullscreen loading modal slightly upward while preserving horizontal centering and the blocking opaque overlay.
+
+= 1.4.0 =
+* Render only the fullscreen loading overlay during initial data load so the underlying interface is not visible before it is ready.
+* Center the loading modal horizontally and vertically in the viewport until the initial post-type and content-list requests have finished.
+* Keep later async loading states blocked by an opaque overlay instead of showing the old inline “Bezig…” state.
+
+= 1.3.98 =
+* Reworked the Contenttype/Search field styling to use one shared scoped control system.
+* Removed the previous double-border focus conflict by styling the WordPress Components backdrop as the only visible border layer.
+* Kept the native select arrow single while matching the search field height, border, radius and focus state.
+
+= 1.3.95 =
+* Aligned the Contenttype SelectControl with the adjacent search TextControl using one shared scoped control style.
+* Matched height, border color, border radius, font sizing, padding, focus state and spacing for both controls.
+* Kept the native/WordPress select arrow single by avoiding custom background arrows.
+* Updated runtime, asset and source package metadata to 1.3.95.
+
+= 1.3.92 =
+* Fixed out-of-range post selector totals so exhausted scans return the actual counted editable total.
+* Added bounded, filterable post selector scans for large admin datasets.
+* Added object-level `edit_term` checks for term selector results, term mutations and rollback.
+* Added bounded, filterable term selector scans with permission-matched totals.
+* Added bundled translation files for plugin strings.
+* Added a direct-access guard to `build/index.asset.php`.
+* Kept JavaScript translations pointed at the plugin `languages/` directory.
+* Updated POT, runtime, asset and source package metadata to 1.3.92.
+* Documented the source archive as a reproducible source snapshot for this release.
+
+= 1.3.90 =
+* Fixed featured-image rollback when the previous state was empty and the post already has no thumbnail.
+* Reduced hard CSS overrides in the action summary UI to lower coupling with WordPress Components.
+* Added an explicit developer source package notice for maintenance and redistribution.
+
+= 1.3.89 =
+* Dedicated step 5 result screen further polished after UX audit.
+* Result feedback uses clearer Dutch user-facing copy and less technical metadata by default.
+* Result summary, result messages, last action card and technical details were tightened for a calmer plugin-native finish.
+* Confirm modal, result messages and featured-image feedback remain aligned with the final UI style.
+
+= Version 1.3.67 =
+* Replaced the plain JavaScript loading fallback with a modern WordPress admin loading card.
+* Added styled no-script and startup error states for a cleaner plugin interface.
+
+= 1.3.65 =
+* Vertically centered the media count pill in the Images step header.
+* Matched the pill height, padding and line-height for consistent optical centering.
+* Updated plugin, asset and readme versions to 1.3.65.
+
+= 1.3.58 =
+* Fixed stepper vertical alignment so inactive and active steps use the same centered layout.
+
+= 1.3.57 =
+* Replaced the blue support note with a compact WordPress-native inline support summary that better matches the plugin UI.
+* The summary now updates its copy when ACF Group scanning is enabled or disabled.
+* Kept the unsupported field types visible as secondary helper text without using a prominent admin notice style.
+
+= 1.3.56 =
+* Fixed Post type SelectControl label typography so it matches the Search label in WordPress Components.
+
+= 1.3.55 =
+* Limited the content selector to Berichten, Pagina's and Producten only. Producten are shown only when WooCommerce is active.
+* Kept WooCommerce-only content out of the selector when WooCommerce is unavailable, so Coupon and unrelated custom post types no longer appear by default.
+
+= 1.3.54 =
 * Split the main capability boundary into dedicated view, mutate and audit-log capability filters. The legacy aiaf_required_capability filter remains the fallback for read/access checks, while bulk mutations now default to manage_options unless aiaf_mutate_capability is explicitly lowered.
 * Kept bulk preview, fill and rollback actions protected by the mutate capability plus per-post edit_post checks.
 * Added request-local caching for ACF image field scans to reduce repeated work inside one request.
@@ -74,7 +336,7 @@ This ZIP is a production runtime package. It includes the plugin PHP files, buil
 
 = 1.3.33 =
 * Added strong scoped admin styling for the post type/search filter row and empty-state message.
-* Added important CSS overrides so the content controls keep the plugin style inside WordPress admin screens.
+* Added scoped CSS overrides so the content controls keep the plugin style inside WordPress admin screens.
 * Updated plugin, asset, POT and readme versions to 1.3.33.
 
 = 1.3.32 =
@@ -121,7 +383,7 @@ This ZIP is a production runtime package. It includes the plugin PHP files, buil
 * Updated plugin, asset and readme versions to 1.3.22.
 
 = 1.3.21 =
-* Restored the visible admin action for rolling back the last saved run.
+* Added audit-log rollback for specific saved run IDs.
 * Updated plugin, asset and readme versions to 1.3.21.
 
 = 1.3.20 =
@@ -174,7 +436,7 @@ This ZIP is a production runtime package. It includes the plugin PHP files, buil
 * Updated plugin, asset and readme versions to 1.3.9.
 
 = 1.3.8 =
-* Corrected release metadata: `Tested up to` now targets WordPress 6.9 instead of the invalid future 7.0 value.
+* Corrected release metadata for the 1.3.8 package; current tested-up-to metadata is maintained in the readme header.
 * Allowed featured-image-only runs to work without ACF runtime functions when no ACF fields are selected.
 * Added a configurable maximum post count per batch run to prevent oversized REST requests.
 * Fixed rollback so featured-image rollbacks can still run when ACF is unavailable.
@@ -242,4 +504,4 @@ This ZIP is a production runtime package. It includes the plugin PHP files, buil
 
 == Developer Build ==
 
-This production ZIP does not include the JavaScript source project. The runtime admin interface uses build/index.js, build/index.css and build/index.asset.php.
+This installable production package intentionally excludes source files, local tooling, CI files and internal audit documents. Use the separate source package for build scripts, Composer/PHPCS configuration, wp-env configuration and development-only verification documents.

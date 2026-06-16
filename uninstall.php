@@ -19,18 +19,46 @@ function aiaf_delete_plugin_options(): void
 
     global $wpdb;
 
-    $aiaf_option_prefix = $wpdb->esc_like('aiaf_last_rollback_') . '%';
+    $aiaf_option_prefixes = [
+        $wpdb->esc_like('aiaf_last_rollback_') . '%',
+        $wpdb->esc_like('aiaf_rollback_run_') . '%',
+    ];
 
-    // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Pattern-based cleanup is required on uninstall for per-user rollback options.
-    $wpdb->query(
-        $wpdb->prepare(
-            "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
-            $aiaf_option_prefix
-        )
-    );
+    foreach ($aiaf_option_prefixes as $aiaf_option_prefix) {
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Pattern-based cleanup is required on uninstall for per-user rollback options.
+        $wpdb->query(
+            $wpdb->prepare(
+                "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
+                $aiaf_option_prefix
+            )
+        );
+    }
 }
 
-if (is_multisite()) {
+/**
+ * Decide whether uninstall should clean plugin-owned metadata on every site.
+ *
+ * Default behaviour is conservative: network-wide cleanup only runs from the
+ * network admin. Site-level uninstall cleanup stays scoped to the current site.
+ *
+ * @return bool
+ */
+function aiaf_should_cleanup_network_wide(): bool
+{
+    $network_wide = is_multisite() && function_exists('is_network_admin') && is_network_admin();
+
+    /**
+     * Filters whether uninstall should remove plugin-owned metadata from every site.
+     *
+     * Keep false for site-scoped cleanup. Set true only when uninstalling this
+     * plugin intentionally for the full multisite network.
+     *
+     * @param bool $network_wide Whether to cleanup all sites on uninstall.
+     */
+    return (bool) apply_filters('aiaf_uninstall_network_wide_cleanup', $network_wide);
+}
+
+if (is_multisite() && aiaf_should_cleanup_network_wide()) {
     $aiaf_site_ids = get_sites([
         'fields' => 'ids',
         'number' => 0,

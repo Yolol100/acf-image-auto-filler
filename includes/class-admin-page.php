@@ -17,7 +17,6 @@ final class AIAF_Admin_Page
     {
         add_action('admin_menu', [self::class, 'register_menu']);
         add_action('admin_enqueue_scripts', [self::class, 'enqueue_assets']);
-        add_action('admin_notices', [self::class, 'maybe_show_acf_notice']);
     }
 
     public static function register_menu(): void
@@ -80,87 +79,65 @@ final class AIAF_Admin_Page
             true
         );
 
-        wp_set_script_translations('aiaf-admin-app', 'acf-image-auto-filler');
+        wp_set_script_translations('aiaf-admin-app', 'acf-image-auto-filler', AIAF_PLUGIN_DIR . 'languages');
 
         $settings = [
             'restUrl'       => esc_url_raw(rest_url('acf-image-auto-filler/v1')),
             'nonce'         => wp_create_nonce('wp_rest'),
             'adminUrl'      => esc_url_raw(admin_url()),
             'pluginVersion' => AIAF_VERSION,
-            'acfActive'     => function_exists('acf_get_field_groups') && function_exists('acf_get_fields') && function_exists('get_field') && function_exists('update_field'),
+            'acfActive'       => AIAF_ACF_Runtime::is_available(),
+            'woocommerceActive' => self::is_woocommerce_active(),
             'canViewAuditLog' => current_user_can(self::audit_log_capability()),
+            'canMutateTool' => current_user_can(self::mutate_capability()),
         ];
 
         wp_add_inline_script(
             'aiaf-admin-app',
-            'window.AIAFSettings = ' . wp_json_encode($settings) . ';',
+            'window.AIAFSettings = ' . wp_json_encode($settings, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ';',
             'before'
         );
     }
 
-    public static function maybe_show_acf_notice(): void
+    private static function is_woocommerce_active(): bool
     {
-        if (!current_user_can(self::view_capability())) {
-            return;
+        if (!function_exists('is_plugin_active')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
         }
 
-        $screen = function_exists('get_current_screen') ? get_current_screen() : null;
-        $screen_id = $screen && isset($screen->id) ? (string) $screen->id : '';
-        $allowed_screens = [
-            'toplevel_page_' . self::PAGE_SLUG,
-        ];
+        $active = function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php');
+        $network_active = is_multisite() && function_exists('is_plugin_active_for_network') && is_plugin_active_for_network('woocommerce/woocommerce.php');
 
-        if (!in_array($screen_id, $allowed_screens, true)) {
-            return;
-        }
-
-        if (!function_exists('acf_get_field_groups') || !function_exists('acf_get_fields') || !function_exists('get_field') || !function_exists('update_field')) {
-            echo '<div class="notice notice-warning"><p>' . esc_html__('Advanced Custom Fields is unavailable. ACF field filling is disabled, but featured-image-only runs can still be used.', 'acf-image-auto-filler') . '</p></div>';
-        }
+        return ($active || $network_active)
+            && class_exists('WooCommerce')
+            && function_exists('WC')
+            && post_type_exists('product');
     }
-
 
     private static function view_capability(): string
     {
-        /**
-         * Filters the capability required to open the ACF Image Auto Filler admin screen.
-         *
-         * The legacy aiaf_required_capability filter is still applied as the fallback
-         * so existing implementations keep working. Keep this at manage_options unless
-         * the project intentionally allows trusted editors to access the tool.
-         *
-         * @param string $capability Required capability.
-         */
-        $legacy_capability = apply_filters('aiaf_required_capability', 'manage_options');
-        $legacy_capability = is_string($legacy_capability) && $legacy_capability !== '' ? $legacy_capability : 'manage_options';
-        $capability = apply_filters('aiaf_view_capability', $legacy_capability);
-
-        return is_string($capability) && $capability !== '' ? $capability : 'manage_options';
+        return AIAF_Capabilities::view();
     }
 
     private static function audit_log_capability(): string
     {
-        /**
-         * Filters the capability required to view the admin audit log.
-         *
-         * Defaults to manage_options because the log can reveal who changed content.
-         *
-         * @param string $capability Required capability.
-         */
-        $capability = apply_filters('aiaf_audit_log_capability', 'manage_options');
+        return AIAF_Capabilities::audit_log();
+    }
 
-        return is_string($capability) && $capability !== '' ? $capability : 'manage_options';
+    private static function mutate_capability(): string
+    {
+        return AIAF_Capabilities::mutate();
     }
 
     public static function render_page(): void
     {
         if (!current_user_can(self::view_capability())) {
-            wp_die(esc_html__('You do not have permission to access this page.', 'acf-image-auto-filler'));
+            wp_die(esc_html__('Je hebt geen toestemming om deze pagina te openen.', 'acf-image-auto-filler'));
         }
 
         echo '<div class="wrap aiaf-react-wrap">';
-        echo '<div id="acf-image-auto-filler-app"><div class="notice notice-info inline"><p>' . esc_html__('Admin interface wordt geladen. Als dit blijft staan, laad het JavaScript-bestand niet.', 'acf-image-auto-filler') . '</p></div></div>';
-        echo '<noscript>' . esc_html__('JavaScript is required to use ACF Image Auto Filler.', 'acf-image-auto-filler') . '</noscript>';
+        echo '<h1 class="screen-reader-text">' . esc_html__('ACF Image Auto Filler', 'acf-image-auto-filler') . '</h1>';
+        echo '<div id="acf-image-auto-filler-app"></div>';
         echo '</div>';
     }
 }
