@@ -127,6 +127,7 @@ final class AIAF_Field_Scanner
             $fields[] = [
                 'key'                   => sanitize_key($field_key),
                 'name'                  => sanitize_key($field_name),
+                'raw_name'              => $field_name,
                 'label'                 => sanitize_text_field(isset($field['label']) ? (string) $field['label'] : (string) $field['name']),
                 'menu_order'            => isset($field['menu_order']) ? (int) $field['menu_order'] : 0,
                 'return_format'         => isset($field['return_format']) ? sanitize_key((string) $field['return_format']) : '',
@@ -135,6 +136,7 @@ final class AIAF_Field_Scanner
                 'scope'                 => sanitize_key($parent_type),
                 'parent_key'            => sanitize_key($parent_key),
                 'parent_name'           => sanitize_key($parent_name),
+                'raw_parent_name'       => $parent_name,
                 'has_value'             => $current_attachment_id > 0,
                 'current_attachment_id' => $current_attachment_id,
                 'current_thumbnail'     => $current_attachment_id > 0 ? esc_url_raw((string) wp_get_attachment_image_url($current_attachment_id, 'thumbnail')) : '',
@@ -145,7 +147,7 @@ final class AIAF_Field_Scanner
 
         if ($type === 'group' && $include_groups && !empty($field['sub_fields']) && is_array($field['sub_fields'])) {
             $path = isset($context['path']) && is_array($context['path']) ? $context['path'] : [];
-            $path[] = isset($field['label']) ? (string) $field['label'] : (string) ($field['name'] ?? 'group');
+            $path[] = sanitize_text_field(isset($field['label']) ? (string) $field['label'] : (string) ($field['name'] ?? 'group'));
 
             foreach ($field['sub_fields'] as $sub_field) {
                 if (!is_array($sub_field)) {

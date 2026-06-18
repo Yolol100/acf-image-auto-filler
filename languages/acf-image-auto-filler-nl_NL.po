@@ -1,885 +1,993 @@
-# Dutch translations for ACF Image Auto Filler.
-# Generated from languages/acf-image-auto-filler.pot.
+# Translations for ACF Image Auto Filler.
 msgid ""
 msgstr ""
-"Project-Id-Version: ACF Image Auto Filler 1.5.48\n"
+"Project-Id-Version: ACF Image Auto Filler 1.6.14\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "%d gekoppeld item"
-msgid_plural "%d gekoppelde items"
+msgid "%1$d changes · %2$d featured · %3$d ACF"
+msgstr "%1$d wijzigingen · %2$d uitgelicht · %3$d ACF"
+
+msgid "%d linked item"
+msgid_plural "%d linked items"
 msgstr[0] "%d gekoppeld item"
 msgstr[1] "%d gekoppelde items"
 
-msgid "%d geselecteerde afbeelding(en) zijn niet gebruikt omdat er niet genoeg geschikte velden zijn."
+msgid "%d selected image(s) were not used because there are not enough suitable fields."
 msgstr "%d geselecteerde afbeelding(en) zijn niet gebruikt omdat er niet genoeg geschikte velden zijn."
 
-msgid "1 wijziging"
+msgid "1 change"
 msgstr "1 wijziging"
-
-msgid "Aandachtspunten"
-msgstr "Aandachtspunten"
 
 msgid "ACF Image Auto Filler"
 msgstr "ACF Image Auto Filler"
 
-msgid "ACF Image fields en directe Image fields binnen ACF Groups."
-msgstr "ACF Image fields en directe Image fields binnen ACF Groups."
-
-msgid "ACF Image fields. Zet ACF-groepen aan voor directe group-velden."
-msgstr "ACF Image fields. Zet ACF-groepen aan voor directe group-velden."
-
 msgid "ACF Image Filler"
 msgstr "ACF Image Filler"
 
-msgid "ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar voor één of meer ACF-rollbacks."
-msgstr "ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar voor één of meer ACF-rollbacks."
+msgid "ACF image fields and direct image fields inside ACF groups."
+msgstr "ACF Image fields en directe image fields binnen ACF-groepen."
 
-msgid "ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar."
+msgid "ACF image fields. Enable ACF groups for direct group fields."
+msgstr "ACF Image fields. Zet ACF-groepen aan voor directe groepsvelden."
+
+msgid "ACF is not active or required ACF functions are unavailable for one or more ACF undo actions."
+msgstr "ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar voor een of meer acties ongedaan maken."
+
+msgid "ACF is not active or required ACF functions are unavailable."
 msgstr "ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar."
 
-msgid "ACF-groepen meenemen"
-msgstr "ACF-groepen meenemen"
+msgid "Action"
+msgstr "Actie"
 
-msgid "Actiebalk"
+msgid "Action bar"
 msgstr "Actiebalk"
 
-msgid "Alleen uitgelichte afbeelding beschikbaar."
-msgstr "Alleen uitgelichte afbeelding beschikbaar."
+msgid "Active"
+msgstr "Actief"
 
-msgid "Alleen uitgelichte afbeelding beschikbaar."
-msgstr "Alleen uitgelichte afbeelding beschikbaar."
+msgid "Active: the first selected image will be set as the featured image."
+msgstr "Actief: de eerste geselecteerde afbeelding wordt ingesteld als uitgelichte afbeelding."
 
-msgid "Advanced Custom Fields is niet beschikbaar. ACF-velden vullen is uitgeschakeld, maar featured-image-only kan nog worden gebruikt."
-msgstr "Advanced Custom Fields is niet beschikbaar. ACF-velden vullen is uitgeschakeld, maar featured-image-only kan nog worden gebruikt."
+msgid "Adjust selection"
+msgstr "Selectie aanpassen"
 
-msgid "afbeelding"
-msgstr "afbeelding"
+msgid "Advanced Custom Fields is not active or required ACF functions are unavailable."
+msgstr "Advanced Custom Fields is niet actief of vereiste ACF-functies zijn niet beschikbaar."
 
-msgid "Afbeelding"
-msgstr "Afbeelding"
+msgid "After that you can directly set the featured image."
+msgstr "Daarna kun je direct de uitgelichte afbeelding instellen."
 
-msgid "Afbeelding groter bekijken"
-msgstr "Afbeelding groter bekijken"
+msgid "Already has image"
+msgstr "Heeft al een afbeelding"
 
-msgid "Afbeelding kiezen voor"
-msgstr "Afbeelding kiezen voor"
+msgid "Already undone"
+msgstr "Al ongedaan gemaakt"
 
-msgid "afbeeldingen"
-msgstr "afbeeldingen"
-
-msgid "Afbeeldingen gebruikt"
-msgstr "Afbeeldingen gebruikt"
-
-msgid "Afbeeldingen invullen"
-msgstr "Afbeeldingen invullen"
-
-msgid "Afbeeldingen kiezen"
-msgstr "Afbeeldingen kiezen"
-
-msgid "Afbeeldingen klaar voor koppeling"
-msgstr "Afbeeldingen klaar voor koppeling"
-
-msgid "Afbeeldingen nu invullen?"
-msgstr "Afbeeldingen nu invullen?"
-
-msgid "Afbeeldingsvoorbeeld"
-msgstr "Afbeeldingsvoorbeeld"
-
-msgid "Alle lege velden selecteren"
-msgstr "Alle lege velden selecteren"
-
-msgid "Alleen geselecteerde velden"
-msgstr "Alleen geselecteerde velden"
-
-msgid "Alleen lege velden"
-msgstr "Alleen lege velden"
-
-msgid "Alleen overschrijvingen"
-msgstr "Alleen overschrijvingen"
-
-msgid "Alleen zonder gekoppelde afbeelding"
-msgstr "Alleen zonder gekoppelde afbeelding"
-
-msgid "Alles deselecteren"
-msgstr "Alles deselecteren"
-
-msgid "Alles selecteren"
-msgstr "Alles selecteren"
-
-msgid "Alles tonen"
-msgstr "Alles tonen"
-
-msgid "Alles was al ingevuld. Er zijn geen velden aangepast."
-msgstr "Alles was al ingevuld. Er zijn geen velden aangepast."
-
-msgid "Alles ziet er goed uit. Er zijn geen fouten of overgeslagen velden."
-msgstr "Alles ziet er goed uit. Er zijn geen fouten of overgeslagen velden."
-
-msgid "Annuleren"
-msgstr "Annuleren"
-
-msgid "Attachment-ID's moeten als lijst worden aangeleverd."
-msgstr "Attachment-ID's moeten als lijst worden aangeleverd."
-
-msgid "Automatisch / geen handmatige keuze"
-msgstr "Automatisch / geen handmatige keuze"
-
-msgid "Batchmodus actief"
-msgstr "Batchmodus actief"
-
-msgid "Batchmodus waarschuwing"
-msgstr "Batchmodus waarschuwing"
-
-msgid "Berichten"
-msgstr "Berichten"
-
-msgid "Beschikbare doelen"
-msgstr "Beschikbare doelen"
-
-msgid "Beschikbare posts"
-msgstr "Beschikbare posts"
-
-msgid "Bestaande afbeeldingen behouden"
-msgstr "Bestaande afbeeldingen behouden"
-
-msgid "Bestaande afbeeldingsvelden kunnen worden overschreven."
-msgstr "Bestaande afbeeldingsvelden kunnen worden overschreven."
-
-msgid "Bestaande afbeeldingsvelden worden overschreven."
-msgstr "Bestaande afbeeldingsvelden worden overschreven."
-
-msgid "Bijlage-ID %d is geen afbeelding."
+msgid "Attachment ID %d is not an image."
 msgstr "Bijlage-ID %d is geen afbeelding."
 
-msgid "Categorieën"
+msgid "Attachment IDs must be provided as a list."
+msgstr "Bijlage-ID's moeten als lijst worden aangeleverd."
+
+msgid "Audit log"
+msgstr "Auditlog"
+
+msgid "Automatic / no manual choice"
+msgstr "Automatisch / geen handmatige keuze"
+
+msgid "Available for original user"
+msgstr "Beschikbaar voor oorspronkelijke gebruiker"
+
+msgid "Available posts"
+msgstr "Beschikbare berichten"
+
+msgid "Available target"
+msgstr "Beschikbaar doel"
+
+msgid "Available targets"
+msgstr "Beschikbare doelen"
+
+msgid "Available to undo"
+msgstr "Beschikbaar om ongedaan te maken"
+
+msgid "Batch mode active"
+msgstr "Batchmodus actief"
+
+msgid "Batch mode warning"
+msgstr "Waarschuwing batchmodus"
+
+msgid "Briefly review what will be changed. After execution, you can roll back this run from the audit log."
+msgstr "Controleer kort wat er wordt gewijzigd. Na uitvoeren kun je deze run via het auditlog ongedaan maken."
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "Categories"
 msgstr "Categorieën"
 
-msgid "Concepten selecteren"
-msgstr "Concepten selecteren"
+msgid "Changes"
+msgstr "Wijzigingen"
+
+msgid "Check"
+msgstr "Controleren"
+
+msgid "Check mapping"
+msgstr "Koppeling controleren"
+
+msgid "Check required"
+msgstr "Controle nodig"
+
+msgid "Check the featured image before applying changes."
+msgstr "Controleer de uitgelichte afbeelding voordat je wijzigingen uitvoert."
+
+msgid "Check whether this content has ACF image fields. If the image is directly inside a group, enable ACF groups."
+msgstr "Controleer of deze content ACF Image fields heeft. Staat de afbeelding direct in een groep, zet dan ACF-groepen aan."
+
+msgid "Choose a content type and select one or more items. In featured-image-only mode, only items that support featured images are shown."
+msgstr "Kies een contenttype en selecteer een of meer items. In de modus alleen uitgelichte afbeelding worden alleen items getoond die uitgelichte afbeeldingen ondersteunen."
+
+msgid "Choose a content type that supports featured images."
+msgstr "Kies een contenttype dat uitgelichte afbeeldingen ondersteunt."
+
+msgid "Choose another filter to see more rows."
+msgstr "Kies een ander filter om meer rijen te zien."
+
+msgid "Choose another selection"
+msgstr "Andere selectie kiezen"
+
+msgid "Choose content"
+msgstr "Content kiezen"
+
+msgid "Choose content and fields first. Then the proposed mappings are shown here."
+msgstr "Kies eerst content en velden. Daarna worden de voorgestelde koppelingen hier getoond."
+
+msgid "Choose fields"
+msgstr "Velden kiezen"
+
+msgid "Choose fields and images first to automatically match by file name."
+msgstr "Kies eerst velden en afbeeldingen om automatisch op bestandsnaam te koppelen."
+
+msgid "Choose image for"
+msgstr "Afbeelding kiezen voor"
+
+msgid "Choose images"
+msgstr "Afbeeldingen kiezen"
+
+msgid "Choose images from the Media Library. The order determines the automatic mapping to the selected fields."
+msgstr "Kies afbeeldingen uit de mediabibliotheek. De volgorde bepaalt de automatische koppeling aan de geselecteerde velden."
+
+msgid "Choose the image that will be used as the featured image."
+msgstr "Kies de afbeelding die als uitgelichte afbeelding wordt gebruikt."
+
+msgid "Clear selection"
+msgstr "Selectie wissen"
+
+msgid "Close"
+msgstr "Sluiten"
 
 msgid "Content"
 msgstr "Content"
 
-msgid "Content kiezen"
-msgstr "Content kiezen"
+msgid "Content selection actions"
+msgstr "Acties voor contentselectie"
 
-msgid "Content selectie-acties"
-msgstr "Content selectie-acties"
-
-msgid "Contenttype"
+msgid "Content type"
 msgstr "Contenttype"
 
-msgid "Controle"
-msgstr "Controle"
+msgid "Create a preview before downloading a CSV."
+msgstr "Maak eerst een voorbeeld voordat je een CSV downloadt."
 
-msgid "Controle nodig"
-msgstr "Controle nodig"
+msgid "Create a preview first to check the mapping before applying changes."
+msgstr "Maak eerst een voorbeeld om de koppeling te controleren voordat je wijzigingen uitvoert."
 
-msgid "Controleer de voorgestelde koppelingen voordat je wijzigingen uitvoert."
-msgstr "Controleer de voorgestelde koppelingen voordat je wijzigingen uitvoert."
+msgid "Create a preview to check what will happen to the featured image."
+msgstr "Maak een voorbeeld om te controleren wat er met de uitgelichte afbeelding gebeurt."
 
-msgid "Controleer kort wat er wordt aangepast. Na uitvoering kun je deze run vanuit het auditlog terugdraaien."
-msgstr "Controleer kort wat er wordt aangepast. Na uitvoering kun je deze run vanuit het auditlog terugdraaien."
+msgid "Create another preview"
+msgstr "Nieuw voorbeeld maken"
 
-msgid "Controleer of deze content ACF Image fields heeft. Staat de afbeelding direct in een group, zet dan ACF-groepen aan."
-msgstr "Controleer of deze content ACF Image fields heeft. Staat de afbeelding direct in een group, zet dan ACF-groepen aan."
+msgid "Create preview"
+msgstr "Voorbeeld maken"
 
-msgid "Controleer per veld welke afbeelding wordt gekoppeld voordat je uitvoert."
-msgstr "Controleer per veld welke afbeelding wordt gekoppeld voordat je uitvoert."
-
-msgid "CSV downloaden"
-msgstr "CSV downloaden"
-
-msgid "Daarna tonen we hier alleen de afbeeldingsvelden die veilig gevuld kunnen worden."
-msgstr "Daarna tonen we hier alleen de afbeeldingsvelden die veilig gevuld kunnen worden."
-
-msgid "De geselecteerde ACF Image fields zijn niet beschikbaar voor dit item."
-msgstr "De geselecteerde ACF Image fields zijn niet beschikbaar voor dit item."
-
-msgid "De geselecteerde koppelingen zijn verwerkt. Je kunt deze run vanuit het auditlog terugdraaien."
-msgstr "De geselecteerde koppelingen zijn verwerkt. Je kunt deze run vanuit het auditlog terugdraaien."
-
-msgid "De geselecteerde uitgelichte afbeelding is geen geldige afbeelding."
-msgstr "De geselecteerde uitgelichte afbeelding is geen geldige afbeelding."
-
-msgid "De preview is verouderd. Vernieuw de preview voordat je uitvoert."
-msgstr "De preview is verouderd. Vernieuw de preview voordat je uitvoert."
-
-msgid "De uitgelichte afbeelding kon voor één of meer items niet worden hersteld."
-msgstr "De uitgelichte afbeelding kon voor één of meer items niet worden hersteld."
-
-msgid "De uitvoering is klaar. Controleer hieronder de belangrijkste uitkomst en vervolgactie."
-msgstr "De uitvoering is klaar. Controleer hieronder de belangrijkste uitkomst en vervolgactie."
-
-msgid "De WordPress Media Library kon niet worden geladen."
-msgstr "De WordPress Media Library kon niet worden geladen."
-
-msgid "Dit veld heeft al een waarde."
-msgstr "Dit veld heeft al een waarde."
-
-msgid "Eerdere actie"
-msgstr "Eerdere actie"
-
-msgid "Er ging iets mis. Probeer opnieuw of controleer de invoer."
-msgstr "Er ging iets mis. Probeer opnieuw of controleer de invoer."
-
-msgid "Er is geen rollbackdata gevonden voor de laatste run."
-msgstr "Er is geen rollbackdata gevonden voor de laatste run."
-
-msgid "Er zijn aandachtspunten gevonden. Controleer de melding hieronder."
-msgstr "Er zijn aandachtspunten gevonden. Controleer de melding hieronder."
-
-msgid "Er zijn geen geldige afbeeldingen geselecteerd."
-msgstr "Er zijn geen geldige afbeeldingen geselecteerd."
-
-msgid "Er zijn geen geschikte ACF Image fields gevonden voor dit item."
-msgstr "Er zijn geen geschikte ACF Image fields gevonden voor dit item."
-
-msgid "Er zijn geen nieuwe wijzigingen uitgevoerd. Controleer hieronder de korte samenvatting."
-msgstr "Er zijn geen nieuwe wijzigingen uitgevoerd. Controleer hieronder de korte samenvatting."
-
-msgid "Er zijn meer automatische ACF-afbeeldingen dan automatisch te vullen ACF-velden. Extra afbeeldingen worden overgeslagen tenzij je handmatig mapt."
-msgstr "Er zijn meer automatische ACF-afbeeldingen dan automatisch te vullen ACF-velden. Extra afbeeldingen worden overgeslagen tenzij je handmatig mapt."
-
-msgid "Er zijn minder automatische ACF-afbeeldingen dan automatisch te vullen velden. Niet alle velden krijgen automatisch een afbeelding."
-msgstr "Er zijn minder automatische ACF-afbeeldingen dan automatisch te vullen velden. Niet alle velden krijgen automatisch een afbeelding."
-
-msgid "Even geduld. De interface blijft geblokkeerd tot de huidige data klaar is."
-msgstr "Even geduld. De interface blijft geblokkeerd tot de huidige data klaar is."
-
-msgid "Extra afbeeldingen"
-msgstr "Extra afbeeldingen"
-
-msgid "Eén of meer ACF Image fields konden niet worden hersteld."
-msgstr "Eén of meer ACF Image fields konden niet worden hersteld."
-
-msgid "Filter, match of exporteer de voorgestelde koppelingen."
-msgstr "Filter, match of exporteer de voorgestelde koppelingen."
-
-msgid "Fouten"
-msgstr "Fouten"
-
-msgid "Ga naar eerdere stappen"
-msgstr "Ga naar eerdere stappen"
-
-msgid "Ga naar stap"
-msgstr "Ga naar stap"
-
-msgid "Gebruik de eerste gekozen afbeelding als featured image."
-msgstr "Gebruik de eerste gekozen afbeelding als featured image."
-
-msgid "Gebruik dit wanneer afbeeldingen direct binnen een ACF Group staan."
-msgstr "Gebruik dit wanneer afbeeldingen direct binnen een ACF Group staan."
-
-msgid "Gebruik geselecteerde afbeeldingen"
-msgstr "Gebruik geselecteerde afbeeldingen"
-
-msgid "Geen ACF Image fields gevonden voor dit contenttype. De uitgelichte afbeelding kan wel worden gevuld."
-msgstr "Geen ACF Image fields gevonden voor dit contenttype. De uitgelichte afbeelding kan wel worden gevuld."
-
-msgid "Geen ACF-afbeeldingsvelden gevonden"
-msgstr "Geen ACF-afbeeldingsvelden gevonden"
-
-msgid "Geen bewerkbare items gevonden. Kies een ander contenttype of pas je zoekterm aan."
-msgstr "Geen bewerkbare items gevonden. Kies een ander contenttype of pas je zoekterm aan."
-
-msgid "Geen geschikte afbeeldingsvelden"
-msgstr "Geen geschikte afbeeldingsvelden"
-
-msgid "Geen koppelingen binnen dit filter"
-msgstr "Geen koppelingen binnen dit filter"
-
-msgid "Geen wijziging nodig."
-msgstr "Geen wijziging nodig."
-
-msgid "Geen wijzigingen nodig"
-msgstr "Geen wijzigingen nodig"
-
-msgid "Gegevens laden"
-msgstr "Gegevens laden"
-
-msgid "geladen"
-msgstr "geladen"
-
-msgid "Gepubliceerd selecteren"
-msgstr "Gepubliceerd selecteren"
-
-msgid "Geselecteerd"
-msgstr "Geselecteerd"
-
-msgid "geselecteerd"
-msgstr "geselecteerd"
-
-msgid "Geselecteerde afbeeldingen"
-msgstr "Geselecteerde afbeeldingen"
-
-msgid "geselecteerde item(s)"
-msgstr "geselecteerde item(s)"
-
-msgid "Geselecteerde items"
-msgstr "Geselecteerde items"
-
-msgid "geselecteerde veld(en)"
-msgstr "geselecteerde veld(en)"
-
-msgid "Geselecteerde velden niet beschikbaar"
-msgstr "Geselecteerde velden niet beschikbaar"
-
-msgid "Gevuld"
-msgstr "Gevuld"
-
-msgid "Gevulde ACF-velden worden niet meegeteld zolang vervangen uit staat. Automatische afbeeldingen worden alleen aan lege geselecteerde velden gekoppeld."
-msgstr "Gevulde ACF-velden worden niet meegeteld zolang vervangen uit staat. Automatische afbeeldingen worden alleen aan lege geselecteerde velden gekoppeld."
-
-msgid "Handmatige keuze"
-msgstr "Handmatige keuze"
-
-msgid "Heeft al afbeelding"
-msgstr "Heeft al afbeelding"
-
-msgid "Huidig"
+msgid "Current"
 msgstr "Huidig"
 
-msgid "Huidige afbeelding bekijken"
-msgstr "Huidige afbeelding bekijken"
+msgid "Date"
+msgstr "Datum"
 
-msgid "ID %d is geen bijlage."
+msgid "Deselect all"
+msgstr "Alles deselecteren"
+
+msgid "Down"
+msgstr "Omlaag"
+
+msgid "Download CSV"
+msgstr "CSV downloaden"
+
+msgid "Empty"
+msgstr "Leeg"
+
+msgid "Empty fields only"
+msgstr "Alleen lege velden"
+
+msgid "Errors"
+msgstr "Fouten"
+
+msgid "Every completed run can be undone from the audit log while its rollback data is still available."
+msgstr "Elke uitgevoerde run kan via het auditlog ongedaan worden gemaakt zolang de rollbackdata beschikbaar is."
+
+msgid "Everything looks good. There are no errors or skipped items."
+msgstr "Alles ziet er goed uit. Er zijn geen fouten of overgeslagen items."
+
+msgid "Everything was already filled. No fields were changed."
+msgstr "Alles was al gevuld. Er zijn geen velden gewijzigd."
+
+msgid "Existing featured images can be overwritten."
+msgstr "Bestaande uitgelichte afbeeldingen kunnen worden overschreven."
+
+msgid "Existing featured images will be overwritten."
+msgstr "Bestaande uitgelichte afbeeldingen worden overschreven."
+
+msgid "Existing image fields can be overwritten."
+msgstr "Bestaande image fields kunnen worden overschreven."
+
+msgid "Existing image fields will be overwritten."
+msgstr "Bestaande image fields worden overschreven."
+
+msgid "Extra images"
+msgstr "Extra afbeeldingen"
+
+msgid "Featured image"
+msgstr "Uitgelichte afbeelding"
+
+msgid "Featured image already contains this image."
+msgstr "De uitgelichte afbeelding bevat deze afbeelding al."
+
+msgid "Featured image already has a value."
+msgstr "De uitgelichte afbeelding heeft al een waarde."
+
+msgid "Featured image available"
+msgstr "Uitgelichte afbeelding beschikbaar"
+
+msgid "Featured image could not be updated."
+msgstr "De uitgelichte afbeelding kon niet worden bijgewerkt."
+
+msgid "Featured image is already correct"
+msgstr "Uitgelichte afbeelding klopt al"
+
+msgid "Featured image only"
+msgstr "Alleen uitgelichte afbeelding"
+
+msgid "Featured-image-only mode uses only the first selected image. Extra images are skipped."
+msgstr "De modus alleen uitgelichte afbeelding gebruikt alleen de eerste geselecteerde afbeelding. Extra afbeeldingen worden overgeslagen."
+
+msgid "Field"
+msgstr "Veld"
+
+msgid "Field \"%1$s\" could not be updated with image #%2$d."
+msgstr "Veld \"%1$s\" kon niet worden bijgewerkt met afbeelding #%2$d."
+
+msgid "Field already contains this image."
+msgstr "Veld bevat deze afbeelding al."
+
+msgid "Field group"
+msgstr "Veldgroep"
+
+msgid "Field options"
+msgstr "Veldopties"
+
+msgid "Field undone"
+msgstr "Veld ongedaan gemaakt"
+
+msgid "Fields"
+msgstr "Velden"
+
+msgid "Fill"
+msgstr "Vullen"
+
+msgid "Fill featured image"
+msgstr "Uitgelichte afbeelding vullen"
+
+msgid "Fill images"
+msgstr "Afbeeldingen vullen"
+
+msgid "Filled"
+msgstr "Gevuld"
+
+msgid "Filled ACF fields are not counted while replace is off. Automatic images are only mapped to empty selected fields."
+msgstr "Gevulde ACF-velden tellen niet mee zolang vervangen uit staat. Automatische afbeeldingen worden alleen aan lege geselecteerde velden gekoppeld."
+
+msgid "Filter"
+msgstr "Filteren"
+
+msgid "Filter, match, or export the proposed mappings."
+msgstr "Filter, koppel of exporteer de voorgestelde koppelingen."
+
+msgid "Final check before running changes"
+msgstr "Laatste controle voor uitvoeren"
+
+msgid "First choose the content type, then select one or more items. Only supported post types and taxonomies with usable ACF image fields are shown."
+msgstr "Kies eerst het contenttype en selecteer daarna een of meer items. Alleen ondersteunde berichttypen en taxonomieën met bruikbare ACF Image fields worden getoond."
+
+msgid "First select the content you want to update, then choose the ACF image fields or featured image, select images, and review the preview before running changes."
+msgstr "Selecteer eerst de content die je wilt bijwerken, kies daarna de ACF Image fields of uitgelichte afbeelding, selecteer afbeeldingen en controleer het voorbeeld voordat je uitvoert."
+
+msgid "Go to earlier steps"
+msgstr "Ga naar eerdere stappen"
+
+msgid "Go to step"
+msgstr "Ga naar stap"
+
+msgid "How does this work?"
+msgstr "Hoe werkt dit?"
+
+msgid "ID %d is not an attachment."
 msgstr "ID %d is geen bijlage."
 
-msgid "item"
-msgstr "item"
+msgid "Image"
+msgstr "Afbeelding"
+
+msgid "Image preview"
+msgstr "Afbeeldingsvoorbeeld"
+
+msgid "Images ready for mapping"
+msgstr "Afbeeldingen klaar om te koppelen"
+
+msgid "Images used"
+msgstr "Gebruikte afbeeldingen"
+
+msgid "Include ACF groups"
+msgstr "ACF-groepen meenemen"
+
+msgid "Invalid or inaccessible content item."
+msgstr "Ongeldig of ontoegankelijk contentitem."
+
+msgid "Invalid or unsupported content type."
+msgstr "Ongeldig of niet-ondersteund contenttype."
+
+msgid "Invalid or unsupported taxonomy."
+msgstr "Ongeldige of niet-ondersteunde taxonomie."
 
 msgid "Item #%d"
 msgstr "Item #%d"
 
-msgid "item geselecteerd"
-msgstr "item geselecteerd"
-
-msgid "item(s) teruggedraaid."
-msgstr "item(s) teruggedraaid."
-
-msgid "items"
-msgstr "items"
-
-msgid "Items gecontroleerd"
+msgid "Items checked"
 msgstr "Items gecontroleerd"
 
-msgid "items geselecteerd"
-msgstr "items geselecteerd"
+msgid "Items needing attention"
+msgstr "Items met aandachtspunt"
 
-msgid "Je hebt geen toestemming meer om één of meer items terug te draaien."
-msgstr "Je hebt geen toestemming meer om één of meer items terug te draaien."
+msgid "Items needing attention were found. Check the message below."
+msgstr "Er zijn items met aandachtspunten gevonden. Controleer de melding hieronder."
 
-msgid "Je hebt geen toestemming meer om één of meer vorige ACF-afbeeldingen te herstellen."
-msgstr "Je hebt geen toestemming meer om één of meer vorige ACF-afbeeldingen te herstellen."
+msgid "Keep existing images"
+msgstr "Bestaande afbeeldingen behouden"
 
-msgid "Je hebt geen toestemming meer om één of meer vorige uitgelichte afbeeldingen te herstellen."
-msgstr "Je hebt geen toestemming meer om één of meer vorige uitgelichte afbeeldingen te herstellen."
-
-msgid "Je hebt geen toestemming om acties terug te draaien."
-msgstr "Je hebt geen toestemming om acties terug te draaien."
-
-msgid "Je hebt geen toestemming om bijlage-ID %d te gebruiken."
-msgstr "Je hebt geen toestemming om bijlage-ID %d te gebruiken."
-
-msgid "Je hebt geen toestemming om afbeeldingen in te vullen."
-msgstr "Je hebt geen toestemming om afbeeldingen in te vullen."
-
-msgid "Je hebt geen toestemming om deze pagina te openen."
-msgstr "Je hebt geen toestemming om deze pagina te openen."
-
-msgid "Je hebt geen toestemming om deze taxonomie te bekijken."
-msgstr "Je hebt geen toestemming om deze taxonomie te bekijken."
-
-msgid "Je hebt geen toestemming om dit post type te bekijken."
-msgstr "Je hebt geen toestemming om dit post type te bekijken."
-
-msgid "Je hebt geen toestemming om het auditlog te bekijken."
-msgstr "Je hebt geen toestemming om het auditlog te bekijken."
-
-msgid "Je kunt de volgorde aanpassen of afbeeldingen vervangen voordat je de koppeling controleert."
-msgstr "Je kunt de volgorde aanpassen of afbeeldingen vervangen voordat je de koppeling controleert."
-
-msgid "Je kunt maximaal %d afbeeldingen per run selecteren."
-msgstr "Je kunt maximaal %d afbeeldingen per run selecteren."
-
-msgid "Je kunt maximaal %d items per run verwerken."
-msgstr "Je kunt maximaal %d items per run verwerken."
-
-msgid "Je past meerdere posts tegelijk aan. Controleer extra goed of deze posts dezelfde ACF-velden gebruiken."
-msgstr "Je past meerdere posts tegelijk aan. Controleer extra goed of deze posts dezelfde ACF-velden gebruiken."
-
-msgid "Kies afbeeldingen uit de Media Library. De volgorde bepaalt de automatische koppeling met de geselecteerde velden."
-msgstr "Kies afbeeldingen uit de Media Library. De volgorde bepaalt de automatische koppeling met de geselecteerde velden."
-
-msgid "Kies een ander filter om meer regels te zien."
-msgstr "Kies een ander filter om meer regels te zien."
-
-msgid "Kies eerst content en velden. Daarna tonen we hier de voorgestelde koppelingen."
-msgstr "Kies eerst content en velden. Daarna tonen we hier de voorgestelde koppelingen."
-
-msgid "Kies eerst het contenttype en selecteer daarna één of meerdere items. Alleen ondersteunde post types en taxonomieën met bruikbare ACF-afbeeldingsvelden worden getoond."
-msgstr "Kies eerst het contenttype en selecteer daarna één of meerdere items. Alleen ondersteunde post types en taxonomieën met bruikbare ACF-afbeeldingsvelden worden getoond."
-
-msgid "Kies eerst velden en afbeeldingen om automatisch op bestandsnaam te matchen."
-msgstr "Kies eerst velden en afbeeldingen om automatisch op bestandsnaam te matchen."
-
-msgid "Koppeling controleren"
-msgstr "Koppeling controleren"
-
-msgid "Koppelingen"
-msgstr "Koppelingen"
-
-msgid "Laatste actie"
+msgid "Last action"
 msgstr "Laatste actie"
 
-msgid "Run opgeslagen. Terugdraaien is beschikbaar vanuit het auditlog."
-msgstr "Run opgeslagen. Terugdraaien is beschikbaar vanuit het auditlog."
-
-msgid "Terugdraaien is beschikbaar na uitvoeren."
-msgstr "Terugdraaien is beschikbaar na uitvoeren."
-
-msgid "Laatste controle vóór uitvoering"
-msgstr "Laatste controle vóór uitvoering"
-
-msgid "Leeg"
-msgstr "Leeg"
-
-msgid "Maak eerst een preview om de koppeling te controleren voordat je wijzigingen uitvoert."
-msgstr "Maak eerst een preview om de koppeling te controleren voordat je wijzigingen uitvoert."
-
-msgid "Maak eerst een preview voordat je een CSV kunt downloaden."
-msgstr "Maak eerst een preview voordat je een CSV kunt downloaden."
-
-msgid "Match op bestandsnaam"
-msgstr "Match op bestandsnaam"
-
-msgid "Media Library openen"
-msgstr "Media Library openen"
-
-msgid "Meer laden"
+msgid "Load more"
 msgstr "Meer laden"
 
-msgid "Niet beschikbaar voor dit contenttype."
-msgstr "Niet beschikbaar voor dit contenttype."
+msgid "Loading data"
+msgstr "Data laden"
 
-msgid "Niet geselecteerd"
-msgstr "Niet geselecteerd"
+msgid "Manual choice"
+msgstr "Handmatige keuze"
 
-msgid "Nieuwe afbeelding"
+msgid "Mappings"
+msgstr "Koppelingen"
+
+msgid "Match by file name"
+msgstr "Koppelen op bestandsnaam"
+
+msgid "New image"
 msgstr "Nieuwe afbeelding"
 
-msgid "Nieuwe afbeelding groter bekijken"
-msgstr "Nieuwe afbeelding groter bekijken"
+msgid "Next step"
+msgstr "Volgende stap"
 
-msgid "Nieuwe selectie starten"
-msgstr "Nieuwe selectie starten"
+msgid "Next, choose an image. Only the featured image will be changed."
+msgstr "Kies daarna een afbeelding. Alleen de uitgelichte afbeelding wordt gewijzigd."
 
-msgid "Nog een preview maken"
-msgstr "Nog een preview maken"
+msgid "No ACF image fields found"
+msgstr "Geen ACF Image fields gevonden"
 
-msgid "Nog geen actiegeschiedenis beschikbaar."
+msgid "No ACF image fields were found for this content. Only the featured image will be processed."
+msgstr "Er zijn geen ACF Image fields gevonden voor deze content. Alleen de uitgelichte afbeelding wordt verwerkt."
+
+msgid "No action history available yet."
 msgstr "Nog geen actiegeschiedenis beschikbaar."
 
-msgid "Nog geen afbeelding gekoppeld"
+msgid "No change needed"
+msgstr "Geen wijziging nodig"
+
+msgid "No change required."
+msgstr "Geen wijziging nodig."
+
+msgid "No changes required"
+msgstr "Geen wijzigingen nodig"
+
+msgid "No editable items found. Choose another content type or adjust your search term."
+msgstr "Geen bewerkbare items gevonden. Kies een ander contenttype of pas je zoekterm aan."
+
+msgid "No image is selected for this field."
+msgstr "Er is geen afbeelding geselecteerd voor dit veld."
+
+msgid "No image linked yet"
 msgstr "Nog geen afbeelding gekoppeld"
 
-msgid "Nog geen afbeeldingen gekozen"
+msgid "No images chosen yet"
 msgstr "Nog geen afbeeldingen gekozen"
 
-msgid "Nog leeg"
-msgstr "Nog leeg"
+msgid "No mappings within this filter"
+msgstr "Geen koppelingen binnen dit filter"
 
-msgid "Nog niets om te controleren"
-msgstr "Nog niets om te controleren"
+msgid "No new changes were made. Review the short summary below."
+msgstr "Er zijn geen nieuwe wijzigingen gedaan. Bekijk de korte samenvatting hieronder."
 
-msgid "Normaal veld"
+msgid "No new fields to fill"
+msgstr "Geen nieuwe velden om te vullen"
+
+msgid "No rollback data was found for this run."
+msgstr "Er is geen rollbackdata gevonden voor deze run."
+
+msgid "No suitable ACF image fields were found for this item."
+msgstr "Er zijn geen geschikte ACF Image fields gevonden voor dit item."
+
+msgid "No suitable image fields"
+msgstr "Geen geschikte image fields"
+
+msgid "No supported target available"
+msgstr "Geen ondersteund doel beschikbaar"
+
+msgid "No valid images were selected."
+msgstr "Er zijn geen geldige afbeeldingen geselecteerd."
+
+msgid "Normal field"
 msgstr "Normaal veld"
 
-msgid "Omhoog"
-msgstr "Omhoog"
+msgid "Not available for this content type."
+msgstr "Niet beschikbaar voor dit contenttype."
 
-msgid "Omlaag"
-msgstr "Omlaag"
+msgid "Not selected"
+msgstr "Niet geselecteerd"
 
-msgid "Ondersteund"
-msgstr "Ondersteund"
+msgid "Nothing to check yet"
+msgstr "Nog niets om te controleren"
 
-msgid "Ongeldig of niet-ondersteund contenttype."
-msgstr "Ongeldig of niet-ondersteund contenttype."
+msgid "Off by default. Enable only when existing images may intentionally be replaced."
+msgstr "Standaard uit. Zet alleen aan als bestaande afbeeldingen bewust vervangen mogen worden."
 
-msgid "Ongeldig of ontoegankelijk contentitem."
-msgstr "Ongeldig of ontoegankelijk contentitem."
+msgid "One or more ACF image fields could not be restored."
+msgstr "Een of meer ACF Image fields konden niet worden hersteld."
 
-msgid "Ongeldige of niet-ondersteunde taxonomie."
-msgstr "Ongeldige of niet-ondersteunde taxonomie."
+msgid "One or more selected items are not editable."
+msgstr "Een of meer geselecteerde items zijn niet bewerkbaar."
 
-msgid "Ongewijzigd"
-msgstr "Ongewijzigd"
+msgid "Only without linked image"
+msgstr "Alleen zonder gekoppelde afbeelding"
 
-msgid "Ongewijzigd of handmatig gekozen"
-msgstr "Ongewijzigd of handmatig gekozen"
+msgid "Open Media Library"
+msgstr "Mediabibliotheek openen"
 
-msgid "Overgeslagen"
-msgstr "Overgeslagen"
+msgid "Operation in progress"
+msgstr "Actie wordt uitgevoerd"
 
-msgid "Overschrijvingen"
-msgstr "Overschrijvingen"
+msgid "Overwrite"
+msgstr "Overschrijven"
 
-msgid "Pagina's"
-msgstr "Pagina's"
+msgid "Overwrites only"
+msgstr "Alleen overschrijvingen"
+
+msgid "Page %1$d of %2$d"
+msgstr "Pagina %1$d van %2$d"
+
+msgid "Please wait. The interface remains blocked until the current data is ready."
+msgstr "Even geduld. De interface blijft geblokkeerd tot de huidige data klaar is."
+
+msgid "Please wait. The interface remains blocked until the current operation is complete."
+msgstr "Even geduld. De interface blijft geblokkeerd tot de huidige actie klaar is."
+
+msgid "Posts"
+msgstr "Berichten"
 
 msgid "Preview"
-msgstr "Preview"
+msgstr "Voorbeeld"
 
-msgid "Preview maken"
-msgstr "Preview maken"
+msgid "Preview not created yet"
+msgstr "Voorbeeld nog niet gemaakt"
 
-msgid "Preview nog niet gemaakt"
-msgstr "Preview nog niet gemaakt"
+msgid "Preview outdated"
+msgstr "Voorbeeld verouderd"
 
-msgid "Preview vernieuwen"
-msgstr "Preview vernieuwen"
+msgid "Previous action"
+msgstr "Vorige actie"
 
-msgid "Preview verouderd"
-msgstr "Preview verouderd"
+msgid "Previous empty value restored."
+msgstr "Vorige lege waarde hersteld."
 
-msgid "Productcategorieën"
+msgid "Previous image restored:"
+msgstr "Vorige afbeelding hersteld:"
+
+msgid "Previous step"
+msgstr "Vorige stap"
+
+msgid "Processed change"
+msgstr "Verwerkte wijziging"
+
+msgid "Processed featured image"
+msgstr "Verwerkte uitgelichte afbeelding"
+
+msgid "Product categories"
 msgstr "Productcategorieën"
 
-msgid "Producten"
+msgid "Products"
 msgstr "Producten"
 
-msgid "Repeater, flexible content, gallery en clone worden overgeslagen."
-msgstr "Repeater, flexible content, gallery en clone worden overgeslagen."
+msgid "Refresh preview"
+msgstr "Voorbeeld vernieuwen"
 
-msgid "Resultaat"
+msgid "Remove"
+msgstr "Verwijderen"
+
+msgid "Repeater, flexible content, gallery and clone fields are skipped."
+msgstr "Repeater-, flexible content-, gallery- en clone fields worden overgeslagen."
+
+msgid "Replace enabled"
+msgstr "Vervangen aan"
+
+msgid "Replace existing images"
+msgstr "Bestaande afbeeldingen vervangen"
+
+msgid "Replace is enabled"
+msgstr "Vervangen staat aan"
+
+msgid "Replace is off by default, so existing images stay in place."
+msgstr "Vervangen staat standaard uit, zodat bestaande afbeeldingen blijven staan."
+
+msgid "Result"
 msgstr "Resultaat"
 
-msgid "Resultaatsamenvatting"
+msgid "Result summary"
 msgstr "Resultaatsamenvatting"
 
-msgid "Rollback"
-msgstr "Rollback"
+msgid "Review the proposed mappings before applying changes."
+msgstr "Controleer de voorgestelde koppelingen voordat je wijzigingen uitvoert."
 
-msgid "Rollbackstatus wordt gecontroleerd voordat je uitvoert."
-msgstr "Rollbackstatus wordt gecontroleerd voordat je uitvoert."
+msgid "Review which image is mapped to each field before running."
+msgstr "Controleer welke afbeelding aan elk veld is gekoppeld voordat je uitvoert."
 
-msgid "Samenvatting van deze actie"
-msgstr "Samenvatting van deze actie"
+msgid "Run"
+msgstr "Uitvoeren"
 
-msgid "Selecteer afbeeldingen"
-msgstr "Selecteer afbeeldingen"
+msgid "Run completed"
+msgstr "Run voltooid"
 
-msgid "Selecteer de afbeeldingen die straks automatisch aan de gekozen velden worden gekoppeld."
-msgstr "Selecteer de afbeeldingen die straks automatisch aan de gekozen velden worden gekoppeld."
+msgid "Run completed with items needing attention"
+msgstr "Run voltooid met aandachtspunten"
 
-msgid "Selecteer eerst content"
+msgid "Run saved. You can undo it from the audit log."
+msgstr "Run opgeslagen. Je kunt deze via het auditlog ongedaan maken."
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "Search by title..."
+msgstr "Zoeken op titel..."
+
+msgid "Select a content item that supports featured images."
+msgstr "Selecteer een contentitem dat uitgelichte afbeeldingen ondersteunt."
+
+msgid "Select all"
+msgstr "Alles selecteren"
+
+msgid "Select all empty fields"
+msgstr "Alle lege velden selecteren"
+
+msgid "Select at least one ACF image field or a content item that supports featured images."
+msgstr "Selecteer minimaal één ACF Image field of een contentitem dat uitgelichte afbeeldingen ondersteunt."
+
+msgid "Select at least one editable item."
+msgstr "Selecteer minimaal één bewerkbaar item."
+
+msgid "Select content first"
 msgstr "Selecteer eerst content"
 
-msgid "Selecteer minstens één ACF Image field of een contentitem dat uitgelichte afbeeldingen ondersteunt."
-msgstr "Selecteer minstens één ACF Image field of een contentitem dat uitgelichte afbeeldingen ondersteunt."
+msgid "Select drafts"
+msgstr "Concepten selecteren"
 
-msgid "Selecteer minstens één bewerkbaar item."
-msgstr "Selecteer minstens één bewerkbaar item."
+msgid "Select images"
+msgstr "Afbeeldingen selecteren"
 
-msgid "Selecteer welke afbeeldingsvelden automatisch gevuld mogen worden."
-msgstr "Selecteer welke afbeeldingsvelden automatisch gevuld mogen worden."
+msgid "Select published"
+msgstr "Gepubliceerd selecteren"
 
-msgid "Selectie wissen"
-msgstr "Selectie wissen"
+msgid "Select the content, then choose the image that should be set as the featured image."
+msgstr "Selecteer de content en kies daarna de afbeelding die als uitgelichte afbeelding moet worden ingesteld."
 
-msgid "Standaard aan. Zet alleen uit als bestaande afbeeldingen moeten blijven staan."
-msgstr "Standaard aan. Zet alleen uit als bestaande afbeeldingen moeten blijven staan."
+msgid "Select the images that will be mapped automatically to the chosen fields."
+msgstr "Selecteer de afbeeldingen die automatisch aan de gekozen velden worden gekoppeld."
 
-msgid "Stapnavigatie"
-msgstr "Stapnavigatie"
+msgid "Select visible items"
+msgstr "Zichtbare items selecteren"
+
+msgid "Select which image fields may be filled automatically."
+msgstr "Selecteer welke image fields automatisch gevuld mogen worden."
+
+msgid "Selected"
+msgstr "Geselecteerd"
+
+msgid "Selected fields only"
+msgstr "Alleen geselecteerde velden"
+
+msgid "Selected fields unavailable"
+msgstr "Geselecteerde velden niet beschikbaar"
+
+msgid "Selected images"
+msgstr "Geselecteerde afbeeldingen"
+
+msgid "Set"
+msgstr "Instellen"
+
+msgid "Set featured image"
+msgstr "Uitgelichte afbeelding instellen"
+
+msgid "Show all"
+msgstr "Alles tonen"
+
+msgid "Show mappings"
+msgstr "Koppelingen tonen"
+
+msgid "Skipped"
+msgstr "Overgeslagen"
+
+msgid "Something went wrong. Try again or check the input."
+msgstr "Er ging iets mis. Probeer opnieuw of controleer de invoer."
+
+msgid "Start new selection"
+msgstr "Nieuwe selectie starten"
+
+msgid "Start over"
+msgstr "Opnieuw beginnen"
 
 msgid "Status"
 msgstr "Status"
 
-msgid "Te vullen velden"
-msgstr "Te vullen velden"
+msgid "Step navigation"
+msgstr "Stapnavigatie"
 
-msgid "Technische details"
-msgstr "Technische details"
+msgid "Still empty"
+msgstr "Nog leeg"
 
-msgid "Terugdraaien"
-msgstr "Terugdraaien"
+msgid "Summary of this action"
+msgstr "Samenvatting van deze actie"
 
-msgid "Toon koppelingen"
-msgstr "Toon koppelingen"
+msgid "Supported"
+msgstr "Ondersteund"
 
-msgid "Uitgelichte afbeelding"
-msgstr "Uitgelichte afbeelding"
-
-msgid "Uitgelichte afbeelding bevat deze afbeelding al."
-msgstr "Uitgelichte afbeelding bevat deze afbeelding al."
-
-msgid "Uitgelichte afbeelding heeft al een waarde."
-msgstr "Uitgelichte afbeelding heeft al een waarde."
-
-msgid "Uitgelichte afbeelding kon niet worden bijgewerkt."
-msgstr "Uitgelichte afbeelding kon niet worden bijgewerkt."
-
-msgid "Uitgelichte afbeelding vullen"
-msgstr "Uitgelichte afbeelding vullen"
-
-msgid "Uitvoeren"
-msgstr "Uitvoeren"
-
-msgid "Uitvoering afgerond"
-msgstr "Uitvoering afgerond"
-
-msgid "Uitvoering afgerond met aandachtspunten"
-msgstr "Uitvoering afgerond met aandachtspunten"
-
-msgid "van"
-msgstr "van"
-
-msgid "veld"
-msgstr "veld"
-
-msgid "Veld"
-msgstr "Veld"
-
-msgid "Veld \"%1$s\" kon niet worden bijgewerkt met afbeelding #%2$d."
-msgstr "Veld \"%1$s\" kon niet worden bijgewerkt met afbeelding #%2$d."
-
-msgid "Veld bevat deze afbeelding al."
-msgstr "Veld bevat deze afbeelding al."
-
-msgid "Veld teruggedraaid"
-msgstr "Veld teruggedraaid"
-
-msgid "Velden"
-msgstr "Velden"
-
-msgid "velden"
-msgstr "velden"
-
-msgid "Velden kiezen"
-msgstr "Velden kiezen"
-
-msgid "Veldgroep"
-msgstr "Veldgroep"
-
-msgid "Veldopties"
-msgstr "Veldopties"
-
-msgid "Vervangen ingeschakeld"
-msgstr "Vervangen ingeschakeld"
-
-msgid "Vervangen is ingeschakeld"
-msgstr "Vervangen is ingeschakeld"
-
-msgid "Verwerkte wijziging"
-msgstr "Verwerkte wijziging"
-
-msgid "Verwijderen"
-msgstr "Verwijderen"
-
-msgid "Volgende stap"
-msgstr "Volgende stap"
-
-msgid "Voor dit veld is geen afbeelding geselecteerd."
-msgstr "Voor dit veld is geen afbeelding geselecteerd."
-
-msgid "Vorige afbeelding hersteld:"
-msgstr "Vorige afbeelding hersteld:"
-
-msgid "Vorige lege waarde hersteld."
-msgstr "Vorige lege waarde hersteld."
-
-msgid "Vorige stap"
-msgstr "Vorige stap"
-
-msgid "wijziging(en) klaar"
-msgstr "wijziging(en) klaar"
-
-msgid "wijzigingen"
-msgstr "wijzigingen"
-
-msgid "Wijzigingen"
-msgstr "Wijzigingen"
-
-msgid "Wordt gevuld"
-msgstr "Wordt gevuld"
-
-msgid "Wordt overgeslagen"
-msgstr "Wordt overgeslagen"
-
-msgid "Wordt overgeslagen: heeft al afbeelding"
-msgstr "Wordt overgeslagen: heeft al afbeelding"
-
-msgid "Wordt overschreven"
-msgstr "Wordt overschreven"
-
-msgid "Workflow stappen"
-msgstr "Workflow stappen"
-
-msgid "Zichtbare items selecteren"
-msgstr "Zichtbare items selecteren"
-
-msgid "Zoek op titel..."
-msgstr "Zoek op titel..."
-
-msgid "Zoeken"
-msgstr "Zoeken"
-
-msgid "Selectie aanpassen"
-msgstr "Selectie aanpassen"
-
-msgid "Alleen uitgelichte afbeelding"
-msgstr "Alleen uitgelichte afbeelding"
-
-msgid "Dit contenttype heeft geen ACF-afbeeldingsvelden. Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt."
-msgstr "Dit contenttype heeft geen ACF-afbeeldingsvelden. Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt."
-
-msgid "Al teruggedraaid"
-msgstr "Al teruggedraaid"
-
-msgid "Beschikbaar voor rollback"
-msgstr "Beschikbaar voor rollback"
-
-msgid "ACF is niet beschikbaar en dit contenttype ondersteunt geen uitgelichte afbeelding."
-msgstr "ACF is niet beschikbaar en dit contenttype ondersteunt geen uitgelichte afbeelding."
-
-msgid "ACF is niet beschikbaar. Alleen de uitgelichte afbeelding blijft beschikbaar."
-msgstr "ACF is niet beschikbaar. Alleen de uitgelichte afbeelding blijft beschikbaar."
-
-msgid "Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt."
-msgstr "Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt."
-
-msgid "Selecteer een contentitem dat uitgelichte afbeeldingen ondersteunt."
-msgstr "Selecteer een contentitem dat uitgelichte afbeeldingen ondersteunt."
-
-msgid "ACF-velden zijn verborgen. De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt."
-msgstr "ACF-velden zijn verborgen. De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt."
-
-msgid "Alles is al gekoppeld"
-msgstr "Alles is al gekoppeld"
-
-msgid "Bestaande uitgelichte afbeeldingen worden overschreven."
-msgstr "Bestaande uitgelichte afbeeldingen worden overschreven."
-
-msgid "Controleer de uitgelichte afbeelding voordat je wijzigingen uitvoert."
-msgstr "Controleer de uitgelichte afbeelding voordat je wijzigingen uitvoert."
-
-msgid "Daarna kun je alleen de uitgelichte afbeelding vullen."
-msgstr "Daarna kun je alleen de uitgelichte afbeelding vullen."
-
-msgid "De eerste afbeelding in de selectie wordt gebruikt als uitgelichte afbeelding."
-msgstr "De eerste afbeelding in de selectie wordt gebruikt als uitgelichte afbeelding."
-
-msgid "De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt."
-msgstr "De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt."
-
-msgid "De geselecteerde afbeelding is al gekoppeld aan de gekozen item(s). Er zijn daarom geen ACF-afbeeldingsvelden aangepast."
-msgstr "De geselecteerde afbeelding is al gekoppeld aan de gekozen item(s). Er zijn daarom geen ACF-afbeeldingsvelden aangepast."
-
-msgid "Doel"
+msgid "Target"
 msgstr "Doel"
 
-msgid "Featured-image-only gebruikt alleen de eerste geselecteerde afbeelding. Extra afbeeldingen worden overgeslagen."
-msgstr "Featured-image-only gebruikt alleen de eerste geselecteerde afbeelding. Extra afbeeldingen worden overgeslagen."
+msgid "Technical details"
+msgstr "Technische details"
 
-msgid "Geen nieuwe velden om te vullen"
-msgstr "Geen nieuwe velden om te vullen"
+msgid "Test batch actions on staging first when updating a lot of content."
+msgstr "Test batch-acties eerst op staging wanneer je veel content bijwerkt."
 
-msgid "Kies de afbeelding die als uitgelichte afbeelding wordt gebruikt."
-msgstr "Kies de afbeelding die als uitgelichte afbeelding wordt gebruikt."
+msgid "The WordPress Media Library could not be loaded."
+msgstr "De WordPress-mediabibliotheek kon niet worden geladen."
 
-msgid "Opnieuw beginnen"
-msgstr "Opnieuw beginnen"
+msgid "The featured image could not be restored for one or more items."
+msgstr "De uitgelichte afbeelding kon voor een of meer items niet worden hersteld."
 
-msgid "Overschrijven"
-msgstr "Overschrijven"
+msgid "The featured image was already correct. Nothing was changed."
+msgstr "De uitgelichte afbeelding klopte al. Er is niets gewijzigd."
 
-msgid "Sluiten"
-msgstr "Sluiten"
+msgid "The featured image was processed. You can undo this run from the audit log."
+msgstr "De uitgelichte afbeelding is verwerkt. Je kunt deze run via het auditlog ongedaan maken."
 
-msgid "Te vullen"
+msgid "The featured-image-only run is complete. Review the result and undo option below."
+msgstr "De run alleen uitgelichte afbeelding is voltooid. Bekijk hieronder het resultaat en de optie ongedaan maken."
+
+msgid "The first image in the selection will be used as the featured image."
+msgstr "De eerste afbeelding in de selectie wordt gebruikt als uitgelichte afbeelding."
+
+msgid "The preview is outdated. Refresh the preview before running."
+msgstr "Het voorbeeld is verouderd. Vernieuw het voorbeeld voordat je uitvoert."
+
+msgid "The run is complete. Review the main result and next action below."
+msgstr "De run is voltooid. Bekijk hieronder het hoofdresultaat en de volgende actie."
+
+msgid "The selected ACF image fields are not available for this item."
+msgstr "De geselecteerde ACF Image fields zijn niet beschikbaar voor dit item."
+
+msgid "The selected featured image is not a valid image."
+msgstr "De geselecteerde uitgelichte afbeelding is geen geldige afbeelding."
+
+msgid "The selected featured image is unavailable or is not a valid image."
+msgstr "De geselecteerde uitgelichte afbeelding is niet beschikbaar of geen geldige afbeelding."
+
+msgid "The selected image is already linked to the chosen item(s). No ACF image fields were changed."
+msgstr "De geselecteerde afbeelding is al gekoppeld aan de gekozen item(s). Er zijn geen ACF Image fields gewijzigd."
+
+msgid "The selected image is already set as the featured image. No change is needed."
+msgstr "De geselecteerde afbeelding is al ingesteld als uitgelichte afbeelding. Er is geen wijziging nodig."
+
+msgid "The selected mappings were processed. You can undo this run from the audit log."
+msgstr "De geselecteerde koppelingen zijn verwerkt. Je kunt deze run via het auditlog ongedaan maken."
+
+msgid "Then we only show image fields that can be filled safely."
+msgstr "Daarna tonen we alleen image fields die veilig gevuld kunnen worden."
+
+msgid "There are fewer automatic ACF images than fields to fill automatically. Not all fields will automatically receive an image."
+msgstr "Er zijn minder automatische ACF-afbeeldingen dan velden om automatisch te vullen. Niet alle velden krijgen automatisch een afbeelding."
+
+msgid "There are more automatic ACF images than ACF fields to fill automatically. Extra images are skipped unless you map them manually."
+msgstr "Er zijn meer automatische ACF-afbeeldingen dan ACF-velden om automatisch te vullen. Extra afbeeldingen worden overgeslagen tenzij je ze handmatig koppelt."
+
+msgid "This content type has no ACF image fields. Create a preview to check what happens with the featured image."
+msgstr "Dit contenttype heeft geen ACF Image fields. Maak een voorbeeld om te controleren wat er met de uitgelichte afbeelding gebeurt."
+
+msgid "This field already has a value."
+msgstr "Dit veld heeft al een waarde."
+
+msgid "To fill"
 msgstr "Te vullen"
 
-msgid "Uitgelichte afbeelding kiezen"
-msgstr "Uitgelichte afbeelding kiezen"
-
-msgid "doel"
-msgstr "doel"
-
-msgid "doelen"
-msgstr "doelen"
-
-msgid "Actief"
-msgstr "Actief"
-
-msgid "Actief: de eerste gekozen afbeelding wordt ingesteld als uitgelichte afbeelding."
-msgstr "Actief: de eerste gekozen afbeelding wordt ingesteld als uitgelichte afbeelding."
-
-msgid "Alles ziet er goed uit. Er zijn geen fouten of overgeslagen items."
-msgstr "Alles ziet er goed uit. Er zijn geen fouten of overgeslagen items."
-
-msgid "Beschikbaar doel"
-msgstr "Beschikbaar doel"
-
-msgid "Bestaande uitgelichte afbeeldingen kunnen worden overschreven."
-msgstr "Bestaande uitgelichte afbeeldingen kunnen worden overschreven."
-
-msgid "Daarna kun je direct de uitgelichte afbeelding instellen."
-msgstr "Daarna kun je direct de uitgelichte afbeelding instellen."
-
-msgid "De ACF-velden zijn uitgeschakeld. Kies hierna een afbeelding; alleen de uitgelichte afbeelding wordt aangepast."
-msgstr "De ACF-velden zijn uitgeschakeld. Kies hierna een afbeelding; alleen de uitgelichte afbeelding wordt aangepast."
-
-msgid "De featured-image-only run is klaar. Controleer hieronder de uitkomst en rollback-optie."
-msgstr "De featured-image-only run is klaar. Controleer hieronder de uitkomst en rollback-optie."
-
-msgid "De geselecteerde afbeelding is al ingesteld als uitgelichte afbeelding voor de gekozen item(s)."
-msgstr "De geselecteerde afbeelding is al ingesteld als uitgelichte afbeelding voor de gekozen item(s)."
-
-msgid "De uitgelichte afbeelding is verwerkt. Je kunt deze run vanuit het auditlog terugdraaien."
-msgstr "De uitgelichte afbeelding is verwerkt. Je kunt deze run vanuit het auditlog terugdraaien."
-
-msgid "De uitgelichte afbeelding stond al goed. Er is niets aangepast."
-msgstr "De uitgelichte afbeelding stond al goed. Er is niets aangepast."
-
-msgid "Geen nieuwe uitgelichte afbeelding nodig"
-msgstr "Geen nieuwe uitgelichte afbeelding nodig"
-
-msgid "Geen ondersteund doel beschikbaar"
-msgstr "Geen ondersteund doel beschikbaar"
-
-msgid "Ingesteld"
-msgstr "Ingesteld"
-
-msgid "Je past meerdere items tegelijk aan. Controleer extra goed of bij alle items dezelfde uitgelichte afbeelding gewenst is."
-msgstr "Je past meerdere items tegelijk aan. Controleer extra goed of bij alle items dezelfde uitgelichte afbeelding gewenst is."
-
-msgid "Kies een contenttype dat uitgelichte afbeeldingen ondersteunt."
-msgstr "Kies een contenttype dat uitgelichte afbeeldingen ondersteunt."
-
-msgid "Kies een contenttype en selecteer één of meerdere items. In featured-image-only modus worden alleen items met ondersteuning voor uitgelichte afbeeldingen getoond."
-msgstr "Kies een contenttype en selecteer één of meerdere items. In featured-image-only modus worden alleen items met ondersteuning voor uitgelichte afbeeldingen getoond."
-
-msgid "Niet beschikbaar"
+msgid "Unavailable"
 msgstr "Niet beschikbaar"
 
-msgid "Niet beschikbaar: dit contenttype ondersteunt geen uitgelichte afbeelding."
+msgid "Unavailable: this content type does not support a featured image."
 msgstr "Niet beschikbaar: dit contenttype ondersteunt geen uitgelichte afbeelding."
 
-msgid "Uitgelichte afbeelding instellen"
-msgstr "Uitgelichte afbeelding instellen"
+msgid "Unchanged"
+msgstr "Ongewijzigd"
 
-msgid "Uitgelichte afbeelding nu instellen?"
-msgstr "Uitgelichte afbeelding nu instellen?"
+msgid "Unchanged or manually chosen"
+msgstr "Ongewijzigd of handmatig gekozen"
 
-msgid "Verwerkte uitgelichte afbeelding"
-msgstr "Verwerkte uitgelichte afbeelding"
+msgid "Undo"
+msgstr "Ongedaan maken"
 
-msgid "Wordt ingesteld"
+msgid "Undo is available after running changes."
+msgstr "Ongedaan maken is beschikbaar nadat wijzigingen zijn uitgevoerd."
+
+msgid "Undo status is checked before you run changes."
+msgstr "De status voor ongedaan maken wordt gecontroleerd voordat je wijzigingen uitvoert."
+
+msgid "Undo this run"
+msgstr "Deze run ongedaan maken"
+
+msgid "Undone"
+msgstr "Ongedaan gemaakt"
+
+msgid "Unknown item"
+msgstr "Onbekend item"
+
+msgid "Up"
+msgstr "Omhoog"
+
+msgid "Use manual mapping when a specific image should go to a specific field."
+msgstr "Gebruik handmatig koppelen wanneer een specifieke afbeelding naar een specifiek veld moet."
+
+msgid "Use selected images"
+msgstr "Geselecteerde afbeeldingen gebruiken"
+
+msgid "Use the first selected image as the featured image."
+msgstr "Gebruik de eerste geselecteerde afbeelding als uitgelichte afbeelding."
+
+msgid "Use this when images are directly inside an ACF group."
+msgstr "Gebruik dit wanneer afbeeldingen direct in een ACF-groep staan."
+
+msgid "User"
+msgstr "Gebruiker"
+
+msgid "User ID"
+msgstr "Gebruikers-ID"
+
+msgid "View current image"
+msgstr "Huidige afbeelding bekijken"
+
+msgid "View larger image"
+msgstr "Grotere afbeelding bekijken"
+
+msgid "View larger new image"
+msgstr "Grotere nieuwe afbeelding bekijken"
+
+msgid "Warning: batch replace enabled"
+msgstr "Waarschuwing: batch vervangen ingeschakeld"
+
+msgid "Will be filled"
+msgstr "Wordt gevuld"
+
+msgid "Will be overwritten"
+msgstr "Wordt overschreven"
+
+msgid "Will be set"
 msgstr "Wordt ingesteld"
+
+msgid "Will be skipped"
+msgstr "Wordt overgeslagen"
+
+msgid "Will be skipped: already has image"
+msgstr "Wordt overgeslagen: heeft al afbeelding"
+
+msgid "Workflow steps"
+msgstr "Workflowstappen"
+
+msgid "You are changing multiple items at once. Carefully check that the same featured image is intended for all items."
+msgstr "Je wijzigt meerdere items tegelijk. Controleer zorgvuldig of dezelfde uitgelichte afbeelding voor alle items bedoeld is."
+
+msgid "You are changing multiple posts at once. Check carefully that these posts use the same ACF fields."
+msgstr "Je wijzigt meerdere berichten tegelijk. Controleer zorgvuldig of deze berichten dezelfde ACF-velden gebruiken."
+
+msgid "You can adjust the order or replace images before checking the mapping."
+msgstr "Je kunt de volgorde aanpassen of afbeeldingen vervangen voordat je de koppeling controleert."
+
+msgid "You can process a maximum of %d items per run."
+msgstr "Je kunt maximaal %d items per run verwerken."
+
+msgid "You can process a maximum of %d manual mappings per run."
+msgstr "Je kunt maximaal %d handmatige koppelingen per run verwerken."
+
+msgid "You can process up to %d fields per run."
+msgstr "Je kunt maximaal %d velden per run verwerken."
+
+msgid "You can select a maximum of %d images per run."
+msgstr "Je kunt maximaal %d afbeeldingen per run selecteren."
+
+msgid "You do not have permission to fill images."
+msgstr "Je hebt geen toestemming om afbeeldingen te vullen."
+
+msgid "You do not have permission to open this page."
+msgstr "Je hebt geen toestemming om deze pagina te openen."
+
+msgid "You do not have permission to roll back actions."
+msgstr "Je hebt geen toestemming om acties ongedaan te maken."
+
+msgid "You do not have permission to use attachment ID %d."
+msgstr "Je hebt geen toestemming om bijlage-ID %d te gebruiken."
+
+msgid "You do not have permission to view the audit log."
+msgstr "Je hebt geen toestemming om het auditlog te bekijken."
+
+msgid "You do not have permission to view this post type."
+msgstr "Je hebt geen toestemming om dit berichttype te bekijken."
+
+msgid "You do not have permission to view this taxonomy."
+msgstr "Je hebt geen toestemming om deze taxonomie te bekijken."
+
+msgid "You no longer have permission to restore one or more previous ACF images."
+msgstr "Je hebt geen toestemming meer om een of meer vorige ACF-afbeeldingen te herstellen."
+
+msgid "You no longer have permission to restore one or more previous featured images."
+msgstr "Je hebt geen toestemming meer om een of meer vorige uitgelichte afbeeldingen te herstellen."
+
+msgid "You no longer have permission to undo one or more items."
+msgstr "Je hebt geen toestemming meer om een of meer items ongedaan te maken."
+
+msgid "change(s) ready"
+msgstr "wijziging(en) klaar"
+
+msgid "changes"
+msgstr "wijzigingen"
+
+msgid "existing images will be overwritten."
+msgstr "bestaande afbeeldingen worden overschreven."
+
+msgid "featured"
+msgstr "uitgelicht"
+
+msgid "field"
+msgstr "veld"
+
+msgid "fields"
+msgstr "velden"
+
+msgid "image"
+msgstr "afbeelding"
+
+msgid "images"
+msgstr "afbeeldingen"
+
+msgid "item"
+msgstr "item"
+
+msgid "item selected"
+msgstr "item geselecteerd"
+
+msgid "item(s) rolled back."
+msgstr "item(s) ongedaan gemaakt."
+
+msgid "items"
+msgstr "items"
+
+msgid "items selected"
+msgstr "items geselecteerd"
+
+msgid "items to fill?"
+msgstr "items vullen?"
+
+msgid "items to overwrite?"
+msgstr "items overschrijven?"
+
+msgid "loaded"
+msgstr "geladen"
+
+msgid "of"
+msgstr "van"
+
+msgid "other"
+msgstr "andere"
+
+msgid "selected"
+msgstr "geselecteerd"
+
+msgid "selected field(s)"
+msgstr "geselecteerde veld(en)"
+
+msgid "selected item(s)"
+msgstr "geselecteerde item(s)"
+
+msgid "target"
+msgstr "doel"
+
+msgid "targets"
+msgstr "doelen"
+
+
+#: includes/class-admin-page.php
+msgid "Review completed runs and undo available changes from one place."
+msgstr "Bekijk uitgevoerde acties en maak beschikbare wijzigingen vanaf één plek ongedaan."
+
+#: includes/class-admin-page.php
+msgid "Back to ACF Image Filler"
+msgstr "Terug naar ACF Image Filler"
+
+#: includes/class-admin-page.php
+msgid "Showing actions created by your account. Administrators can view and filter all users."
+msgstr "Je ziet alleen acties die door jouw account zijn aangemaakt. Beheerders kunnen alle gebruikers bekijken en filteren."
+
+msgid "Undo available"
+msgstr "Ongedaan maken beschikbaar"
+
+msgid "Only original user can undo"
+msgstr "Alleen de oorspronkelijke gebruiker kan dit ongedaan maken"
+
+msgid "Undo this run? The previous image values will be restored where possible."
+msgstr "Deze run ongedaan maken? De vorige afbeeldingswaarden worden waar mogelijk hersteld."
+
+msgid "No rollback run was selected."
+msgstr "Er is geen run geselecteerd om ongedaan te maken."
+
+msgid "The undo request could not be verified. Refresh the page and try again."
+msgstr "Het verzoek kon niet worden geverifieerd. Vernieuw de pagina en probeer opnieuw."
+
+msgid "You do not have permission to undo this run."
+msgstr "Je hebt geen rechten om deze run ongedaan te maken."
+
+msgid "Run undone. Previous image values were restored where possible."
+msgstr "Run ongedaan gemaakt. Vorige afbeeldingswaarden zijn waar mogelijk hersteld."
+
+msgid "Off by default. Turn on only if existing images may be replaced."
+msgstr "Standaard uit. Zet alleen aan als bestaande afbeeldingen vervangen mogen worden."
+
+msgid "%d changes"
+msgstr "%d wijzigingen"
+
+msgid "%d featured images"
+msgstr "%d uitgelichte afbeeldingen"
+
+msgid "1 ACF field"
+msgstr "1 ACF-veld"
+
+msgid "%d ACF fields"
+msgstr "%d ACF-velden"
+
+msgid "Rollback data unavailable"
+msgstr "Rollbackgegevens niet beschikbaar"

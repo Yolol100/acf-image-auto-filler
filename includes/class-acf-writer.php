@@ -43,7 +43,7 @@ final class AIAF_ACF_Writer
 
         $needs_acf = !empty($fields);
         if ($needs_acf && (!function_exists('get_field') || !function_exists('update_field'))) {
-            $result['errors'][] = __('ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar.', 'acf-image-auto-filler');
+            $result['errors'][] = __('ACF is not active or required ACF functions are unavailable.', 'acf-image-auto-filler');
             return $result;
         }
 
@@ -58,10 +58,10 @@ final class AIAF_ACF_Writer
         if (empty($fields) && $had_fields_before_filter && !empty($field_key_allowlist)) {
             $result['skipped'][] = [
                 'post_id'     => $target_id,
-                'field_label' => __('Geselecteerde velden niet beschikbaar', 'acf-image-auto-filler'),
+                'field_label' => __('Selected fields unavailable', 'acf-image-auto-filler'),
                 'field_name'  => '',
                 'field_key'   => '',
-                'reason'      => __('De geselecteerde ACF Image fields zijn niet beschikbaar voor dit item.', 'acf-image-auto-filler'),
+                'reason'      => __('The selected ACF image fields are not available for this item.', 'acf-image-auto-filler'),
                 'status'      => 'missing_selected_fields',
             ];
         }
@@ -69,17 +69,17 @@ final class AIAF_ACF_Writer
         if (empty($fields) && !$had_fields_before_filter && $featured_image_id <= 0) {
             $result['skipped'][] = [
                 'post_id'     => $target_id,
-                'field_label' => __('Geen geschikte afbeeldingsvelden', 'acf-image-auto-filler'),
+                'field_label' => __('No suitable image fields', 'acf-image-auto-filler'),
                 'field_name'  => '',
                 'field_key'   => '',
-                'reason'      => __('Er zijn geen geschikte ACF Image fields gevonden voor dit item.', 'acf-image-auto-filler'),
+                'reason'      => __('No suitable ACF image fields were found for this item.', 'acf-image-auto-filler'),
                 'status'      => 'no_fields',
             ];
         }
 
         $valid_attachment_ids = $this->filter_valid_image_attachments($attachment_ids, $result);
         if ($featured_image_id > 0 && !in_array($featured_image_id, $valid_attachment_ids, true)) {
-            $result['errors'][] = __('De geselecteerde uitgelichte afbeelding is niet beschikbaar of geen geldige afbeelding.', 'acf-image-auto-filler');
+            $result['errors'][] = __('The selected featured image is unavailable or is not a valid image.', 'acf-image-auto-filler');
             return $result;
         }
 
@@ -91,7 +91,7 @@ final class AIAF_ACF_Writer
         }
 
         if (empty($valid_attachment_ids) && $featured_image_id <= 0 && empty($manual_mapping)) {
-            $result['errors'][] = __('Er zijn geen geldige afbeeldingen geselecteerd.', 'acf-image-auto-filler');
+            $result['errors'][] = __('No valid images were selected.', 'acf-image-auto-filler');
             return $result;
         }
 
@@ -105,7 +105,8 @@ final class AIAF_ACF_Writer
             }
 
             $field_key = sanitize_key((string) $field['key']);
-            $field_name = (string) $field['name'];
+            $field_name = isset($field['raw_name']) && is_string($field['raw_name']) && $field['raw_name'] !== '' ? (string) $field['raw_name'] : (string) $field['name'];
+            $response_field_name = sanitize_key((string) $field['name']);
             $field_label = (string) $field['label'];
             $scope = isset($field['scope']) ? (string) $field['scope'] : 'top_level';
             $parent_key = isset($field['parent_key']) ? sanitize_key((string) $field['parent_key']) : '';
@@ -124,9 +125,9 @@ final class AIAF_ACF_Writer
                     $result['skipped'][] = [
                         'post_id'     => $target_id,
                         'field_label' => $field_label,
-                        'field_name'  => $field_name,
+                        'field_name'  => $response_field_name,
                         'field_key'   => $field_key,
-                        'reason'      => __('Dit veld heeft al een waarde.', 'acf-image-auto-filler'),
+                        'reason'      => __('This field already has a value.', 'acf-image-auto-filler'),
                         'status'      => 'existing',
                     ];
                     continue;
@@ -142,9 +143,9 @@ final class AIAF_ACF_Writer
                 $result['skipped'][] = [
                     'post_id'     => $target_id,
                     'field_label' => $field_label,
-                    'field_name'  => $field_name,
+                    'field_name'  => $response_field_name,
                     'field_key'   => $field_key,
-                    'reason'      => __('Voor dit veld is geen afbeelding geselecteerd.', 'acf-image-auto-filler'),
+                    'reason'      => __('No image is selected for this field.', 'acf-image-auto-filler'),
                     'status'      => 'no_image',
                 ];
                 continue;
@@ -154,9 +155,9 @@ final class AIAF_ACF_Writer
                 $result['skipped'][] = [
                     'post_id'     => $target_id,
                     'field_label' => $field_label,
-                    'field_name'  => $field_name,
+                    'field_name'  => $response_field_name,
                     'field_key'   => $field_key,
-                    'reason'      => __('Dit veld heeft al een waarde.', 'acf-image-auto-filler'),
+                    'reason'      => __('This field already has a value.', 'acf-image-auto-filler'),
                     'status'      => 'existing',
                 ];
                 continue;
@@ -167,10 +168,10 @@ final class AIAF_ACF_Writer
                 $result['skipped'][] = [
                     'post_id'       => $target_id,
                     'field_label'   => $field_label,
-                    'field_name'    => $field_name,
+                    'field_name'    => $response_field_name,
                     'field_key'     => $field_key,
                     'attachment_id' => $attachment_id,
-                    'reason'        => __('Veld bevat deze afbeelding al.', 'acf-image-auto-filler'),
+                    'reason'        => __('Field already contains this image.', 'acf-image-auto-filler'),
                     'status'        => 'unchanged',
                 ];
                 continue;
@@ -181,7 +182,7 @@ final class AIAF_ACF_Writer
                 if ($updated === false) {
                     $result['errors'][] = sprintf(
                         /* translators: 1: field label, 2: attachment ID. */
-                        __('Veld "%1$s" kon niet worden bijgewerkt met afbeelding #%2$d.', 'acf-image-auto-filler'),
+                        __('Field "%1$s" could not be updated with image #%2$d.', 'acf-image-auto-filler'),
                         $field_label,
                         $attachment_id
                     );
@@ -209,7 +210,7 @@ final class AIAF_ACF_Writer
                 'post_id'               => $target_id,
                 'post_title'            => sanitize_text_field($this->get_target_title($target_id)),
                 'field_label'           => sanitize_text_field($field_label),
-                'field_name'            => sanitize_key($field_name),
+                'field_name'            => $response_field_name,
                 'field_key'             => $field_key,
                 'attachment_id'         => $attachment_id,
                 'attachment_title'      => sanitize_text_field(wp_strip_all_tags((string) get_the_title($attachment_id))),
@@ -228,12 +229,12 @@ final class AIAF_ACF_Writer
         if (empty($manual_mapping) && $unused_image_count > 0) {
             $result['skipped'][] = [
                 'post_id'     => $target_id,
-                'field_label' => __('Extra afbeeldingen', 'acf-image-auto-filler'),
+                'field_label' => __('Extra images', 'acf-image-auto-filler'),
                 'field_name'  => '',
                 'field_key'   => '',
                 'reason'      => sprintf(
                     /* translators: %d: number of images. */
-                    __('%d geselecteerde afbeelding(en) zijn niet gebruikt omdat er niet genoeg geschikte velden zijn.', 'acf-image-auto-filler'),
+                    __('%d selected image(s) were not used because there are not enough suitable fields.', 'acf-image-auto-filler'),
                     $unused_image_count
                 ),
                 'status'      => 'extra_images',
@@ -253,7 +254,7 @@ final class AIAF_ACF_Writer
     private function process_featured_image(int $post_id, int $attachment_id, bool $overwrite, bool $execute, array &$result): void
     {
         if (!wp_attachment_is_image($attachment_id)) {
-            $result['errors'][] = __('De geselecteerde uitgelichte afbeelding is geen geldige afbeelding.', 'acf-image-auto-filler');
+            $result['errors'][] = __('The selected featured image is not a valid image.', 'acf-image-auto-filler');
             return;
         }
 
@@ -263,10 +264,10 @@ final class AIAF_ACF_Writer
         if ($current > 0 && !$overwrite) {
             $result['skipped'][] = [
                 'post_id'     => $post_id,
-                'field_label' => __('Uitgelichte afbeelding', 'acf-image-auto-filler'),
+                'field_label' => __('Featured image', 'acf-image-auto-filler'),
                 'field_name'  => '_thumbnail_id',
                 'field_key'   => '_thumbnail_id',
-                'reason'      => __('Uitgelichte afbeelding heeft al een waarde.', 'acf-image-auto-filler'),
+                'reason'      => __('Featured image already has a value.', 'acf-image-auto-filler'),
                 'status'      => 'existing',
             ];
             return;
@@ -275,11 +276,11 @@ final class AIAF_ACF_Writer
         if ($current === $attachment_id) {
             $result['skipped'][] = [
                 'post_id'       => $post_id,
-                'field_label'   => __('Uitgelichte afbeelding', 'acf-image-auto-filler'),
+                'field_label'   => __('Featured image', 'acf-image-auto-filler'),
                 'field_name'    => '_thumbnail_id',
                 'field_key'     => '_thumbnail_id',
                 'attachment_id' => $attachment_id,
-                'reason'        => __('Uitgelichte afbeelding bevat deze afbeelding al.', 'acf-image-auto-filler'),
+                'reason'        => __('Featured image already contains this image.', 'acf-image-auto-filler'),
                 'status'        => 'unchanged',
             ];
             return;
@@ -288,7 +289,7 @@ final class AIAF_ACF_Writer
         if ($execute) {
             $ok = set_post_thumbnail($post_id, $attachment_id);
             if (!$ok) {
-                $result['errors'][] = __('Uitgelichte afbeelding kon niet worden bijgewerkt.', 'acf-image-auto-filler');
+                $result['errors'][] = __('Featured image could not be updated.', 'acf-image-auto-filler');
                 return;
             }
             $result['rollback'][] = [
@@ -296,7 +297,7 @@ final class AIAF_ACF_Writer
                 'post_id'                => $post_id,
                 'field_key'              => '_thumbnail_id',
                 'field_name'             => '_thumbnail_id',
-                'field_label'            => __('Uitgelichte afbeelding', 'acf-image-auto-filler'),
+                'field_label'            => __('Featured image', 'acf-image-auto-filler'),
                 'previous_attachment_id' => $current,
                 'new_attachment_id'      => $attachment_id,
             ];
@@ -305,7 +306,7 @@ final class AIAF_ACF_Writer
         $result['filled'][] = [
             'post_id'               => $post_id,
             'post_title'            => sanitize_text_field($this->get_target_title($post_id)),
-            'field_label'           => __('Uitgelichte afbeelding', 'acf-image-auto-filler'),
+            'field_label'           => __('Featured image', 'acf-image-auto-filler'),
             'field_name'            => '_thumbnail_id',
             'field_key'             => '_thumbnail_id',
             'attachment_id'         => $attachment_id,
@@ -392,7 +393,7 @@ final class AIAF_ACF_Writer
             if (get_post_type($attachment_id) !== 'attachment') {
                 $result['errors'][] = sprintf(
                     /* translators: %d: Attachment ID. */
-                    __('ID %d is geen bijlage.', 'acf-image-auto-filler'),
+                    __('ID %d is not an attachment.', 'acf-image-auto-filler'),
                     $attachment_id
                 );
                 continue;
@@ -401,16 +402,16 @@ final class AIAF_ACF_Writer
             if (!wp_attachment_is_image($attachment_id)) {
                 $result['errors'][] = sprintf(
                     /* translators: %d: Attachment ID. */
-                    __('Bijlage-ID %d is geen afbeelding.', 'acf-image-auto-filler'),
+                    __('Attachment ID %d is not an image.', 'acf-image-auto-filler'),
                     $attachment_id
                 );
                 continue;
             }
 
-            if (!current_user_can('read_post', $attachment_id)) {
+            if (!$this->current_user_can_use_attachment($attachment_id)) {
                 $result['errors'][] = sprintf(
                     /* translators: %d: Attachment ID. */
-                    __('Je hebt geen toestemming om bijlage-ID %d te gebruiken.', 'acf-image-auto-filler'),
+                    __('You do not have permission to use attachment ID %d.', 'acf-image-auto-filler'),
                     $attachment_id
                 );
                 continue;
@@ -420,6 +421,28 @@ final class AIAF_ACF_Writer
         }
 
         return array_values(array_unique($valid));
+    }
+
+    private function current_user_can_use_attachment(int $attachment_id): bool
+    {
+        if (!current_user_can('read_post', $attachment_id)) {
+            return false;
+        }
+
+        /**
+         * Filters the additional capability required to select an attachment.
+         *
+         * Return an empty string to allow any readable image attachment. The
+         * default requires Media Library upload access, which is safer when
+         * view access is delegated to non-admin roles.
+         *
+         * @param string $capability Attachment capability.
+         * @param int    $attachment_id Attachment ID.
+         */
+        $capability = apply_filters('aiaf_attachment_usage_capability', 'upload_files', $attachment_id);
+        $capability = is_string($capability) ? trim($capability) : 'upload_files';
+
+        return $capability === '' || current_user_can($capability);
     }
 
     /**

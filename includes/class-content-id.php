@@ -133,6 +133,39 @@ final class AIAF_Content_ID
         return absint($content_id);
     }
 
+    public static function is_allowed_target(string $content_id): bool
+    {
+        $content_id = self::sanitize($content_id);
+        if ($content_id === '') {
+            return false;
+        }
+
+        if (strpos($content_id, 'term:') === 0) {
+            $parts = explode(':', $content_id);
+            $taxonomy = sanitize_key($parts[1] ?? '');
+            if ($taxonomy === '' || !taxonomy_exists($taxonomy)) {
+                return false;
+            }
+
+            $allowed = self::get_allowed_taxonomies();
+
+            return in_array($taxonomy, $allowed, true);
+        }
+
+        $post_id = absint($content_id);
+        $post_type = $post_id > 0 ? get_post_type($post_id) : '';
+        if (!is_string($post_type) || $post_type === '' || $post_type === 'attachment' || !post_type_exists($post_type)) {
+            return false;
+        }
+
+        $allowed = self::get_allowed_post_types();
+        if (!in_array($post_type, $allowed, true)) {
+            return false;
+        }
+
+        return AIAF_ACF_Runtime::is_available() || post_type_supports($post_type, 'thumbnail');
+    }
+
     public static function current_user_can_edit(string $content_id): bool
     {
         $content_id = self::sanitize($content_id);
@@ -167,6 +200,39 @@ final class AIAF_Content_ID
         }
 
         return false;
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    private static function get_allowed_post_types(): array
+    {
+        $allowed = ['post', 'page'];
+        if (AIAF_Environment::is_woocommerce_active()) {
+            $allowed[] = 'product';
+        }
+
+        $allowed = apply_filters('aiaf_allowed_post_types', $allowed);
+
+        return array_values(array_unique(array_filter(array_map('sanitize_key', is_array($allowed) ? $allowed : []))));
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    private static function get_allowed_taxonomies(): array
+    {
+        $taxonomies = [];
+        if (taxonomy_exists('category')) {
+            $taxonomies[] = 'category';
+        }
+        if (AIAF_Environment::is_woocommerce_active() && taxonomy_exists('product_cat')) {
+            $taxonomies[] = 'product_cat';
+        }
+
+        $taxonomies = apply_filters('aiaf_allowed_taxonomies', $taxonomies);
+
+        return array_values(array_unique(array_filter(array_map('sanitize_key', is_array($taxonomies) ? $taxonomies : []))));
     }
 
     public static function supports_featured_image(string $content_id): bool

@@ -53,12 +53,13 @@ final class AIAF_Capabilities
         /**
          * Filters the capability required to execute fills and rollbacks.
          *
-         * Defaults to manage_options so read access can be granted separately from
-         * bulk mutation rights. Per-item edit_post and edit_term checks still run.
+         * Defaults to the legacy capability instead of view(), so lowering the
+         * browsing capability does not accidentally grant write access. Per-item
+         * edit_post and edit_term checks still run for every target.
          *
          * @param string $capability Required capability.
          */
-        return self::normalize(apply_filters('aiaf_mutate_capability', 'manage_options'));
+        return self::normalize(apply_filters('aiaf_mutate_capability', self::legacy()));
     }
 
     public static function audit_log(): string

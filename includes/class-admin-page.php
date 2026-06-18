@@ -12,6 +12,9 @@ if (!defined('ABSPATH')) {
 final class AIAF_Admin_Page
 {
     private const PAGE_SLUG = 'acf-image-auto-filler';
+    private const AUDIT_PAGE_SLUG = 'acf-image-auto-filler-audit-log';
+
+    private static string $audit_hook = '';
 
     public static function init(): void
     {
@@ -31,45 +34,69 @@ final class AIAF_Admin_Page
             58
         );
 
-        remove_submenu_page(self::PAGE_SLUG, self::PAGE_SLUG);
+        add_submenu_page(
+            self::PAGE_SLUG,
+            __('ACF Image Auto Filler', 'acf-image-auto-filler'),
+            __('ACF Image Filler', 'acf-image-auto-filler'),
+            self::view_capability(),
+            self::PAGE_SLUG,
+            [self::class, 'render_page']
+        );
+
+        self::$audit_hook = (string) add_submenu_page(
+            self::PAGE_SLUG,
+            __('Audit log', 'acf-image-auto-filler'),
+            __('Audit log', 'acf-image-auto-filler'),
+            self::audit_log_capability(),
+            self::AUDIT_PAGE_SLUG,
+            [self::class, 'render_audit_page']
+        );
     }
 
     public static function enqueue_assets(string $hook): void
     {
-        $allowed_hooks = [
-            'toplevel_page_' . self::PAGE_SLUG,
-        ];
+        $page = isset($_GET['page']) ? sanitize_key(wp_unslash($_GET['page'])) : '';
+        $is_main_page = $hook === 'toplevel_page_' . self::PAGE_SLUG || $page === self::PAGE_SLUG;
+        $is_audit_page = $hook === self::$audit_hook || $page === self::AUDIT_PAGE_SLUG;
 
-        if (!in_array($hook, $allowed_hooks, true)) {
+        if (!$is_main_page && !$is_audit_page) {
+            return;
+        }
+
+        $asset_file = AIAF_PLUGIN_DIR . 'build/index.asset.php';
+        $asset = file_exists($asset_file) ? require $asset_file : [];
+        if (!is_array($asset)) {
+            $asset = [];
+        }
+
+        $asset_version = isset($asset['version']) ? (string) $asset['version'] : AIAF_VERSION;
+        $style_file = AIAF_PLUGIN_DIR . 'build/index.css';
+        $style_version = file_exists($style_file) ? $asset_version . '-' . (string) filemtime($style_file) : $asset_version;
+        $style_dependencies = $is_main_page ? ['wp-components'] : [];
+
+        if ($is_main_page) {
+            wp_enqueue_style('wp-components');
+        }
+
+        wp_enqueue_style(
+            'aiaf-admin-app',
+            AIAF_PLUGIN_URL . 'build/index.css',
+            $style_dependencies,
+            $style_version
+        );
+
+        if (!$is_main_page) {
             return;
         }
 
         wp_enqueue_media();
 
-        $asset_file = AIAF_PLUGIN_DIR . 'build/index.asset.php';
-        $asset = file_exists($asset_file) ? require $asset_file : [
-            'dependencies' => ['wp-element', 'wp-components', 'wp-api-fetch', 'wp-i18n'],
-            'version'      => AIAF_VERSION,
-        ];
-
-        $dependencies = isset($asset['dependencies']) && is_array($asset['dependencies']) ? $asset['dependencies'] : [];
+        $dependencies = isset($asset['dependencies']) && is_array($asset['dependencies']) ? $asset['dependencies'] : ['wp-element', 'wp-components', 'wp-api-fetch', 'wp-i18n'];
         $dependencies = array_values(array_diff($dependencies, ['wp-icons']));
         $dependencies = array_values(array_unique(array_merge($dependencies, ['wp-element', 'wp-components', 'wp-api-fetch', 'wp-i18n', 'wp-dom-ready'])));
 
-        wp_enqueue_style('wp-components');
-
-        $asset_version = isset($asset['version']) ? (string) $asset['version'] : AIAF_VERSION;
-        $style_file = AIAF_PLUGIN_DIR . 'build/index.css';
         $script_file = AIAF_PLUGIN_DIR . 'build/index.js';
-        $style_version = file_exists($style_file) ? $asset_version . '-' . (string) filemtime($style_file) : $asset_version;
         $script_version = file_exists($script_file) ? $asset_version . '-' . (string) filemtime($script_file) : $asset_version;
-
-        wp_enqueue_style(
-            'aiaf-admin-app',
-            AIAF_PLUGIN_URL . 'build/index.css',
-            ['wp-components'],
-            $style_version
-        );
 
         wp_enqueue_script(
             'aiaf-admin-app',
@@ -89,6 +116,7 @@ final class AIAF_Admin_Page
             'acfActive'       => AIAF_ACF_Runtime::is_available(),
             'woocommerceActive' => self::is_woocommerce_active(),
             'canViewAuditLog' => current_user_can(self::audit_log_capability()),
+            'canViewFullAuditLog' => current_user_can(self::audit_log_capability()),
             'canMutateTool' => current_user_can(self::mutate_capability()),
         ];
 
@@ -99,19 +127,10 @@ final class AIAF_Admin_Page
         );
     }
 
+
     private static function is_woocommerce_active(): bool
     {
-        if (!function_exists('is_plugin_active')) {
-            require_once ABSPATH . 'wp-admin/includes/plugin.php';
-        }
-
-        $active = function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php');
-        $network_active = is_multisite() && function_exists('is_plugin_active_for_network') && is_plugin_active_for_network('woocommerce/woocommerce.php');
-
-        return ($active || $network_active)
-            && class_exists('WooCommerce')
-            && function_exists('WC')
-            && post_type_exists('product');
+        return AIAF_Environment::is_woocommerce_active();
     }
 
     private static function view_capability(): string
@@ -129,10 +148,185 @@ final class AIAF_Admin_Page
         return AIAF_Capabilities::mutate();
     }
 
+
+    public static function render_audit_page(): void
+    {
+        if (!current_user_can(self::audit_log_capability())) {
+            wp_die(esc_html__('You do not have permission to view the audit log.', 'acf-image-auto-filler'));
+        }
+
+        $manager = new AIAF_Rollback_Manager();
+        $items = $manager->get_audit_log();
+        $can_view_full_audit_log = current_user_can(self::audit_log_capability());
+        $current_user_id = get_current_user_id();
+        $user_filter = $can_view_full_audit_log && isset($_GET['aiaf_user']) ? absint(wp_unslash($_GET['aiaf_user'])) : 0;
+        $date_filter = isset($_GET['aiaf_date']) ? sanitize_text_field(wp_unslash($_GET['aiaf_date'])) : '';
+        $notice = self::handle_audit_rollback_action();
+
+        if (!$can_view_full_audit_log) {
+            $items = array_values(array_filter($items, static fn (array $item): bool => isset($item['user_id']) && absint($item['user_id']) === $current_user_id));
+        } elseif ($user_filter > 0) {
+            $items = array_values(array_filter($items, static fn (array $item): bool => isset($item['user_id']) && absint($item['user_id']) === $user_filter));
+        }
+
+        if ($date_filter !== '' && preg_match('/^\d{4}-\d{2}-\d{2}$/', $date_filter)) {
+            $items = array_values(array_filter($items, static function (array $item) use ($date_filter): bool {
+                $created = isset($item['created_at']) ? absint($item['created_at']) : 0;
+                return $created > 0 && wp_date('Y-m-d', $created) === $date_filter;
+            }));
+        }
+
+        $per_page = 20;
+        $paged = isset($_GET['paged']) ? max(1, absint(wp_unslash($_GET['paged']))) : 1;
+        $total = count($items);
+        $pages = max(1, (int) ceil($total / $per_page));
+        $items = array_slice($items, ($paged - 1) * $per_page, $per_page);
+
+        echo '<div class="wrap aiaf-audit-page">';
+        echo '<div class="aiaf-audit-shell">';
+        echo '<div class="aiaf-audit-header">';
+        echo '<div><h1>' . esc_html__('Audit log', 'acf-image-auto-filler') . '</h1><p>' . esc_html__('Review completed runs and undo available changes from one place.', 'acf-image-auto-filler') . '</p></div>';
+        echo '<a class="aiaf-audit-back-button" href="' . esc_url(admin_url('admin.php?page=' . self::PAGE_SLUG)) . '">' . esc_html__('Back to ACF Image Filler', 'acf-image-auto-filler') . '</a>';
+        echo '</div>';
+        echo '<div class="aiaf-audit-body">';
+        if ($notice !== null) {
+            $notice_type = isset($notice['type']) && $notice['type'] === 'success' ? 'success' : 'error';
+            echo '<div class="aiaf-audit-notice aiaf-audit-notice--' . esc_attr($notice_type) . '" role="status">' . esc_html((string) ($notice['message'] ?? '')) . '</div>';
+        }
+        if (!$can_view_full_audit_log) {
+            echo '<p class="aiaf-audit-scope-note">' . esc_html__('Showing actions created by your account. Administrators can view and filter all users.', 'acf-image-auto-filler') . '</p>';
+        }
+        echo '<form method="get" class="aiaf-audit-filters">';
+        echo '<input type="hidden" name="page" value="' . esc_attr(self::AUDIT_PAGE_SLUG) . '" />';
+        if ($can_view_full_audit_log) {
+            echo '<label><span>' . esc_html__('User ID', 'acf-image-auto-filler') . '</span><input type="number" min="1" name="aiaf_user" value="' . esc_attr($user_filter > 0 ? (string) $user_filter : '') . '" /></label>';
+        }
+        echo '<label><span>' . esc_html__('Date', 'acf-image-auto-filler') . '</span><input type="date" name="aiaf_date" value="' . esc_attr($date_filter) . '" /></label>';
+        submit_button(__('Filter', 'acf-image-auto-filler'), 'secondary', '', false);
+        echo '</form>';
+
+        echo '<div class="aiaf-audit-table-wrap">';
+        echo '<table class="widefat striped aiaf-audit-table"><thead><tr>';
+        echo '<th>' . esc_html__('Action', 'acf-image-auto-filler') . '</th>';
+        echo '<th>' . esc_html__('User', 'acf-image-auto-filler') . '</th>';
+        echo '<th>' . esc_html__('Changes', 'acf-image-auto-filler') . '</th>';
+        echo '<th>' . esc_html__('Date', 'acf-image-auto-filler') . '</th>';
+        echo '<th>' . esc_html__('Status', 'acf-image-auto-filler') . '</th>';
+        echo '</tr></thead><tbody>';
+
+        if (!$items) {
+            echo '<tr><td colspan="5">' . esc_html__('No action history available yet.', 'acf-image-auto-filler') . '</td></tr>';
+        }
+
+        foreach ($items as $item) {
+            $summary = isset($item['summary']) && is_array($item['summary']) ? $item['summary'] : [];
+            $titles = isset($summary['titles']) && is_array($summary['titles']) ? $summary['titles'] : [];
+            $first = isset($titles[0]) && is_array($titles[0]) ? $titles[0] : [];
+            $title = isset($first['title']) ? sanitize_text_field((string) $first['title']) : __('Previous action', 'acf-image-auto-filler');
+            $edit_url = isset($first['edit_url']) ? esc_url((string) $first['edit_url']) : '';
+            $count = isset($item['item_count']) ? absint($item['item_count']) : 0;
+            $featured = isset($summary['featured_count']) ? absint($summary['featured_count']) : 0;
+            $acf = isset($summary['acf_count']) ? absint($summary['acf_count']) : 0;
+            $created = isset($item['created_at']) ? absint($item['created_at']) : 0;
+            $run_id = isset($item['run_id']) ? sanitize_text_field((string) $item['run_id']) : '';
+            $rollback_status = isset($item['rollback_status']) ? sanitize_key((string) $item['rollback_status']) : '';
+            $can_rollback = $rollback_status === 'available' && $run_id !== '' && current_user_can(self::mutate_capability());
+
+            $change_parts = [];
+            $change_parts[] = $count === 1 ? __('1 change', 'acf-image-auto-filler') : sprintf(__('%d changes', 'acf-image-auto-filler'), $count);
+            if ($featured > 0) {
+                $change_parts[] = $featured === 1 ? __('Featured image', 'acf-image-auto-filler') : sprintf(__('%d featured images', 'acf-image-auto-filler'), $featured);
+            }
+            if ($acf > 0) {
+                $change_parts[] = $acf === 1 ? __('1 ACF field', 'acf-image-auto-filler') : sprintf(__('%d ACF fields', 'acf-image-auto-filler'), $acf);
+            }
+
+            echo '<tr>';
+            echo '<td>' . ($edit_url !== '' ? '<a href="' . esc_url($edit_url) . '">' . esc_html($title) . '</a>' : esc_html($title)) . '</td>';
+            echo '<td>' . esc_html((string) (isset($item['user_id']) ? absint($item['user_id']) : 0)) . '</td>';
+            echo '<td>' . esc_html(implode(' · ', $change_parts)) . '</td>';
+            echo '<td>' . esc_html($created > 0 ? wp_date(get_option('date_format') . ' ' . get_option('time_format'), $created) : '') . '</td>';
+            if ($can_rollback) {
+                $confirm = esc_js(__('Undo this run? The previous image values will be restored where possible.', 'acf-image-auto-filler'));
+                echo '<td><form method="post" class="aiaf-audit-rollback-form" onsubmit="return window.confirm(\'' . $confirm . '\');">';
+                wp_nonce_field('aiaf_audit_rollback_' . $run_id, 'aiaf_audit_nonce');
+                echo '<input type="hidden" name="aiaf_rollback_run_id" value="' . esc_attr($run_id) . '" />';
+                submit_button(__('Undo this run', 'acf-image-auto-filler'), 'secondary aiaf-audit-rollback-button', 'submit', false);
+                echo '</form></td>';
+            } elseif ($rollback_status === 'available_for_owner') {
+                echo '<td><span class="aiaf-audit-status aiaf-audit-status--muted">' . esc_html__('Only original user can undo', 'acf-image-auto-filler') . '</span></td>';
+            } elseif ($rollback_status === 'rollback_data_missing') {
+                echo '<td><span class="aiaf-audit-status aiaf-audit-status--muted">' . esc_html__('Rollback data unavailable', 'acf-image-auto-filler') . '</span></td>';
+            } else {
+                echo '<td><span class="aiaf-audit-status aiaf-audit-status--done">' . esc_html__('Already undone', 'acf-image-auto-filler') . '</span></td>';
+            }
+            echo '</tr>';
+        }
+        echo '</tbody></table>';
+        echo '</div>';
+
+        if ($pages > 1) {
+            echo '<p class="tablenav-pages">' . esc_html(sprintf(__('Page %1$d of %2$d', 'acf-image-auto-filler'), $paged, $pages)) . '</p>';
+        }
+
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
+
+    /**
+     * @return array{type: string, message: string}|null
+     */
+    private static function handle_audit_rollback_action(): ?array
+    {
+        if (!isset($_POST['aiaf_rollback_run_id'])) {
+            return null;
+        }
+
+        $run_id = sanitize_text_field(wp_unslash((string) $_POST['aiaf_rollback_run_id']));
+        if ($run_id === '') {
+            return [
+                'type'    => 'error',
+                'message' => __('No rollback run was selected.', 'acf-image-auto-filler'),
+            ];
+        }
+
+        $nonce = isset($_POST['aiaf_audit_nonce']) ? sanitize_text_field(wp_unslash((string) $_POST['aiaf_audit_nonce'])) : '';
+        if (!wp_verify_nonce($nonce, 'aiaf_audit_rollback_' . $run_id)) {
+            return [
+                'type'    => 'error',
+                'message' => __('The undo request could not be verified. Refresh the page and try again.', 'acf-image-auto-filler'),
+            ];
+        }
+
+        if (!current_user_can(self::audit_log_capability()) || !current_user_can(self::mutate_capability())) {
+            return [
+                'type'    => 'error',
+                'message' => __('You do not have permission to undo this run.', 'acf-image-auto-filler'),
+            ];
+        }
+
+        $manager = new AIAF_Rollback_Manager();
+        $result = $manager->rollback_run($run_id);
+        $errors = isset($result['errors']) && is_array($result['errors']) ? array_filter(array_map('strval', $result['errors'])) : [];
+        if ($errors !== []) {
+            return [
+                'type'    => 'error',
+                'message' => implode(' ', $errors),
+            ];
+        }
+
+        return [
+            'type'    => 'success',
+            'message' => __('Run undone. Previous image values were restored where possible.', 'acf-image-auto-filler'),
+        ];
+    }
+
+
     public static function render_page(): void
     {
         if (!current_user_can(self::view_capability())) {
-            wp_die(esc_html__('Je hebt geen toestemming om deze pagina te openen.', 'acf-image-auto-filler'));
+            wp_die(esc_html__('You do not have permission to open this page.', 'acf-image-auto-filler'));
         }
 
         echo '<div class="wrap aiaf-react-wrap">';

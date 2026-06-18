@@ -1,1 +1,954 @@
-{"translation-revision-date":"2026-06-17 00:00+0000","generator":"ACF Image Auto Filler release build","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"nl_NL","plural-forms":"nplurals=2; plural=(n != 1);"},"%d gekoppeld item":["%d gekoppeld item","%d gekoppelde items"],"%d geselecteerde afbeelding(en) zijn niet gebruikt omdat er niet genoeg geschikte velden zijn.":["%d geselecteerde afbeelding(en) zijn niet gebruikt omdat er niet genoeg geschikte velden zijn."],"1 wijziging":["1 wijziging"],"Aandachtspunten":["Aandachtspunten"],"ACF Image Auto Filler":["ACF Image Auto Filler"],"ACF Image fields en directe Image fields binnen ACF Groups.":["ACF Image fields en directe Image fields binnen ACF Groups."],"ACF Image fields. Zet ACF-groepen aan voor directe group-velden.":["ACF Image fields. Zet ACF-groepen aan voor directe group-velden."],"ACF Image Filler":["ACF Image Filler"],"ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar voor één of meer ACF-rollbacks.":["ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar voor één of meer ACF-rollbacks."],"ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar.":["ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar."],"ACF-groepen meenemen":["ACF-groepen meenemen"],"Actiebalk":["Actiebalk"],"afbeelding":["afbeelding"],"Afbeelding":["Afbeelding"],"Afbeelding groter bekijken":["Afbeelding groter bekijken"],"Afbeelding kiezen voor":["Afbeelding kiezen voor"],"afbeeldingen":["afbeeldingen"],"Afbeeldingen gebruikt":["Afbeeldingen gebruikt"],"Afbeeldingen invullen":["Afbeeldingen invullen"],"Afbeeldingen kiezen":["Afbeeldingen kiezen"],"Afbeeldingen klaar voor koppeling":["Afbeeldingen klaar voor koppeling"],"Afbeeldingen nu invullen?":["Afbeeldingen nu invullen?"],"Afbeeldingsvoorbeeld":["Afbeeldingsvoorbeeld"],"Alle lege velden selecteren":["Alle lege velden selecteren"],"Alleen geselecteerde velden":["Alleen geselecteerde velden"],"Alleen lege velden":["Alleen lege velden"],"Alleen overschrijvingen":["Alleen overschrijvingen"],"Alleen zonder gekoppelde afbeelding":["Alleen zonder gekoppelde afbeelding"],"Alles deselecteren":["Alles deselecteren"],"Alles selecteren":["Alles selecteren"],"Alles tonen":["Alles tonen"],"Alles was al ingevuld. Er zijn geen velden aangepast.":["Alles was al ingevuld. Er zijn geen velden aangepast."],"Alles ziet er goed uit. Er zijn geen fouten of overgeslagen velden.":["Alles ziet er goed uit. Er zijn geen fouten of overgeslagen velden."],"Annuleren":["Annuleren"],"Attachment-ID's moeten als lijst worden aangeleverd.":["Attachment-ID's moeten als lijst worden aangeleverd."],"Automatisch / geen handmatige keuze":["Automatisch / geen handmatige keuze"],"Batchmodus actief":["Batchmodus actief"],"Batchmodus waarschuwing":["Batchmodus waarschuwing"],"Berichten":["Berichten"],"Beschikbare doelen":["Beschikbare doelen"],"Beschikbare posts":["Beschikbare posts"],"Bestaande afbeeldingen behouden":["Bestaande afbeeldingen behouden"],"Bestaande afbeeldingsvelden kunnen worden overschreven.":["Bestaande afbeeldingsvelden kunnen worden overschreven."],"Bestaande afbeeldingsvelden worden overschreven.":["Bestaande afbeeldingsvelden worden overschreven."],"Bijlage-ID %d is geen afbeelding.":["Bijlage-ID %d is geen afbeelding."],"Categorieën":["Categorieën"],"Concepten selecteren":["Concepten selecteren"],"Content":["Content"],"Content kiezen":["Content kiezen"],"Content selectie-acties":["Content selectie-acties"],"Contenttype":["Contenttype"],"Controle":["Controle"],"Controle nodig":["Controle nodig"],"Controleer de voorgestelde koppelingen voordat je wijzigingen uitvoert.":["Controleer de voorgestelde koppelingen voordat je wijzigingen uitvoert."],"Controleer kort wat er wordt aangepast. Na uitvoering kun je deze run vanuit het auditlog terugdraaien.":["Controleer kort wat er wordt aangepast. Na uitvoering kun je deze run vanuit het auditlog terugdraaien."],"Controleer of deze content ACF Image fields heeft. Staat de afbeelding direct in een group, zet dan ACF-groepen aan.":["Controleer of deze content ACF Image fields heeft. Staat de afbeelding direct in een group, zet dan ACF-groepen aan."],"Controleer per veld welke afbeelding wordt gekoppeld voordat je uitvoert.":["Controleer per veld welke afbeelding wordt gekoppeld voordat je uitvoert."],"CSV downloaden":["CSV downloaden"],"Daarna tonen we hier alleen de afbeeldingsvelden die veilig gevuld kunnen worden.":["Daarna tonen we hier alleen de afbeeldingsvelden die veilig gevuld kunnen worden."],"De geselecteerde ACF Image fields zijn niet beschikbaar voor dit item.":["De geselecteerde ACF Image fields zijn niet beschikbaar voor dit item."],"De geselecteerde koppelingen zijn verwerkt. Je kunt deze run vanuit het auditlog terugdraaien.":["De geselecteerde koppelingen zijn verwerkt. Je kunt deze run vanuit het auditlog terugdraaien."],"De geselecteerde uitgelichte afbeelding is geen geldige afbeelding.":["De geselecteerde uitgelichte afbeelding is geen geldige afbeelding."],"De preview is verouderd. Vernieuw de preview voordat je uitvoert.":["De preview is verouderd. Vernieuw de preview voordat je uitvoert."],"De uitgelichte afbeelding kon voor één of meer items niet worden hersteld.":["De uitgelichte afbeelding kon voor één of meer items niet worden hersteld."],"De uitvoering is klaar. Controleer hieronder de belangrijkste uitkomst en vervolgactie.":["De uitvoering is klaar. Controleer hieronder de belangrijkste uitkomst en vervolgactie."],"De WordPress Media Library kon niet worden geladen.":["De WordPress Media Library kon niet worden geladen."],"Dit veld heeft al een waarde.":["Dit veld heeft al een waarde."],"Eerdere actie":["Eerdere actie"],"Er ging iets mis. Probeer opnieuw of controleer de invoer.":["Er ging iets mis. Probeer opnieuw of controleer de invoer."],"Er is geen rollbackdata gevonden voor de laatste run.":["Er is geen rollbackdata gevonden voor de laatste run."],"Er zijn aandachtspunten gevonden. Controleer de melding hieronder.":["Er zijn aandachtspunten gevonden. Controleer de melding hieronder."],"Er zijn geen geldige afbeeldingen geselecteerd.":["Er zijn geen geldige afbeeldingen geselecteerd."],"Er zijn geen geschikte ACF Image fields gevonden voor dit item.":["Er zijn geen geschikte ACF Image fields gevonden voor dit item."],"Er zijn geen nieuwe wijzigingen uitgevoerd. Controleer hieronder de korte samenvatting.":["Er zijn geen nieuwe wijzigingen uitgevoerd. Controleer hieronder de korte samenvatting."],"Er zijn meer automatische ACF-afbeeldingen dan automatisch te vullen ACF-velden. Extra afbeeldingen worden overgeslagen tenzij je handmatig mapt.":["Er zijn meer automatische ACF-afbeeldingen dan automatisch te vullen ACF-velden. Extra afbeeldingen worden overgeslagen tenzij je handmatig mapt."],"Er zijn minder automatische ACF-afbeeldingen dan automatisch te vullen velden. Niet alle velden krijgen automatisch een afbeelding.":["Er zijn minder automatische ACF-afbeeldingen dan automatisch te vullen velden. Niet alle velden krijgen automatisch een afbeelding."],"Even geduld. De interface blijft geblokkeerd tot de huidige data klaar is.":["Even geduld. De interface blijft geblokkeerd tot de huidige data klaar is."],"Extra afbeeldingen":["Extra afbeeldingen"],"Eén of meer ACF Image fields konden niet worden hersteld.":["Eén of meer ACF Image fields konden niet worden hersteld."],"Filter, match of exporteer de voorgestelde koppelingen.":["Filter, match of exporteer de voorgestelde koppelingen."],"Fouten":["Fouten"],"Ga naar eerdere stappen":["Ga naar eerdere stappen"],"Ga naar stap":["Ga naar stap"],"Gebruik de eerste gekozen afbeelding als featured image.":["Gebruik de eerste gekozen afbeelding als featured image."],"Gebruik dit wanneer afbeeldingen direct binnen een ACF Group staan.":["Gebruik dit wanneer afbeeldingen direct binnen een ACF Group staan."],"Gebruik geselecteerde afbeeldingen":["Gebruik geselecteerde afbeeldingen"],"Geen ACF Image fields gevonden voor dit contenttype. De uitgelichte afbeelding kan wel worden gevuld.":["Geen ACF Image fields gevonden voor dit contenttype. De uitgelichte afbeelding kan wel worden gevuld."],"Geen ACF-afbeeldingsvelden gevonden":["Geen ACF-afbeeldingsvelden gevonden"],"Geen bewerkbare items gevonden. Kies een ander contenttype of pas je zoekterm aan.":["Geen bewerkbare items gevonden. Kies een ander contenttype of pas je zoekterm aan."],"Geen geschikte afbeeldingsvelden":["Geen geschikte afbeeldingsvelden"],"Geen koppelingen binnen dit filter":["Geen koppelingen binnen dit filter"],"Geen wijziging nodig.":["Geen wijziging nodig."],"Geen wijzigingen nodig":["Geen wijzigingen nodig"],"Gegevens laden":["Gegevens laden"],"geladen":["geladen"],"Gepubliceerd selecteren":["Gepubliceerd selecteren"],"Geselecteerd":["Geselecteerd"],"geselecteerd":["geselecteerd"],"Geselecteerde afbeeldingen":["Geselecteerde afbeeldingen"],"geselecteerde item(s)":["geselecteerde item(s)"],"Geselecteerde items":["Geselecteerde items"],"geselecteerde veld(en)":["geselecteerde veld(en)"],"Geselecteerde velden niet beschikbaar":["Geselecteerde velden niet beschikbaar"],"Gevuld":["Gevuld"],"Gevulde ACF-velden worden niet meegeteld zolang vervangen uit staat. Automatische afbeeldingen worden alleen aan lege geselecteerde velden gekoppeld.":["Gevulde ACF-velden worden niet meegeteld zolang vervangen uit staat. Automatische afbeeldingen worden alleen aan lege geselecteerde velden gekoppeld."],"Handmatige keuze":["Handmatige keuze"],"Heeft al afbeelding":["Heeft al afbeelding"],"Huidig":["Huidig"],"Huidige afbeelding bekijken":["Huidige afbeelding bekijken"],"ID %d is geen bijlage.":["ID %d is geen bijlage."],"item":["item"],"Item #%d":["Item #%d"],"item geselecteerd":["item geselecteerd"],"item(s) teruggedraaid.":["item(s) teruggedraaid."],"items":["items"],"Items gecontroleerd":["Items gecontroleerd"],"items geselecteerd":["items geselecteerd"],"Je hebt geen toestemming meer om één of meer items terug te draaien.":["Je hebt geen toestemming meer om één of meer items terug te draaien."],"Je hebt geen toestemming meer om één of meer vorige ACF-afbeeldingen te herstellen.":["Je hebt geen toestemming meer om één of meer vorige ACF-afbeeldingen te herstellen."],"Je hebt geen toestemming meer om één of meer vorige uitgelichte afbeeldingen te herstellen.":["Je hebt geen toestemming meer om één of meer vorige uitgelichte afbeeldingen te herstellen."],"Je hebt geen toestemming om acties terug te draaien.":["Je hebt geen toestemming om acties terug te draaien."],"Je hebt geen toestemming om bijlage-ID %d te gebruiken.":["Je hebt geen toestemming om bijlage-ID %d te gebruiken."],"Je hebt geen toestemming om afbeeldingen in te vullen.":["Je hebt geen toestemming om afbeeldingen in te vullen."],"Je hebt geen toestemming om deze pagina te openen.":["Je hebt geen toestemming om deze pagina te openen."],"Je hebt geen toestemming om deze taxonomie te bekijken.":["Je hebt geen toestemming om deze taxonomie te bekijken."],"Je hebt geen toestemming om dit post type te bekijken.":["Je hebt geen toestemming om dit post type te bekijken."],"Je hebt geen toestemming om het auditlog te bekijken.":["Je hebt geen toestemming om het auditlog te bekijken."],"Je kunt de volgorde aanpassen of afbeeldingen vervangen voordat je de koppeling controleert.":["Je kunt de volgorde aanpassen of afbeeldingen vervangen voordat je de koppeling controleert."],"Je kunt maximaal %d afbeeldingen per run selecteren.":["Je kunt maximaal %d afbeeldingen per run selecteren."],"Je kunt maximaal %d items per run verwerken.":["Je kunt maximaal %d items per run verwerken."],"Je past meerdere posts tegelijk aan. Controleer extra goed of deze posts dezelfde ACF-velden gebruiken.":["Je past meerdere posts tegelijk aan. Controleer extra goed of deze posts dezelfde ACF-velden gebruiken."],"Kies afbeeldingen uit de Media Library. De volgorde bepaalt de automatische koppeling met de geselecteerde velden.":["Kies afbeeldingen uit de Media Library. De volgorde bepaalt de automatische koppeling met de geselecteerde velden."],"Kies een ander filter om meer regels te zien.":["Kies een ander filter om meer regels te zien."],"Kies eerst content en velden. Daarna tonen we hier de voorgestelde koppelingen.":["Kies eerst content en velden. Daarna tonen we hier de voorgestelde koppelingen."],"Kies eerst het contenttype en selecteer daarna één of meerdere items. Alleen ondersteunde post types en taxonomieën met bruikbare ACF-afbeeldingsvelden worden getoond.":["Kies eerst het contenttype en selecteer daarna één of meerdere items. Alleen ondersteunde post types en taxonomieën met bruikbare ACF-afbeeldingsvelden worden getoond."],"Kies eerst velden en afbeeldingen om automatisch op bestandsnaam te matchen.":["Kies eerst velden en afbeeldingen om automatisch op bestandsnaam te matchen."],"Koppeling controleren":["Koppeling controleren"],"Koppelingen":["Koppelingen"],"Laatste actie":["Laatste actie"],"Run opgeslagen. Terugdraaien is beschikbaar vanuit het auditlog.":["Run opgeslagen. Terugdraaien is beschikbaar vanuit het auditlog."],"Terugdraaien is beschikbaar na uitvoeren.":["Terugdraaien is beschikbaar na uitvoeren."],"Laatste controle vóór uitvoering":["Laatste controle vóór uitvoering"],"Leeg":["Leeg"],"Maak eerst een preview om de koppeling te controleren voordat je wijzigingen uitvoert.":["Maak eerst een preview om de koppeling te controleren voordat je wijzigingen uitvoert."],"Maak eerst een preview voordat je een CSV kunt downloaden.":["Maak eerst een preview voordat je een CSV kunt downloaden."],"Match op bestandsnaam":["Match op bestandsnaam"],"Media Library openen":["Media Library openen"],"Meer laden":["Meer laden"],"Niet beschikbaar voor dit contenttype.":["Niet beschikbaar voor dit contenttype."],"Niet geselecteerd":["Niet geselecteerd"],"Nieuwe afbeelding":["Nieuwe afbeelding"],"Nieuwe afbeelding groter bekijken":["Nieuwe afbeelding groter bekijken"],"Nieuwe selectie starten":["Nieuwe selectie starten"],"Nog een preview maken":["Nog een preview maken"],"Nog geen actiegeschiedenis beschikbaar.":["Nog geen actiegeschiedenis beschikbaar."],"Nog geen afbeelding gekoppeld":["Nog geen afbeelding gekoppeld"],"Nog geen afbeeldingen gekozen":["Nog geen afbeeldingen gekozen"],"Nog leeg":["Nog leeg"],"Nog niets om te controleren":["Nog niets om te controleren"],"Normaal veld":["Normaal veld"],"Omhoog":["Omhoog"],"Omlaag":["Omlaag"],"Ondersteund":["Ondersteund"],"Ongeldig of niet-ondersteund contenttype.":["Ongeldig of niet-ondersteund contenttype."],"Ongeldig of ontoegankelijk contentitem.":["Ongeldig of ontoegankelijk contentitem."],"Ongeldige of niet-ondersteunde taxonomie.":["Ongeldige of niet-ondersteunde taxonomie."],"Ongewijzigd":["Ongewijzigd"],"Ongewijzigd of handmatig gekozen":["Ongewijzigd of handmatig gekozen"],"Overgeslagen":["Overgeslagen"],"Overschrijvingen":["Overschrijvingen"],"Pagina's":["Pagina's"],"Preview":["Preview"],"Preview maken":["Preview maken"],"Preview nog niet gemaakt":["Preview nog niet gemaakt"],"Preview vernieuwen":["Preview vernieuwen"],"Preview verouderd":["Preview verouderd"],"Productcategorieën":["Productcategorieën"],"Producten":["Producten"],"Repeater, flexible content, gallery en clone worden overgeslagen.":["Repeater, flexible content, gallery en clone worden overgeslagen."],"Resultaat":["Resultaat"],"Resultaatsamenvatting":["Resultaatsamenvatting"],"Rollback":["Rollback"],"Rollbackstatus wordt gecontroleerd voordat je uitvoert.":["Rollbackstatus wordt gecontroleerd voordat je uitvoert."],"Samenvatting van deze actie":["Samenvatting van deze actie"],"Selecteer afbeeldingen":["Selecteer afbeeldingen"],"Selecteer de afbeeldingen die straks automatisch aan de gekozen velden worden gekoppeld.":["Selecteer de afbeeldingen die straks automatisch aan de gekozen velden worden gekoppeld."],"Selecteer eerst content":["Selecteer eerst content"],"Selecteer minstens één ACF Image field of een contentitem dat uitgelichte afbeeldingen ondersteunt.":["Selecteer minstens één ACF Image field of een contentitem dat uitgelichte afbeeldingen ondersteunt."],"Selecteer minstens één bewerkbaar item.":["Selecteer minstens één bewerkbaar item."],"Selecteer welke afbeeldingsvelden automatisch gevuld mogen worden.":["Selecteer welke afbeeldingsvelden automatisch gevuld mogen worden."],"Selectie wissen":["Selectie wissen"],"Standaard aan. Zet alleen uit als bestaande afbeeldingen moeten blijven staan.":["Standaard aan. Zet alleen uit als bestaande afbeeldingen moeten blijven staan."],"Stapnavigatie":["Stapnavigatie"],"Status":["Status"],"Te vullen velden":["Te vullen velden"],"Technische details":["Technische details"],"Terugdraaien":["Terugdraaien"],"Toon koppelingen":["Toon koppelingen"],"Uitgelichte afbeelding":["Uitgelichte afbeelding"],"Uitgelichte afbeelding bevat deze afbeelding al.":["Uitgelichte afbeelding bevat deze afbeelding al."],"Uitgelichte afbeelding heeft al een waarde.":["Uitgelichte afbeelding heeft al een waarde."],"Uitgelichte afbeelding kon niet worden bijgewerkt.":["Uitgelichte afbeelding kon niet worden bijgewerkt."],"Uitgelichte afbeelding vullen":["Uitgelichte afbeelding vullen"],"Uitvoeren":["Uitvoeren"],"Uitvoering afgerond":["Uitvoering afgerond"],"Uitvoering afgerond met aandachtspunten":["Uitvoering afgerond met aandachtspunten"],"van":["van"],"veld":["veld"],"Veld":["Veld"],"Veld \"%1$s\" kon niet worden bijgewerkt met afbeelding #%2$d.":["Veld \"%1$s\" kon niet worden bijgewerkt met afbeelding #%2$d."],"Veld bevat deze afbeelding al.":["Veld bevat deze afbeelding al."],"Veld teruggedraaid":["Veld teruggedraaid"],"Velden":["Velden"],"velden":["velden"],"Velden kiezen":["Velden kiezen"],"Veldgroep":["Veldgroep"],"Veldopties":["Veldopties"],"Vervangen ingeschakeld":["Vervangen ingeschakeld"],"Vervangen is ingeschakeld":["Vervangen is ingeschakeld"],"Verwerkte wijziging":["Verwerkte wijziging"],"Verwijderen":["Verwijderen"],"Volgende stap":["Volgende stap"],"Voor dit veld is geen afbeelding geselecteerd.":["Voor dit veld is geen afbeelding geselecteerd."],"Vorige afbeelding hersteld:":["Vorige afbeelding hersteld:"],"Vorige lege waarde hersteld.":["Vorige lege waarde hersteld."],"Vorige stap":["Vorige stap"],"wijziging(en) klaar":["wijziging(en) klaar"],"wijzigingen":["wijzigingen"],"Wijzigingen":["Wijzigingen"],"Wordt gevuld":["Wordt gevuld"],"Wordt overgeslagen":["Wordt overgeslagen"],"Wordt overgeslagen: heeft al afbeelding":["Wordt overgeslagen: heeft al afbeelding"],"Wordt overschreven":["Wordt overschreven"],"Workflow stappen":["Workflow stappen"],"Zichtbare items selecteren":["Zichtbare items selecteren"],"Zoek op titel...":["Zoek op titel..."],"Zoeken":["Zoeken"],"Selectie aanpassen":["Selectie aanpassen"],"Alleen uitgelichte afbeelding":["Alleen uitgelichte afbeelding"],"Dit contenttype heeft geen ACF-afbeeldingsvelden. Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt.":["Dit contenttype heeft geen ACF-afbeeldingsvelden. Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt."],"Al teruggedraaid":["Al teruggedraaid"],"Beschikbaar voor rollback":["Beschikbaar voor rollback"],"ACF is niet beschikbaar en dit contenttype ondersteunt geen uitgelichte afbeelding.":["ACF is niet beschikbaar en dit contenttype ondersteunt geen uitgelichte afbeelding."],"ACF is niet beschikbaar. Alleen de uitgelichte afbeelding blijft beschikbaar.":["ACF is niet beschikbaar. Alleen de uitgelichte afbeelding blijft beschikbaar."],"Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt.":["Maak een preview om te controleren wat er met de uitgelichte afbeelding gebeurt."],"Selecteer een contentitem dat uitgelichte afbeeldingen ondersteunt.":["Selecteer een contentitem dat uitgelichte afbeeldingen ondersteunt."],"ACF-velden zijn verborgen. De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt.":["ACF-velden zijn verborgen. De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt."],"Alles is al gekoppeld":["Alles is al gekoppeld"],"Bestaande uitgelichte afbeeldingen worden overschreven.":["Bestaande uitgelichte afbeeldingen worden overschreven."],"Controleer de uitgelichte afbeelding voordat je wijzigingen uitvoert.":["Controleer de uitgelichte afbeelding voordat je wijzigingen uitvoert."],"Daarna kun je alleen de uitgelichte afbeelding vullen.":["Daarna kun je alleen de uitgelichte afbeelding vullen."],"De eerste afbeelding in de selectie wordt gebruikt als uitgelichte afbeelding.":["De eerste afbeelding in de selectie wordt gebruikt als uitgelichte afbeelding."],"De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt.":["De eerste gekozen afbeelding wordt als uitgelichte afbeelding gebruikt."],"De geselecteerde afbeelding is al gekoppeld aan de gekozen item(s). Er zijn daarom geen ACF-afbeeldingsvelden aangepast.":["De geselecteerde afbeelding is al gekoppeld aan de gekozen item(s). Er zijn daarom geen ACF-afbeeldingsvelden aangepast."],"Doel":["Doel"],"Featured-image-only gebruikt alleen de eerste geselecteerde afbeelding. Extra afbeeldingen worden overgeslagen.":["Featured-image-only gebruikt alleen de eerste geselecteerde afbeelding. Extra afbeeldingen worden overgeslagen."],"Geen nieuwe velden om te vullen":["Geen nieuwe velden om te vullen"],"Kies de afbeelding die als uitgelichte afbeelding wordt gebruikt.":["Kies de afbeelding die als uitgelichte afbeelding wordt gebruikt."],"Opnieuw beginnen":["Opnieuw beginnen"],"Overschrijven":["Overschrijven"],"Sluiten":["Sluiten"],"Te vullen":["Te vullen"],"Uitgelichte afbeelding kiezen":["Uitgelichte afbeelding kiezen"],"doel":["doel"],"doelen":["doelen"],"Actief":["Actief"],"Actief: de eerste gekozen afbeelding wordt ingesteld als uitgelichte afbeelding.":["Actief: de eerste gekozen afbeelding wordt ingesteld als uitgelichte afbeelding."],"Alles ziet er goed uit. Er zijn geen fouten of overgeslagen items.":["Alles ziet er goed uit. Er zijn geen fouten of overgeslagen items."],"Beschikbaar doel":["Beschikbaar doel"],"Bestaande uitgelichte afbeeldingen kunnen worden overschreven.":["Bestaande uitgelichte afbeeldingen kunnen worden overschreven."],"Daarna kun je direct de uitgelichte afbeelding instellen.":["Daarna kun je direct de uitgelichte afbeelding instellen."],"De ACF-velden zijn uitgeschakeld. Kies hierna een afbeelding; alleen de uitgelichte afbeelding wordt aangepast.":["De ACF-velden zijn uitgeschakeld. Kies hierna een afbeelding; alleen de uitgelichte afbeelding wordt aangepast."],"De featured-image-only run is klaar. Controleer hieronder de uitkomst en rollback-optie.":["De featured-image-only run is klaar. Controleer hieronder de uitkomst en rollback-optie."],"De geselecteerde afbeelding is al ingesteld als uitgelichte afbeelding voor de gekozen item(s).":["De geselecteerde afbeelding is al ingesteld als uitgelichte afbeelding voor de gekozen item(s)."],"De uitgelichte afbeelding is verwerkt. Je kunt deze run vanuit het auditlog terugdraaien.":["De uitgelichte afbeelding is verwerkt. Je kunt deze run vanuit het auditlog terugdraaien."],"De uitgelichte afbeelding stond al goed. Er is niets aangepast.":["De uitgelichte afbeelding stond al goed. Er is niets aangepast."],"Geen nieuwe uitgelichte afbeelding nodig":["Geen nieuwe uitgelichte afbeelding nodig"],"Geen ondersteund doel beschikbaar":["Geen ondersteund doel beschikbaar"],"Ingesteld":["Ingesteld"],"Je past meerdere items tegelijk aan. Controleer extra goed of bij alle items dezelfde uitgelichte afbeelding gewenst is.":["Je past meerdere items tegelijk aan. Controleer extra goed of bij alle items dezelfde uitgelichte afbeelding gewenst is."],"Kies een contenttype dat uitgelichte afbeeldingen ondersteunt.":["Kies een contenttype dat uitgelichte afbeeldingen ondersteunt."],"Kies een contenttype en selecteer één of meerdere items. In featured-image-only modus worden alleen items met ondersteuning voor uitgelichte afbeeldingen getoond.":["Kies een contenttype en selecteer één of meerdere items. In featured-image-only modus worden alleen items met ondersteuning voor uitgelichte afbeeldingen getoond."],"Niet beschikbaar":["Niet beschikbaar"],"Niet beschikbaar: dit contenttype ondersteunt geen uitgelichte afbeelding.":["Niet beschikbaar: dit contenttype ondersteunt geen uitgelichte afbeelding."],"Uitgelichte afbeelding instellen":["Uitgelichte afbeelding instellen"],"Uitgelichte afbeelding nu instellen?":["Uitgelichte afbeelding nu instellen?"],"Verwerkte uitgelichte afbeelding":["Verwerkte uitgelichte afbeelding"],"Wordt ingesteld":["Wordt ingesteld"],"Alleen uitgelichte afbeelding beschikbaar.":["Alleen uitgelichte afbeelding beschikbaar."]}}}
+{
+  "translation-revision-date": "2026-06-17 00:00+0000",
+  "generator": "manual",
+  "domain": "acf-image-auto-filler",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "acf-image-auto-filler",
+        "lang": "nl_NL",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "%1$d changes · %2$d featured · %3$d ACF": [
+        "%1$d wijzigingen · %2$d uitgelicht · %3$d ACF"
+      ],
+      "%d linked item": [
+        "%d gekoppeld item",
+        "%d gekoppelde items"
+      ],
+      "%d selected image(s) were not used because there are not enough suitable fields.": [
+        "%d geselecteerde afbeelding(en) zijn niet gebruikt omdat er niet genoeg geschikte velden zijn."
+      ],
+      "1 change": [
+        "1 wijziging"
+      ],
+      "ACF Image Auto Filler": [
+        "ACF Image Auto Filler"
+      ],
+      "ACF Image Filler": [
+        "ACF Image Filler"
+      ],
+      "ACF image fields and direct image fields inside ACF groups.": [
+        "ACF Image fields en directe image fields binnen ACF-groepen."
+      ],
+      "ACF image fields. Enable ACF groups for direct group fields.": [
+        "ACF Image fields. Zet ACF-groepen aan voor directe groepsvelden."
+      ],
+      "ACF is not active or required ACF functions are unavailable for one or more ACF undo actions.": [
+        "ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar voor een of meer acties ongedaan maken."
+      ],
+      "ACF is not active or required ACF functions are unavailable.": [
+        "ACF is niet actief of vereiste ACF-functies zijn niet beschikbaar."
+      ],
+      "Action": [
+        "Actie"
+      ],
+      "Action bar": [
+        "Actiebalk"
+      ],
+      "Active": [
+        "Actief"
+      ],
+      "Active: the first selected image will be set as the featured image.": [
+        "Actief: de eerste geselecteerde afbeelding wordt ingesteld als uitgelichte afbeelding."
+      ],
+      "Adjust selection": [
+        "Selectie aanpassen"
+      ],
+      "Advanced Custom Fields is not active or required ACF functions are unavailable.": [
+        "Advanced Custom Fields is niet actief of vereiste ACF-functies zijn niet beschikbaar."
+      ],
+      "After that you can directly set the featured image.": [
+        "Daarna kun je direct de uitgelichte afbeelding instellen."
+      ],
+      "Already has image": [
+        "Heeft al een afbeelding"
+      ],
+      "Rollback data unavailable": [
+        "Rollbackgegevens niet beschikbaar"
+      ],
+      "Already undone": [
+        "Al ongedaan gemaakt"
+      ],
+      "Attachment ID %d is not an image.": [
+        "Bijlage-ID %d is geen afbeelding."
+      ],
+      "Attachment IDs must be provided as a list.": [
+        "Bijlage-ID's moeten als lijst worden aangeleverd."
+      ],
+      "Audit log": [
+        "Auditlog"
+      ],
+      "Automatic / no manual choice": [
+        "Automatisch / geen handmatige keuze"
+      ],
+      "Available for original user": [
+        "Beschikbaar voor oorspronkelijke gebruiker"
+      ],
+      "Available posts": [
+        "Beschikbare berichten"
+      ],
+      "Available target": [
+        "Beschikbaar doel"
+      ],
+      "Available targets": [
+        "Beschikbare doelen"
+      ],
+      "Available to undo": [
+        "Beschikbaar om ongedaan te maken"
+      ],
+      "Batch mode active": [
+        "Batchmodus actief"
+      ],
+      "Batch mode warning": [
+        "Waarschuwing batchmodus"
+      ],
+      "Briefly review what will be changed. After execution, you can roll back this run from the audit log.": [
+        "Controleer kort wat er wordt gewijzigd. Na uitvoeren kun je deze run via het auditlog ongedaan maken."
+      ],
+      "Cancel": [
+        "Annuleren"
+      ],
+      "Categories": [
+        "Categorieën"
+      ],
+      "Changes": [
+        "Wijzigingen"
+      ],
+      "Check": [
+        "Controleren"
+      ],
+      "Check mapping": [
+        "Koppeling controleren"
+      ],
+      "Check required": [
+        "Controle nodig"
+      ],
+      "Check the featured image before applying changes.": [
+        "Controleer de uitgelichte afbeelding voordat je wijzigingen uitvoert."
+      ],
+      "Check whether this content has ACF image fields. If the image is directly inside a group, enable ACF groups.": [
+        "Controleer of deze content ACF Image fields heeft. Staat de afbeelding direct in een groep, zet dan ACF-groepen aan."
+      ],
+      "Choose a content type and select one or more items. In featured-image-only mode, only items that support featured images are shown.": [
+        "Kies een contenttype en selecteer een of meer items. In de modus alleen uitgelichte afbeelding worden alleen items getoond die uitgelichte afbeeldingen ondersteunen."
+      ],
+      "Choose a content type that supports featured images.": [
+        "Kies een contenttype dat uitgelichte afbeeldingen ondersteunt."
+      ],
+      "Choose another filter to see more rows.": [
+        "Kies een ander filter om meer rijen te zien."
+      ],
+      "Choose another selection": [
+        "Andere selectie kiezen"
+      ],
+      "Choose content": [
+        "Content kiezen"
+      ],
+      "Choose content and fields first. Then the proposed mappings are shown here.": [
+        "Kies eerst content en velden. Daarna worden de voorgestelde koppelingen hier getoond."
+      ],
+      "Choose fields": [
+        "Velden kiezen"
+      ],
+      "Choose fields and images first to automatically match by file name.": [
+        "Kies eerst velden en afbeeldingen om automatisch op bestandsnaam te koppelen."
+      ],
+      "Choose image for": [
+        "Afbeelding kiezen voor"
+      ],
+      "Choose images": [
+        "Afbeeldingen kiezen"
+      ],
+      "Choose images from the Media Library. The order determines the automatic mapping to the selected fields.": [
+        "Kies afbeeldingen uit de mediabibliotheek. De volgorde bepaalt de automatische koppeling aan de geselecteerde velden."
+      ],
+      "Choose the image that will be used as the featured image.": [
+        "Kies de afbeelding die als uitgelichte afbeelding wordt gebruikt."
+      ],
+      "Clear selection": [
+        "Selectie wissen"
+      ],
+      "Close": [
+        "Sluiten"
+      ],
+      "Content": [
+        "Content"
+      ],
+      "Content selection actions": [
+        "Acties voor contentselectie"
+      ],
+      "Content type": [
+        "Contenttype"
+      ],
+      "Create a preview before downloading a CSV.": [
+        "Maak eerst een voorbeeld voordat je een CSV downloadt."
+      ],
+      "Create a preview first to check the mapping before applying changes.": [
+        "Maak eerst een voorbeeld om de koppeling te controleren voordat je wijzigingen uitvoert."
+      ],
+      "Create a preview to check what will happen to the featured image.": [
+        "Maak een voorbeeld om te controleren wat er met de uitgelichte afbeelding gebeurt."
+      ],
+      "Create another preview": [
+        "Nieuw voorbeeld maken"
+      ],
+      "Create preview": [
+        "Voorbeeld maken"
+      ],
+      "Current": [
+        "Huidig"
+      ],
+      "Date": [
+        "Datum"
+      ],
+      "Deselect all": [
+        "Alles deselecteren"
+      ],
+      "Down": [
+        "Omlaag"
+      ],
+      "Download CSV": [
+        "CSV downloaden"
+      ],
+      "Empty": [
+        "Leeg"
+      ],
+      "Empty fields only": [
+        "Alleen lege velden"
+      ],
+      "Errors": [
+        "Fouten"
+      ],
+      "Every completed run can be undone from the audit log while its rollback data is still available.": [
+        "Elke uitgevoerde run kan via het auditlog ongedaan worden gemaakt zolang de rollbackdata beschikbaar is."
+      ],
+      "Everything looks good. There are no errors or skipped items.": [
+        "Alles ziet er goed uit. Er zijn geen fouten of overgeslagen items."
+      ],
+      "Everything was already filled. No fields were changed.": [
+        "Alles was al gevuld. Er zijn geen velden gewijzigd."
+      ],
+      "Existing featured images can be overwritten.": [
+        "Bestaande uitgelichte afbeeldingen kunnen worden overschreven."
+      ],
+      "Existing featured images will be overwritten.": [
+        "Bestaande uitgelichte afbeeldingen worden overschreven."
+      ],
+      "Existing image fields can be overwritten.": [
+        "Bestaande image fields kunnen worden overschreven."
+      ],
+      "Existing image fields will be overwritten.": [
+        "Bestaande image fields worden overschreven."
+      ],
+      "Extra images": [
+        "Extra afbeeldingen"
+      ],
+      "Featured image": [
+        "Uitgelichte afbeelding"
+      ],
+      "Featured image already contains this image.": [
+        "De uitgelichte afbeelding bevat deze afbeelding al."
+      ],
+      "Featured image already has a value.": [
+        "De uitgelichte afbeelding heeft al een waarde."
+      ],
+      "Featured image available": [
+        "Uitgelichte afbeelding beschikbaar"
+      ],
+      "Featured image could not be updated.": [
+        "De uitgelichte afbeelding kon niet worden bijgewerkt."
+      ],
+      "Featured image is already correct": [
+        "Uitgelichte afbeelding klopt al"
+      ],
+      "Featured image only": [
+        "Alleen uitgelichte afbeelding"
+      ],
+      "Featured-image-only mode uses only the first selected image. Extra images are skipped.": [
+        "De modus alleen uitgelichte afbeelding gebruikt alleen de eerste geselecteerde afbeelding. Extra afbeeldingen worden overgeslagen."
+      ],
+      "Field": [
+        "Veld"
+      ],
+      "Field \"%1$s\" could not be updated with image #%2$d.": [
+        "Veld \"%1$s\" kon niet worden bijgewerkt met afbeelding #%2$d."
+      ],
+      "Field already contains this image.": [
+        "Veld bevat deze afbeelding al."
+      ],
+      "Field group": [
+        "Veldgroep"
+      ],
+      "Field options": [
+        "Veldopties"
+      ],
+      "Field undone": [
+        "Veld ongedaan gemaakt"
+      ],
+      "Fields": [
+        "Velden"
+      ],
+      "Fill": [
+        "Vullen"
+      ],
+      "Fill featured image": [
+        "Uitgelichte afbeelding vullen"
+      ],
+      "Fill images": [
+        "Afbeeldingen vullen"
+      ],
+      "Filled": [
+        "Gevuld"
+      ],
+      "Filled ACF fields are not counted while replace is off. Automatic images are only mapped to empty selected fields.": [
+        "Gevulde ACF-velden tellen niet mee zolang vervangen uit staat. Automatische afbeeldingen worden alleen aan lege geselecteerde velden gekoppeld."
+      ],
+      "Filter": [
+        "Filteren"
+      ],
+      "Filter, match, or export the proposed mappings.": [
+        "Filter, koppel of exporteer de voorgestelde koppelingen."
+      ],
+      "Final check before running changes": [
+        "Laatste controle voor uitvoeren"
+      ],
+      "First choose the content type, then select one or more items. Only supported post types and taxonomies with usable ACF image fields are shown.": [
+        "Kies eerst het contenttype en selecteer daarna een of meer items. Alleen ondersteunde berichttypen en taxonomieën met bruikbare ACF Image fields worden getoond."
+      ],
+      "First select the content you want to update, then choose the ACF image fields or featured image, select images, and review the preview before running changes.": [
+        "Selecteer eerst de content die je wilt bijwerken, kies daarna de ACF Image fields of uitgelichte afbeelding, selecteer afbeeldingen en controleer het voorbeeld voordat je uitvoert."
+      ],
+      "Go to earlier steps": [
+        "Ga naar eerdere stappen"
+      ],
+      "Go to step": [
+        "Ga naar stap"
+      ],
+      "How does this work?": [
+        "Hoe werkt dit?"
+      ],
+      "ID %d is not an attachment.": [
+        "ID %d is geen bijlage."
+      ],
+      "Image": [
+        "Afbeelding"
+      ],
+      "Image preview": [
+        "Afbeeldingsvoorbeeld"
+      ],
+      "Images ready for mapping": [
+        "Afbeeldingen klaar om te koppelen"
+      ],
+      "Images used": [
+        "Gebruikte afbeeldingen"
+      ],
+      "Include ACF groups": [
+        "ACF-groepen meenemen"
+      ],
+      "Invalid or inaccessible content item.": [
+        "Ongeldig of ontoegankelijk contentitem."
+      ],
+      "Invalid or unsupported content type.": [
+        "Ongeldig of niet-ondersteund contenttype."
+      ],
+      "Invalid or unsupported taxonomy.": [
+        "Ongeldige of niet-ondersteunde taxonomie."
+      ],
+      "Item #%d": [
+        "Item #%d"
+      ],
+      "Items checked": [
+        "Items gecontroleerd"
+      ],
+      "Items needing attention": [
+        "Items met aandachtspunt"
+      ],
+      "Items needing attention were found. Check the message below.": [
+        "Er zijn items met aandachtspunten gevonden. Controleer de melding hieronder."
+      ],
+      "Keep existing images": [
+        "Bestaande afbeeldingen behouden"
+      ],
+      "Last action": [
+        "Laatste actie"
+      ],
+      "Load more": [
+        "Meer laden"
+      ],
+      "Loading data": [
+        "Data laden"
+      ],
+      "Manual choice": [
+        "Handmatige keuze"
+      ],
+      "Mappings": [
+        "Koppelingen"
+      ],
+      "Match by file name": [
+        "Koppelen op bestandsnaam"
+      ],
+      "New image": [
+        "Nieuwe afbeelding"
+      ],
+      "Next step": [
+        "Volgende stap"
+      ],
+      "Next, choose an image. Only the featured image will be changed.": [
+        "Kies daarna een afbeelding. Alleen de uitgelichte afbeelding wordt gewijzigd."
+      ],
+      "No ACF image fields found": [
+        "Geen ACF Image fields gevonden"
+      ],
+      "No ACF image fields were found for this content. Only the featured image will be processed.": [
+        "Er zijn geen ACF Image fields gevonden voor deze content. Alleen de uitgelichte afbeelding wordt verwerkt."
+      ],
+      "No action history available yet.": [
+        "Nog geen actiegeschiedenis beschikbaar."
+      ],
+      "No change needed": [
+        "Geen wijziging nodig"
+      ],
+      "No change required.": [
+        "Geen wijziging nodig."
+      ],
+      "No changes required": [
+        "Geen wijzigingen nodig"
+      ],
+      "No editable items found. Choose another content type or adjust your search term.": [
+        "Geen bewerkbare items gevonden. Kies een ander contenttype of pas je zoekterm aan."
+      ],
+      "No image is selected for this field.": [
+        "Er is geen afbeelding geselecteerd voor dit veld."
+      ],
+      "No image linked yet": [
+        "Nog geen afbeelding gekoppeld"
+      ],
+      "No images chosen yet": [
+        "Nog geen afbeeldingen gekozen"
+      ],
+      "No mappings within this filter": [
+        "Geen koppelingen binnen dit filter"
+      ],
+      "No new changes were made. Review the short summary below.": [
+        "Er zijn geen nieuwe wijzigingen gedaan. Bekijk de korte samenvatting hieronder."
+      ],
+      "No new fields to fill": [
+        "Geen nieuwe velden om te vullen"
+      ],
+      "No rollback data was found for this run.": [
+        "Er is geen rollbackdata gevonden voor deze run."
+      ],
+      "No suitable ACF image fields were found for this item.": [
+        "Er zijn geen geschikte ACF Image fields gevonden voor dit item."
+      ],
+      "No suitable image fields": [
+        "Geen geschikte image fields"
+      ],
+      "No supported target available": [
+        "Geen ondersteund doel beschikbaar"
+      ],
+      "No valid images were selected.": [
+        "Er zijn geen geldige afbeeldingen geselecteerd."
+      ],
+      "Normal field": [
+        "Normaal veld"
+      ],
+      "Not available for this content type.": [
+        "Niet beschikbaar voor dit contenttype."
+      ],
+      "Not selected": [
+        "Niet geselecteerd"
+      ],
+      "Nothing to check yet": [
+        "Nog niets om te controleren"
+      ],
+      "Off by default. Enable only when existing images may intentionally be replaced.": [
+        "Standaard uit. Zet alleen aan als bestaande afbeeldingen bewust vervangen mogen worden."
+      ],
+      "One or more ACF image fields could not be restored.": [
+        "Een of meer ACF Image fields konden niet worden hersteld."
+      ],
+      "One or more selected items are not editable.": [
+        "Een of meer geselecteerde items zijn niet bewerkbaar."
+      ],
+      "Only without linked image": [
+        "Alleen zonder gekoppelde afbeelding"
+      ],
+      "Open Media Library": [
+        "Mediabibliotheek openen"
+      ],
+      "Operation in progress": [
+        "Actie wordt uitgevoerd"
+      ],
+      "Overwrite": [
+        "Overschrijven"
+      ],
+      "Overwrites only": [
+        "Alleen overschrijvingen"
+      ],
+      "Page %1$d of %2$d": [
+        "Pagina %1$d van %2$d"
+      ],
+      "Please wait. The interface remains blocked until the current data is ready.": [
+        "Even geduld. De interface blijft geblokkeerd tot de huidige data klaar is."
+      ],
+      "Please wait. The interface remains blocked until the current operation is complete.": [
+        "Even geduld. De interface blijft geblokkeerd tot de huidige actie klaar is."
+      ],
+      "Posts": [
+        "Berichten"
+      ],
+      "Preview": [
+        "Voorbeeld"
+      ],
+      "Preview not created yet": [
+        "Voorbeeld nog niet gemaakt"
+      ],
+      "Preview outdated": [
+        "Voorbeeld verouderd"
+      ],
+      "Previous action": [
+        "Vorige actie"
+      ],
+      "Previous empty value restored.": [
+        "Vorige lege waarde hersteld."
+      ],
+      "Previous image restored:": [
+        "Vorige afbeelding hersteld:"
+      ],
+      "Previous step": [
+        "Vorige stap"
+      ],
+      "Processed change": [
+        "Verwerkte wijziging"
+      ],
+      "Processed featured image": [
+        "Verwerkte uitgelichte afbeelding"
+      ],
+      "Product categories": [
+        "Productcategorieën"
+      ],
+      "Products": [
+        "Producten"
+      ],
+      "Refresh preview": [
+        "Voorbeeld vernieuwen"
+      ],
+      "Remove": [
+        "Verwijderen"
+      ],
+      "Repeater, flexible content, gallery and clone fields are skipped.": [
+        "Repeater-, flexible content-, gallery- en clone fields worden overgeslagen."
+      ],
+      "Replace enabled": [
+        "Vervangen aan"
+      ],
+      "Replace existing images": [
+        "Bestaande afbeeldingen vervangen"
+      ],
+      "Replace is enabled": [
+        "Vervangen staat aan"
+      ],
+      "Replace is off by default, so existing images stay in place.": [
+        "Vervangen staat standaard uit, zodat bestaande afbeeldingen blijven staan."
+      ],
+      "Result": [
+        "Resultaat"
+      ],
+      "Result summary": [
+        "Resultaatsamenvatting"
+      ],
+      "Review the proposed mappings before applying changes.": [
+        "Controleer de voorgestelde koppelingen voordat je wijzigingen uitvoert."
+      ],
+      "Review which image is mapped to each field before running.": [
+        "Controleer welke afbeelding aan elk veld is gekoppeld voordat je uitvoert."
+      ],
+      "Run": [
+        "Uitvoeren"
+      ],
+      "Run completed": [
+        "Run voltooid"
+      ],
+      "Run completed with items needing attention": [
+        "Run voltooid met aandachtspunten"
+      ],
+      "Run saved. You can undo it from the audit log.": [
+        "Run opgeslagen. Je kunt deze via het auditlog ongedaan maken."
+      ],
+      "Search": [
+        "Zoeken"
+      ],
+      "Search by title...": [
+        "Zoeken op titel..."
+      ],
+      "Select a content item that supports featured images.": [
+        "Selecteer een contentitem dat uitgelichte afbeeldingen ondersteunt."
+      ],
+      "Select all": [
+        "Alles selecteren"
+      ],
+      "Select all empty fields": [
+        "Alle lege velden selecteren"
+      ],
+      "Select at least one ACF image field or a content item that supports featured images.": [
+        "Selecteer minimaal één ACF Image field of een contentitem dat uitgelichte afbeeldingen ondersteunt."
+      ],
+      "Select at least one editable item.": [
+        "Selecteer minimaal één bewerkbaar item."
+      ],
+      "Select content first": [
+        "Selecteer eerst content"
+      ],
+      "Select drafts": [
+        "Concepten selecteren"
+      ],
+      "Select images": [
+        "Afbeeldingen selecteren"
+      ],
+      "Select published": [
+        "Gepubliceerd selecteren"
+      ],
+      "Select the content, then choose the image that should be set as the featured image.": [
+        "Selecteer de content en kies daarna de afbeelding die als uitgelichte afbeelding moet worden ingesteld."
+      ],
+      "Select the images that will be mapped automatically to the chosen fields.": [
+        "Selecteer de afbeeldingen die automatisch aan de gekozen velden worden gekoppeld."
+      ],
+      "Select visible items": [
+        "Zichtbare items selecteren"
+      ],
+      "Select which image fields may be filled automatically.": [
+        "Selecteer welke image fields automatisch gevuld mogen worden."
+      ],
+      "Selected": [
+        "Geselecteerd"
+      ],
+      "Selected fields only": [
+        "Alleen geselecteerde velden"
+      ],
+      "Selected fields unavailable": [
+        "Geselecteerde velden niet beschikbaar"
+      ],
+      "Selected images": [
+        "Geselecteerde afbeeldingen"
+      ],
+      "Set": [
+        "Instellen"
+      ],
+      "Set featured image": [
+        "Uitgelichte afbeelding instellen"
+      ],
+      "Show all": [
+        "Alles tonen"
+      ],
+      "Show mappings": [
+        "Koppelingen tonen"
+      ],
+      "Skipped": [
+        "Overgeslagen"
+      ],
+      "Something went wrong. Try again or check the input.": [
+        "Er ging iets mis. Probeer opnieuw of controleer de invoer."
+      ],
+      "Start new selection": [
+        "Nieuwe selectie starten"
+      ],
+      "Start over": [
+        "Opnieuw beginnen"
+      ],
+      "Status": [
+        "Status"
+      ],
+      "Step navigation": [
+        "Stapnavigatie"
+      ],
+      "Still empty": [
+        "Nog leeg"
+      ],
+      "Summary of this action": [
+        "Samenvatting van deze actie"
+      ],
+      "Supported": [
+        "Ondersteund"
+      ],
+      "Target": [
+        "Doel"
+      ],
+      "Technical details": [
+        "Technische details"
+      ],
+      "Test batch actions on staging first when updating a lot of content.": [
+        "Test batch-acties eerst op staging wanneer je veel content bijwerkt."
+      ],
+      "The WordPress Media Library could not be loaded.": [
+        "De WordPress-mediabibliotheek kon niet worden geladen."
+      ],
+      "The featured image could not be restored for one or more items.": [
+        "De uitgelichte afbeelding kon voor een of meer items niet worden hersteld."
+      ],
+      "The featured image was already correct. Nothing was changed.": [
+        "De uitgelichte afbeelding klopte al. Er is niets gewijzigd."
+      ],
+      "The featured image was processed. You can undo this run from the audit log.": [
+        "De uitgelichte afbeelding is verwerkt. Je kunt deze run via het auditlog ongedaan maken."
+      ],
+      "The featured-image-only run is complete. Review the result and undo option below.": [
+        "De run alleen uitgelichte afbeelding is voltooid. Bekijk hieronder het resultaat en de optie ongedaan maken."
+      ],
+      "The first image in the selection will be used as the featured image.": [
+        "De eerste afbeelding in de selectie wordt gebruikt als uitgelichte afbeelding."
+      ],
+      "The preview is outdated. Refresh the preview before running.": [
+        "Het voorbeeld is verouderd. Vernieuw het voorbeeld voordat je uitvoert."
+      ],
+      "The run is complete. Review the main result and next action below.": [
+        "De run is voltooid. Bekijk hieronder het hoofdresultaat en de volgende actie."
+      ],
+      "The selected ACF image fields are not available for this item.": [
+        "De geselecteerde ACF Image fields zijn niet beschikbaar voor dit item."
+      ],
+      "The selected featured image is not a valid image.": [
+        "De geselecteerde uitgelichte afbeelding is geen geldige afbeelding."
+      ],
+      "The selected featured image is unavailable or is not a valid image.": [
+        "De geselecteerde uitgelichte afbeelding is niet beschikbaar of geen geldige afbeelding."
+      ],
+      "The selected image is already linked to the chosen item(s). No ACF image fields were changed.": [
+        "De geselecteerde afbeelding is al gekoppeld aan de gekozen item(s). Er zijn geen ACF Image fields gewijzigd."
+      ],
+      "The selected image is already set as the featured image. No change is needed.": [
+        "De geselecteerde afbeelding is al ingesteld als uitgelichte afbeelding. Er is geen wijziging nodig."
+      ],
+      "The selected mappings were processed. You can undo this run from the audit log.": [
+        "De geselecteerde koppelingen zijn verwerkt. Je kunt deze run via het auditlog ongedaan maken."
+      ],
+      "Then we only show image fields that can be filled safely.": [
+        "Daarna tonen we alleen image fields die veilig gevuld kunnen worden."
+      ],
+      "There are fewer automatic ACF images than fields to fill automatically. Not all fields will automatically receive an image.": [
+        "Er zijn minder automatische ACF-afbeeldingen dan velden om automatisch te vullen. Niet alle velden krijgen automatisch een afbeelding."
+      ],
+      "There are more automatic ACF images than ACF fields to fill automatically. Extra images are skipped unless you map them manually.": [
+        "Er zijn meer automatische ACF-afbeeldingen dan ACF-velden om automatisch te vullen. Extra afbeeldingen worden overgeslagen tenzij je ze handmatig koppelt."
+      ],
+      "This content type has no ACF image fields. Create a preview to check what happens with the featured image.": [
+        "Dit contenttype heeft geen ACF Image fields. Maak een voorbeeld om te controleren wat er met de uitgelichte afbeelding gebeurt."
+      ],
+      "This field already has a value.": [
+        "Dit veld heeft al een waarde."
+      ],
+      "To fill": [
+        "Te vullen"
+      ],
+      "Unavailable": [
+        "Niet beschikbaar"
+      ],
+      "Unavailable: this content type does not support a featured image.": [
+        "Niet beschikbaar: dit contenttype ondersteunt geen uitgelichte afbeelding."
+      ],
+      "Unchanged": [
+        "Ongewijzigd"
+      ],
+      "Unchanged or manually chosen": [
+        "Ongewijzigd of handmatig gekozen"
+      ],
+      "Undo": [
+        "Ongedaan maken"
+      ],
+      "Undo is available after running changes.": [
+        "Ongedaan maken is beschikbaar nadat wijzigingen zijn uitgevoerd."
+      ],
+      "Undo status is checked before you run changes.": [
+        "De status voor ongedaan maken wordt gecontroleerd voordat je wijzigingen uitvoert."
+      ],
+      "Undo this run": [
+        "Deze run ongedaan maken"
+      ],
+      "Undone": [
+        "Ongedaan gemaakt"
+      ],
+      "Unknown item": [
+        "Onbekend item"
+      ],
+      "Up": [
+        "Omhoog"
+      ],
+      "Use manual mapping when a specific image should go to a specific field.": [
+        "Gebruik handmatig koppelen wanneer een specifieke afbeelding naar een specifiek veld moet."
+      ],
+      "Use selected images": [
+        "Geselecteerde afbeeldingen gebruiken"
+      ],
+      "Use the first selected image as the featured image.": [
+        "Gebruik de eerste geselecteerde afbeelding als uitgelichte afbeelding."
+      ],
+      "Use this when images are directly inside an ACF group.": [
+        "Gebruik dit wanneer afbeeldingen direct in een ACF-groep staan."
+      ],
+      "User": [
+        "Gebruiker"
+      ],
+      "User ID": [
+        "Gebruikers-ID"
+      ],
+      "View current image": [
+        "Huidige afbeelding bekijken"
+      ],
+      "View larger image": [
+        "Grotere afbeelding bekijken"
+      ],
+      "View larger new image": [
+        "Grotere nieuwe afbeelding bekijken"
+      ],
+      "Warning: batch replace enabled": [
+        "Waarschuwing: batch vervangen ingeschakeld"
+      ],
+      "Will be filled": [
+        "Wordt gevuld"
+      ],
+      "Will be overwritten": [
+        "Wordt overschreven"
+      ],
+      "Will be set": [
+        "Wordt ingesteld"
+      ],
+      "Will be skipped": [
+        "Wordt overgeslagen"
+      ],
+      "Will be skipped: already has image": [
+        "Wordt overgeslagen: heeft al afbeelding"
+      ],
+      "Workflow steps": [
+        "Workflowstappen"
+      ],
+      "You are changing multiple items at once. Carefully check that the same featured image is intended for all items.": [
+        "Je wijzigt meerdere items tegelijk. Controleer zorgvuldig of dezelfde uitgelichte afbeelding voor alle items bedoeld is."
+      ],
+      "You are changing multiple posts at once. Check carefully that these posts use the same ACF fields.": [
+        "Je wijzigt meerdere berichten tegelijk. Controleer zorgvuldig of deze berichten dezelfde ACF-velden gebruiken."
+      ],
+      "You can adjust the order or replace images before checking the mapping.": [
+        "Je kunt de volgorde aanpassen of afbeeldingen vervangen voordat je de koppeling controleert."
+      ],
+      "You can process a maximum of %d items per run.": [
+        "Je kunt maximaal %d items per run verwerken."
+      ],
+      "You can process a maximum of %d manual mappings per run.": [
+        "Je kunt maximaal %d handmatige koppelingen per run verwerken."
+      ],
+      "You can process up to %d fields per run.": [
+        "Je kunt maximaal %d velden per run verwerken."
+      ],
+      "You can select a maximum of %d images per run.": [
+        "Je kunt maximaal %d afbeeldingen per run selecteren."
+      ],
+      "You do not have permission to fill images.": [
+        "Je hebt geen toestemming om afbeeldingen te vullen."
+      ],
+      "You do not have permission to open this page.": [
+        "Je hebt geen toestemming om deze pagina te openen."
+      ],
+      "You do not have permission to roll back actions.": [
+        "Je hebt geen toestemming om acties ongedaan te maken."
+      ],
+      "You do not have permission to use attachment ID %d.": [
+        "Je hebt geen toestemming om bijlage-ID %d te gebruiken."
+      ],
+      "You do not have permission to view the audit log.": [
+        "Je hebt geen toestemming om het auditlog te bekijken."
+      ],
+      "You do not have permission to view this post type.": [
+        "Je hebt geen toestemming om dit berichttype te bekijken."
+      ],
+      "You do not have permission to view this taxonomy.": [
+        "Je hebt geen toestemming om deze taxonomie te bekijken."
+      ],
+      "You no longer have permission to restore one or more previous ACF images.": [
+        "Je hebt geen toestemming meer om een of meer vorige ACF-afbeeldingen te herstellen."
+      ],
+      "You no longer have permission to restore one or more previous featured images.": [
+        "Je hebt geen toestemming meer om een of meer vorige uitgelichte afbeeldingen te herstellen."
+      ],
+      "You no longer have permission to undo one or more items.": [
+        "Je hebt geen toestemming meer om een of meer items ongedaan te maken."
+      ],
+      "change(s) ready": [
+        "wijziging(en) klaar"
+      ],
+      "changes": [
+        "wijzigingen"
+      ],
+      "existing images will be overwritten.": [
+        "bestaande afbeeldingen worden overschreven."
+      ],
+      "featured": [
+        "uitgelicht"
+      ],
+      "field": [
+        "veld"
+      ],
+      "fields": [
+        "velden"
+      ],
+      "image": [
+        "afbeelding"
+      ],
+      "images": [
+        "afbeeldingen"
+      ],
+      "item": [
+        "item"
+      ],
+      "item selected": [
+        "item geselecteerd"
+      ],
+      "item(s) rolled back.": [
+        "item(s) ongedaan gemaakt."
+      ],
+      "items": [
+        "items"
+      ],
+      "items selected": [
+        "items geselecteerd"
+      ],
+      "items to fill?": [
+        "items vullen?"
+      ],
+      "items to overwrite?": [
+        "items overschrijven?"
+      ],
+      "loaded": [
+        "geladen"
+      ],
+      "of": [
+        "van"
+      ],
+      "other": [
+        "andere"
+      ],
+      "selected": [
+        "geselecteerd"
+      ],
+      "selected field(s)": [
+        "geselecteerde veld(en)"
+      ],
+      "selected item(s)": [
+        "geselecteerde item(s)"
+      ],
+      "target": [
+        "doel"
+      ],
+      "targets": [
+        "doelen"
+      ],
+      "Undo available": [
+        "Ongedaan maken beschikbaar"
+      ],
+      "Off by default. Turn on only if existing images may be replaced.": [
+        "Standaard uit. Zet alleen aan als bestaande afbeeldingen vervangen mogen worden."
+      ]
+    }
+  }
+}
