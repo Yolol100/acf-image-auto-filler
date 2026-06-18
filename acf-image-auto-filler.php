@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ACF Image Auto Filler
  * Description: Safely fill supported ACF image fields or featured images from selected Media Library images.
- * Version: 1.7.47
+ * Version: 1.7.48
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * Author: Webactueel
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('AIAF_VERSION', '1.7.47');
+define('AIAF_VERSION', '1.7.48');
 define('AIAF_PLUGIN_FILE', __FILE__);
 define('AIAF_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('AIAF_PLUGIN_URL', plugin_dir_url(__FILE__));

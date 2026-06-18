@@ -10,5 +10,5 @@ return array (
     3 => 'wp-i18n',
     4 => 'wp-dom-ready',
   ),
-  'version' => '1.7.47',
+  'version' => '1.7.48',
 );
