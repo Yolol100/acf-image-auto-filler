@@ -592,7 +592,7 @@ final class AIAF_Rollback_Manager
             )
         );
 
-        if (!is_array($option_names) || count($option_names) <= $max_runs && $retention_days === 0) {
+        if (!is_array($option_names) || (count($option_names) <= $max_runs && $retention_days === 0)) {
             return;
         }
 

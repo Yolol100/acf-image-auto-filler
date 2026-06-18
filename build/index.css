@@ -4351,14 +4351,18 @@ responsive;
 
 .aiaf-audit-header h1 {
   margin: 0;
+  padding: 0;
   color: var(--aiaf-heading);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.3;
+  font-weight: 600;
 }
 
 .aiaf-audit-header p {
-  margin: 4px 0 0;
+  margin: 8px 0 0;
   color: var(--aiaf-muted);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .aiaf-audit-back-button {

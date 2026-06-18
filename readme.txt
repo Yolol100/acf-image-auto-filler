@@ -4,7 +4,7 @@ Tags: acf, images, media library, custom fields
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.6.17
+Stable tag: 1.7.47
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,30 @@ Use the production package for normal WordPress installation. It contains only r
 Use the source package for development. The source package also contains readable CSS/JS source files and internal verification documents.
 
 == Changelog ==
+
+= 1.7.47 =
+* Removed the manual text domain loader for WordPress.org translation loading.
+* Added translator comments for placeholder strings in the audit log.
+* Tightened read-only audit filter handling to avoid nonce verification warnings.
+* Aligned release metadata for WordPress.org-style distribution.
+* Removed private-update metadata for WordPress.org-style packaging.
+
+= 1.6.22 =
+* Finalized release metadata for the production-ready private build.
+
+= 1.6.21 =
+* Shortened the plugin header description, added the author URI and corrected duplicate changelog metadata.
+
+= 1.6.20 =
+* Increased spacing between the Audit log title and intro text for better visual separation.
+
+= 1.6.19 =
+* Matched the Audit log header typography and intro text spacing to the main Choose content card header.
+
+= 1.6.18 =
+* Improved audit-log user labels while keeping the stored audit data minimal.
+* Hardened audit-log date filtering and rollback confirmation output.
+* Cleaned minor code-quality issues in rollback housekeeping.
 
 = 1.6.17 =
 * Fixed audit-log status handling so restored runs are not confused with expired or missing rollback data.

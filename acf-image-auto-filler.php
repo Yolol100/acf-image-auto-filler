@@ -1,11 +1,12 @@
 <?php
 /**
  * Plugin Name: ACF Image Auto Filler
- * Description: Select Media Library images and safely fill supported ACF image fields or featured images from a WordPress admin screen with preview and rollback.
- * Version: 1.6.17
+ * Description: Safely fill supported ACF image fields or featured images from selected Media Library images.
+ * Version: 1.7.47
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * Author: Webactueel
+ * Author URI: https://webactueel.nl/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: acf-image-auto-filler
@@ -18,7 +19,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('AIAF_VERSION', '1.6.17');
+define('AIAF_VERSION', '1.7.47');
 define('AIAF_PLUGIN_FILE', __FILE__);
 define('AIAF_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('AIAF_PLUGIN_URL', plugin_dir_url(__FILE__));
@@ -35,8 +36,6 @@ require_once AIAF_PLUGIN_DIR . 'includes/class-mutation-service.php';
 require_once AIAF_PLUGIN_DIR . 'includes/class-rest-controller.php';
 require_once AIAF_PLUGIN_DIR . 'includes/class-admin-page.php';
 add_action('plugins_loaded', static function (): void {
-    load_plugin_textdomain('acf-image-auto-filler', false, dirname(plugin_basename(AIAF_PLUGIN_FILE)) . '/languages');
-
     if (is_admin()) {
         AIAF_Admin_Page::init();
     }

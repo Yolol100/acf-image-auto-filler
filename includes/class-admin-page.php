@@ -55,9 +55,8 @@ final class AIAF_Admin_Page
 
     public static function enqueue_assets(string $hook): void
     {
-        $page = isset($_GET['page']) ? sanitize_key(wp_unslash($_GET['page'])) : '';
-        $is_main_page = $hook === 'toplevel_page_' . self::PAGE_SLUG || $page === self::PAGE_SLUG;
-        $is_audit_page = $hook === self::$audit_hook || $page === self::AUDIT_PAGE_SLUG;
+        $is_main_page = $hook === 'toplevel_page_' . self::PAGE_SLUG;
+        $is_audit_page = $hook === self::$audit_hook;
 
         if (!$is_main_page && !$is_audit_page) {
             return;
@@ -148,6 +147,20 @@ final class AIAF_Admin_Page
         return AIAF_Capabilities::mutate();
     }
 
+    private static function get_audit_user_label(int $user_id): string
+    {
+        if ($user_id <= 0) {
+            return '0';
+        }
+
+        $user = get_userdata($user_id);
+        if ($user instanceof WP_User && $user->display_name !== '') {
+            return sprintf('%s (#%d)', $user->display_name, $user_id);
+        }
+
+        return (string) $user_id;
+    }
+
 
     public static function render_audit_page(): void
     {
@@ -159,8 +172,14 @@ final class AIAF_Admin_Page
         $items = $manager->get_audit_log();
         $can_view_full_audit_log = current_user_can(self::audit_log_capability());
         $current_user_id = get_current_user_id();
-        $user_filter = $can_view_full_audit_log && isset($_GET['aiaf_user']) ? absint(wp_unslash($_GET['aiaf_user'])) : 0;
-        $date_filter = isset($_GET['aiaf_date']) ? sanitize_text_field(wp_unslash($_GET['aiaf_date'])) : '';
+        $has_audit_filter = isset($_GET['aiaf_user']) || isset($_GET['aiaf_date']) || isset($_GET['paged']);
+        $audit_filter_nonce = isset($_GET['_wpnonce']) ? sanitize_text_field(wp_unslash((string) $_GET['_wpnonce'])) : '';
+        $can_use_audit_filter = !$has_audit_filter || wp_verify_nonce($audit_filter_nonce, 'aiaf_audit_filters');
+        $user_filter = $can_use_audit_filter && $can_view_full_audit_log && isset($_GET['aiaf_user']) ? absint(wp_unslash((string) $_GET['aiaf_user'])) : 0;
+        $date_filter = $can_use_audit_filter && isset($_GET['aiaf_date']) ? sanitize_text_field(wp_unslash((string) $_GET['aiaf_date'])) : '';
+        if ($date_filter !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $date_filter)) {
+            $date_filter = '';
+        }
         $notice = self::handle_audit_rollback_action();
 
         if (!$can_view_full_audit_log) {
@@ -177,7 +196,7 @@ final class AIAF_Admin_Page
         }
 
         $per_page = 20;
-        $paged = isset($_GET['paged']) ? max(1, absint(wp_unslash($_GET['paged']))) : 1;
+        $paged = $can_use_audit_filter && isset($_GET['paged']) ? max(1, absint(wp_unslash((string) $_GET['paged']))) : 1;
         $total = count($items);
         $pages = max(1, (int) ceil($total / $per_page));
         $items = array_slice($items, ($paged - 1) * $per_page, $per_page);
@@ -198,6 +217,7 @@ final class AIAF_Admin_Page
         }
         echo '<form method="get" class="aiaf-audit-filters">';
         echo '<input type="hidden" name="page" value="' . esc_attr(self::AUDIT_PAGE_SLUG) . '" />';
+        wp_nonce_field('aiaf_audit_filters');
         if ($can_view_full_audit_log) {
             echo '<label><span>' . esc_html__('User ID', 'acf-image-auto-filler') . '</span><input type="number" min="1" name="aiaf_user" value="' . esc_attr($user_filter > 0 ? (string) $user_filter : '') . '" /></label>';
         }
@@ -233,22 +253,26 @@ final class AIAF_Admin_Page
             $can_rollback = $rollback_status === 'available' && $run_id !== '' && current_user_can(self::mutate_capability());
 
             $change_parts = [];
+            /* translators: %d: Number of changed image values. */
             $change_parts[] = $count === 1 ? __('1 change', 'acf-image-auto-filler') : sprintf(__('%d changes', 'acf-image-auto-filler'), $count);
             if ($featured > 0) {
+                /* translators: %d: Number of featured images changed. */
                 $change_parts[] = $featured === 1 ? __('Featured image', 'acf-image-auto-filler') : sprintf(__('%d featured images', 'acf-image-auto-filler'), $featured);
             }
             if ($acf > 0) {
+                /* translators: %d: Number of ACF image fields changed. */
                 $change_parts[] = $acf === 1 ? __('1 ACF field', 'acf-image-auto-filler') : sprintf(__('%d ACF fields', 'acf-image-auto-filler'), $acf);
             }
 
             echo '<tr>';
             echo '<td>' . ($edit_url !== '' ? '<a href="' . esc_url($edit_url) . '">' . esc_html($title) . '</a>' : esc_html($title)) . '</td>';
-            echo '<td>' . esc_html((string) (isset($item['user_id']) ? absint($item['user_id']) : 0)) . '</td>';
+            $user_id = isset($item['user_id']) ? absint($item['user_id']) : 0;
+            echo '<td>' . esc_html(self::get_audit_user_label($user_id)) . '</td>';
             echo '<td>' . esc_html(implode(' · ', $change_parts)) . '</td>';
             echo '<td>' . esc_html($created > 0 ? wp_date(get_option('date_format') . ' ' . get_option('time_format'), $created) : '') . '</td>';
             if ($can_rollback) {
-                $confirm = esc_js(__('Undo this run? The previous image values will be restored where possible.', 'acf-image-auto-filler'));
-                echo '<td><form method="post" class="aiaf-audit-rollback-form" onsubmit="return window.confirm(\'' . $confirm . '\');">';
+                $confirm = wp_json_encode(__('Undo this run? The previous image values will be restored where possible.', 'acf-image-auto-filler'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
+                echo '<td><form method="post" class="aiaf-audit-rollback-form" onsubmit="return window.confirm(' . esc_attr(is_string($confirm) ? $confirm : '""') . ');">';
                 wp_nonce_field('aiaf_audit_rollback_' . $run_id, 'aiaf_audit_nonce');
                 echo '<input type="hidden" name="aiaf_rollback_run_id" value="' . esc_attr($run_id) . '" />';
                 submit_button(__('Undo this run', 'acf-image-auto-filler'), 'secondary aiaf-audit-rollback-button', 'submit', false);
@@ -266,7 +290,9 @@ final class AIAF_Admin_Page
         echo '</div>';
 
         if ($pages > 1) {
-            echo '<p class="tablenav-pages">' . esc_html(sprintf(__('Page %1$d of %2$d', 'acf-image-auto-filler'), $paged, $pages)) . '</p>';
+            /* translators: 1: Current audit log page number, 2: Total number of audit log pages. */
+            $page_label = sprintf(__('Page %1$d of %2$d', 'acf-image-auto-filler'), $paged, $pages);
+            echo '<p class="tablenav-pages">' . esc_html($page_label) . '</p>';
         }
 
         echo '</div>';
