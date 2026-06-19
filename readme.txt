@@ -4,7 +4,7 @@ Tags: acf, images, media library, custom fields
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.7.47
+Stable tag: 1.7.48
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,11 @@ Use the production package for normal WordPress installation. It contains only r
 Use the source package for development. The source package also contains readable CSS/JS source files and internal verification documents.
 
 == Changelog ==
+
+= 1.7.48 =
+* Rechecked attachment limits after manual field mappings are merged into the selected image list.
+* Rechecked selected field limits after per-item manual mappings are expanded.
+* Cleaned admin selector separators in API responses and audit summaries.
 
 = 1.7.47 =
 * Removed the manual text domain loader for WordPress.org translation loading.

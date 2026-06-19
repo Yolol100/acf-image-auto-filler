@@ -82,6 +82,16 @@ final class AIAF_Mutation_Service
         }
 
         $attachment_ids = array_values(array_unique(array_merge($attachment_ids, array_values($manual_mapping))));
+        if ($max_items > 0 && count($attachment_ids) > $max_items) {
+            return new WP_REST_Response([
+                'message' => sprintf(
+                    /* translators: %d: Maximum number of images that may be selected in one run. */
+                    __('You can select a maximum of %d images per run.', 'acf-image-auto-filler'),
+                    $max_items
+                ),
+            ], 400);
+        }
+
         $acf_available = AIAF_ACF_Runtime::is_available();
 
         if (!$acf_available) {
@@ -117,6 +127,16 @@ final class AIAF_Mutation_Service
             $is_term_target = is_string($acf_target_id) && strpos($acf_target_id, 'term_') === 0;
             $post_mapping = $this->mapping_for_content_id($manual_mapping, (string) $content_id);
             $post_field_keys = array_values(array_unique(array_merge($field_keys, array_keys($post_mapping))));
+            if ($max_field_keys > 0 && count($post_field_keys) > $max_field_keys) {
+                return new WP_REST_Response([
+                    'message' => sprintf(
+                        /* translators: %d: Maximum number of fields that may be processed in one run. */
+                        __('You can process up to %d fields per run.', 'acf-image-auto-filler'),
+                        $max_field_keys
+                    ),
+                ], 400);
+            }
+
             $has_post_acf_targets = !empty($post_field_keys);
 
             $fields = $has_post_acf_targets ? $scanner->get_image_fields($acf_target_id, $include_groups) : [];

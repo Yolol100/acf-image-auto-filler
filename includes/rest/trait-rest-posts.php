@@ -117,7 +117,7 @@ trait AIAF_REST_Posts_Trait
                     'title'  => sanitize_text_field(wp_strip_all_tags($title)),
                     'status' => $status,
                     'date'   => $date,
-                    'meta'   => sanitize_text_field('#' . (int) $post->ID . ' · ' . $status . ($date !== '' ? ' · ' . $date : '')),
+                    'meta'   => sanitize_text_field('#' . (int) $post->ID . ' - ' . $status . ($date !== '' ? ' - ' . $date : '')),
                 ];
                 $editable_seen++;
             }
@@ -227,7 +227,7 @@ trait AIAF_REST_Posts_Trait
                     'title'    => sanitize_text_field(wp_strip_all_tags($term->name)),
                     'status'   => $taxonomy,
                     'date'     => '',
-                    'meta'     => sanitize_text_field('#' . (int) $term->term_id . ' · ' . $term_label . ' · ' . $count_label),
+                    'meta'     => sanitize_text_field('#' . (int) $term->term_id . ' - ' . $term_label . ' - ' . $count_label),
                     'taxonomy' => $taxonomy,
                 ];
                 $editable_seen++;

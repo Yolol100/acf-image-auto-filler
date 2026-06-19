@@ -268,7 +268,7 @@ final class AIAF_Admin_Page
             echo '<td>' . ($edit_url !== '' ? '<a href="' . esc_url($edit_url) . '">' . esc_html($title) . '</a>' : esc_html($title)) . '</td>';
             $user_id = isset($item['user_id']) ? absint($item['user_id']) : 0;
             echo '<td>' . esc_html(self::get_audit_user_label($user_id)) . '</td>';
-            echo '<td>' . esc_html(implode(' · ', $change_parts)) . '</td>';
+            echo '<td>' . esc_html(implode(' - ', $change_parts)) . '</td>';
             echo '<td>' . esc_html($created > 0 ? wp_date(get_option('date_format') . ' ' . get_option('time_format'), $created) : '') . '</td>';
             if ($can_rollback) {
                 $confirm = wp_json_encode(__('Undo this run? The previous image values will be restored where possible.', 'acf-image-auto-filler'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
