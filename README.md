@@ -2,7 +2,7 @@
 
 > **Supporting portfolio project · WordPress/PHP · ACF · media mapping · preview and rollback**
 
-**Built by:** [Andrew Baeten](https://github.com/Yolol100) · [Portfolio cases](https://andrewbaeten.nl/category/cases)
+**Developer profile:** [Andrew Baeten](https://github.com/Yolol100) · [Portfolio cases](https://andrewbaeten.nl/category/cases)
 
 ACF Image Auto Filler is a WordPress admin plugin for safely mapping selected Media Library images to supported ACF Image fields or featured images. It is built for controlled editorial and agency workflows with previewing, explicit overwrite behavior, rollback support and audit logging.
 
