@@ -117,8 +117,19 @@ final class AIAF_Rollback_Manager
 
             $type = isset($item['type']) ? (string) $item['type'] : 'acf_image';
             $previous = isset($item['previous_attachment_id']) ? absint($item['previous_attachment_id']) : 0;
+            $applied = isset($item['new_attachment_id']) ? absint($item['new_attachment_id']) : 0;
+            if ($applied <= 0) {
+                $errors[] = __('Rollback skipped because the applied image ID is missing.', 'acf-image-auto-filler');
+                $failed_items[] = $item;
+                continue;
+            }
 
             if ($type === 'featured_image') {
+                if ($post_id <= 0 || absint(get_post_thumbnail_id($post_id)) !== $applied) {
+                    $errors[] = __('Featured image changed after the fill run; rollback was skipped.', 'acf-image-auto-filler');
+                    $failed_items[] = $item;
+                    continue;
+                }
                 if ($previous > 0 && (!$this->can_restore_attachment($previous))) {
                     $errors[] = __('You no longer have permission to restore one or more previous featured images.', 'acf-image-auto-filler');
                     $failed_items[] = $item;
@@ -161,6 +172,25 @@ final class AIAF_Rollback_Manager
             $parent_key = isset($item['parent_key']) ? sanitize_key((string) $item['parent_key']) : '';
             $field_name = isset($item['field_name']) ? $this->sanitize_acf_array_key((string) $item['field_name']) : '';
 
+            // Restore only the image still written by this run. A later edit
+            // must never be replaced by a stale rollback.
+            $group_value = [];
+            if ($scope === 'group' && $parent_key !== '' && $field_name !== '') {
+                $stored_group = get_field($parent_key, $target_id, false);
+                $group_value = is_array($stored_group) ? $stored_group : [];
+                $current_value = $group_value[$field_name] ?? null;
+            } else {
+                $current_value = get_field($field_key, $target_id, false);
+            }
+            $current_id = (is_int($current_value) || (is_string($current_value) && ctype_digit($current_value)))
+                ? absint($current_value)
+                : 0;
+            if ($current_id !== $applied) {
+                $errors[] = __('ACF image field changed after the fill run; rollback was skipped.', 'acf-image-auto-filler');
+                $failed_items[] = $item;
+                continue;
+            }
+
             if ($previous > 0 && !$this->can_restore_attachment($previous)) {
                 $errors[] = __('You no longer have permission to restore one or more previous ACF images.', 'acf-image-auto-filler');
                 $failed_items[] = $item;
@@ -168,10 +198,6 @@ final class AIAF_Rollback_Manager
             }
 
             if ($scope === 'group' && $parent_key !== '' && $field_name !== '') {
-                $group_value = get_field($parent_key, $target_id, false);
-                if (!is_array($group_value)) {
-                    $group_value = [];
-                }
                 $group_value[$field_name] = $value;
                 $updated = update_field($parent_key, $group_value, $target_id);
             } else {
