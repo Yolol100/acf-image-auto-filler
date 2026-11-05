@@ -3,8 +3,6 @@
  * Real WordPress and ACF regression for existing image rollback.
  * Only synthetic pages, image fixtures and field values in a disposable CI site.
  */
-declare(strict_types=1);
-
 if (!defined('ABSPATH') || !function_exists('acf_add_local_field_group')) {
     throw new RuntimeException('WordPress/ACF unavailable.');
 }
